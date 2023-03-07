@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   resources :experiences, only: [:update, :destroy]
 
   get "/dashboard", to: "dashboard#my_solutions"
+  get "/testing", to: "pages#testing"
 end
