@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   resources :favourites, only: [:destroy]
   resources :experiences, only: [:update, :destroy]
 
-  get "/dashboard", to: "dashboard#my_solutions"
+  get "/dashboard", to: "dashboards#my_solutions"
   get "/testing", to: "pages#testing"
 end
