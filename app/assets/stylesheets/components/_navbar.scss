@@ -1,12 +1,20 @@
-.navbar-lewagon {
+.navbar {
   justify-content: space-between;
-  background: white;
+  background-color: #ffffff7a;
+  padding: 10px;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.house-logo i {
   width: 40px;
+  text-decoration: none;
+  color: #606060;
+}
+
+.house-logo i:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
 }
