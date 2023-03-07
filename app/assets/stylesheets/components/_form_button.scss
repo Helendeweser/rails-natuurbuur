@@ -3,14 +3,25 @@
   border: none;
   color: white;
   padding: 15px 32px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   text-align: center;
   text-decoration: none;
   font-size: 15px;
   font-weight: bold;
   width: 335px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
+.btn {
+  color: white !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
 .form-button:hover {
   filter: brightness(95%);
   text-decoration: none;
