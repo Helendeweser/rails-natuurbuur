@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_07_102208) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_07_104254) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,6 +23,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_102208) do
     t.datetime "updated_at", null: false
     t.index ["solution_id"], name: "index_experiences_on_solution_id"
     t.index ["user_id"], name: "index_experiences_on_user_id"
+  end
+
+  create_table "favourites", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "solution_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["solution_id"], name: "index_favourites_on_solution_id"
+    t.index ["user_id"], name: "index_favourites_on_user_id"
   end
 
   create_table "solutions", force: :cascade do |t|
@@ -51,4 +60,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_102208) do
 
   add_foreign_key "experiences", "solutions"
   add_foreign_key "experiences", "users"
+  add_foreign_key "favourites", "solutions"
+  add_foreign_key "favourites", "users"
 end
