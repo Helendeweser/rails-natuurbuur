@@ -3,12 +3,17 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.form_log_in {
+.form_container {
   display: flex;
   justify-content: center;
-}
-
-.form_box {
-  width: 500px;
-  content: center;
+  .form_box {
+    width: 40%;
+    margin: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: $black;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+   }
 }
