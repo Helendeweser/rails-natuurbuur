@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   end
 
   resources :favourites, only: [:destroy]
+  resources :likes, only: [:destroy]
   resources :experiences, only: [:update, :destroy]
 
   get "/dashboard", to: "dashboards#my_solutions"
