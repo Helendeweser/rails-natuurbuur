@@ -4,7 +4,9 @@
     <%# <%= link_to solution_path(solution) do %>
       <%# SMALL CARD: EVERYTHING CENTERED %>
       <div class="small-card">
-        <i class="fa-solid fa-bookmark"></i>
+         <%= link_to solution_favourites_path(solution), data: {turbo_method: :post, turbo_confirm: "Add to your favourites ?"} do %>
+          <i class="fa-solid fa-bookmark"></i>
+         <% end %>
         <div class="content-small-card">
           <div><%= cl_image_tag solution.photo.key, class: "rounded-pictures"%></div>
 
