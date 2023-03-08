@@ -12,12 +12,11 @@
           <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
         </div>
       </div>
-    </div>
 
-    <div class="user-and-save-btn">
-      <%= link_to dashboard_path, class:"save-logo" do %>
-        <i class="fa-regular fa-bookmark"></i>
-      <% end %>
+      <div class="user-and-save-btn">
+        <%= link_to dashboard_path, class:"save-logo" do %>
+          <i class="fa-regular fa-bookmark"></i>
+        <% end %>
 
       <div class="nav-item dropdown">
         <i class="fa-regular fa-user avatar dropdown-toggle " id= "navbarDropdown" data-bs-toggle= "dropdown", aria-haspopup= "true", aria-expanded= "false"></i>
@@ -28,11 +27,13 @@
             <a class="dropdown-item" href="<%= new_user_session_path %>">Login</a>
             <a class="dropdown-item" href="<%= new_user_registration_path %>">Sign up</a>
           <% end %>
+
         </div>
       </div>
-
     </div>
 
   </div>
+
+</div>
 
 </div>
