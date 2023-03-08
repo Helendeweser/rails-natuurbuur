@@ -16,12 +16,9 @@ class FavouritesController < ApplicationController
   end
 
   def destroy
-    # To implement
     @favourite = Favourite.find(params[:id])
-    raise
-
-    # Still have stuff to do
     @favourite.destroy
+    redirect_to dashboard_path
   end
 
   private
