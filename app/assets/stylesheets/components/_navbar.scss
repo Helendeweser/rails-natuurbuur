@@ -1,7 +1,7 @@
 .navbar {
   justify-content: space-between;
   background-color: #ffffff7a;
-  padding: 10px;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 
 .navbar .navbar-collapse {
@@ -18,3 +18,76 @@
   transform: scale(1.2);
   transition: all 0.3s ease-in-out;
 }
+
+.save-logo i {
+  width: 40px;
+  text-decoration: none;
+  color: #606060;
+}
+
+.save-logo i:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.avatar {
+  width: 40px;
+  text-decoration: none;
+  color: #606060;
+}
+
+.avatar:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.user-and-save-btn {
+  display: flex;
+}
+
+.searchbar{
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 60px;
+  padding: 10px;
+  color: #585858;
+  text-decoration: none;
+  }
+
+  .search_input{
+  color: #606060;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color:transparent;
+  line-height: 40px;
+  transition: width 0.4s linear;
+  }
+
+  .searchbar:hover > .search_input{
+  padding: 0 10px;
+  width: 450px;
+  caret-color:rgb(255, 255, 255);
+  transition: width 0.4s linear;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  border-radius: 50px 0 0 50px;
+  }
+
+  .searchbar:hover > .search_icon{
+  background: rgb(255, 255, 255);
+  color: #585858;
+  }
+
+  .search_icon{
+  height: 40px;
+  width: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 50px 50px 0;
+  color: #606060;
+  text-decoration:none;
+  }
