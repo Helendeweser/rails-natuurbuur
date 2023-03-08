@@ -31,7 +31,7 @@ puts "Creating solution #{solution.id}..."
 image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198803/2._Square_meter_garden_on_the_ground_jesbgt.png")
 
 solution = Solution.new(
-  title: "Square meter garden on the ground",
+  title: "Square meter garden (ground)",
   intro: "What do you do with a small, vacant patch of garden? Nothing like picking your own fruits and vegetables there, right?",
   explanation: "You need a container, 1.2 m by 1.2 m approximately. In it you plant different vegetables, fruits or herbs. You divide your box into grid squares of 30 cm by 30 cm and put one type of plant in each. So you are really gardening, but on a small area and very intensively.
 
@@ -380,7 +380,7 @@ image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198808/
 
 solution = Solution.new(
   title: "Non-self-attaching climbing plant",
-  intro: "Studies show that a climbing plant with an average leaf area index covering a 17m² facade captures the same amount of particulate matter as an average 25-year-old urban tree!",
+  intro: "Studies show that a climber with a leaf area index covering a 17m² facade captures the same amount of particulate matter as an average 25-year-old urban tree!",
   explanation: "Your facade likes different types of greenery. A climbing plant is a very good option. But before you choose which one to use, check which one is best for your facade.
 
   •	How many hours of sunlight does it get per day?
@@ -431,7 +431,7 @@ image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198811/
 
 solution = Solution.new(
   title: "Permeable pavement",
-  intro: "Does this sound familiar to you? You actually want a paved surface for (part of) your patio or garden, but you don't want to harm the environment. There is a sympathetic solution!",
+  intro: "You want a paved surface for (part of) your patio or garden, but you don't want to harm the environment? There is a sympathetic solution!",
   explanation: "Whichever way you look at it, every garden needs some paving (at some point). For your patio, because you would rather not see your chairs or table sink into the grass. For a path, to keep your feet dry in the morning dew. Or for your driveway, to neatly park your two- or four-wheeler(s).
 
   The basic rule is: the sum of all your paved surfaces does not exceed 40% of your garden area. And as with a lot of things, the less hardiness, the better.
