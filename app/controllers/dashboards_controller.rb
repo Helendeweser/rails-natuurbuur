@@ -1,6 +1,7 @@
 class DashboardsController < ApplicationController
 
   def my_solutions
-    # @solutions = Solution.where(user == current_user)
+    @favourites = Favourite.where(user_id: current_user.id)
+    @solutions = @favourites.map{ |favourite| favourite.solution }
   end
 end

@@ -11,6 +11,10 @@ a {
   color: $body-color;
 }
 
+a:hover {
+  color: $body-color;
+}
+
 @media(max-width: 1200px) {
   .cards-index {
     grid-template-columns: 1fr 1fr 1fr;
