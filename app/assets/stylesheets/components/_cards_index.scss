@@ -2,9 +2,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 12px;
-  // flex-grow: 1;
   margin-bottom: 20px;
   width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $body-color;
 }
 
 @media(max-width: 1200px) {
