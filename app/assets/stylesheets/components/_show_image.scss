@@ -1,7 +1,7 @@
 .image_card {
   display: flex;
   border:1px solid gray;
-  background-color: $light-gray;
+  background-color: $lighter-gray;
   border-radius: 5px;
   .show-image {
     width: 500px;
@@ -11,4 +11,16 @@
 .text_card {
   margin-top: 10px;
   margin-bottom: 10px;
+  p{
+    font-size: 1.05em;
+    white-space: pre-line;
+  }
+
+}
+
+.side_text {
+  margin: 40px;
+  p{
+    font-size: 1.0em;
+  }
 }

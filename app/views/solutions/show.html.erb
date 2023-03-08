@@ -1,13 +1,19 @@
 <div class="show_card">
   <div class="image_card">
-    <%= cl_image_tag @solution.photo.key, class: "show-image" %>
-    <h2><%= @solution.title%></h2>
-    <%= @solution.intro%>
+    <div>
+      <%= cl_image_tag @solution.photo.key, class: "show-image" %>
+    </div>
+
+    <div class="side_text">
+      <h2><%= @solution.title%></h2>
+      <br>
+      <p><%= @solution.intro%></p>
+    </div>
   </div>
 
   <div class="text_card">
     <h3>Some more information</h3><hr>
-    <a><%= @solution.explanation %></a>
+    <p><%= @solution.explanation %></p>
   </div>
 
 </div>
