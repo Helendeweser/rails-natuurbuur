@@ -8,63 +8,8 @@
     <%# <% end %>
 <%# </div> %>
 
-<%# CARDS INDEX %>
-<div class="cards-index">
-  <% @solutions.each do |solution| %>
-    <%# <%= link_to solution_path(solution) do %>
-      <%# SMALL CARD: EVERYTHING CENTERED %>
-      <div class="small-card">
-        <div class="content-small-card">
-          <div><%= cl_image_tag solution.photo.key, class: "rounded-pictures"%></div>
+<div class="footer">
+  <div class="footer-copyright">
+      NB Natuurbuur
+  </div>
 
-          <h3><%= solution.title %></h3>
-
-          <p><%= solution.intro %></p>
-
-          <%# 'FOOTER' CARD WITH LEFT:ICONS and RIGHT:PRICE %>
-          <div class="details-small-card">
-
-            <%# ICONS %>
-            <div class="icons-details-small-card">
-
-              <%# <div class="comment-detail">
-                <i class="fa-light fa-comment"></i>
-                <p></p>
-              </div> %>
-
-              <div class="likes-detail">
-                <i class="fa-regular fa-heart"></i>
-                <p><%= solution.likes %></p>
-              </div>
-
-              <%# <div class="rating-detail">
-                <i class="fa-light fa-star"></i>
-                <p></p>
-              </div> %>
-
-              <div class="difficulty-detail">
-                <% if solution.difficulty == "Easy" %>
-                  <i class="fa-solid fa-face-smile"></i>
-                  <p><%= solution.difficulty %></p>
-                <% elsif solution.difficulty == "Medium" %>
-                  <i class="fa-solid fa-face-meh"></i>
-                  <p><%= solution.difficulty %></p>
-                <% else %>
-                  <i class="fa-solid fa-face-frown"></i>
-                  <p><%= solution.difficulty %></p>
-                <% end %>
-              </div>
-
-            </div>
-
-            <%# PRICE %>
-            <div class="price-details-small-card">
-              <h3>€ <%= solution.price %></h3>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    <%# <% end %>
-  <% end %>
-</div>

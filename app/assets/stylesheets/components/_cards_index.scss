@@ -1,0 +1,31 @@
+.cards-index {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 12px;
+  // flex-grow: 1;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+@media(max-width: 1200px) {
+  .cards-index {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media(max-width: 992px) {
+  .cards-index {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .cards-index {
+    grid-template-columns: 1fr;
+  }
+
+  .rounded-pictures {
+    height: 180px;
+    width: 180px;
+  }
+}

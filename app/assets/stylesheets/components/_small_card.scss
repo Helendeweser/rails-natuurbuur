@@ -1,63 +1,75 @@
-.cards-index {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 12px;
-  // flex-grow: 1;
-  margin-bottom: 20px;
+.small-card {
+  height: 415px;
+  // width: 300px;
+  font-weight: bold;
+  border-radius: 5px;
+  border:1px solid gray;
+  margin-top: 20px;
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  position: relative;
 
-  .small-card {
-    height: 400px;
-    width: 300px;
-    font-weight: bold;
-    border-radius: 5px;
-    border:1px solid gray;
-    margin-top: 20px;
-    text-align: center;
-    background-color: white;
-    padding: 20px;
+  .fa-bookmark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    color: orange;
+  }
+  .content-small-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    position: relative;
 
-    .content-small-card {
-      width: 100%;
-      height: 100%;
+    h3 {
+      margin-top: 12px;
+    }
+
+    .details-small-card {
       display: flex;
-      flex-direction: column;
-      align-content: center;
-      position: relative;
+      justify-content: space-between;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
 
-      h3 {
-        margin-top: 12px;
+      p {
+        margin-bottom: 0;
       }
 
-      .details-small-card {
+      h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      .icons-details-small-card {
         display: flex;
         justify-content: space-between;
-        width: 100%;
-        position: absolute;
-        bottom: 0;
+        width: 60%;
 
-        p {
-          margin-bottom: 0;
+        .fa-face-smile {
+          color: $green;
+        }
+        .fa-face-meh {
+          color: $orange;
+        }
+        .fa-face-frown {
+          color: $red;
         }
 
-        h3 {
-          margin-top: 0;
-          margin-bottom: 0;
+        .fa-comment {
+          color: $green;
         }
 
-        .icons-details-small-card {
-          display: flex;
-          justify-content: space-between;
-          width: 40%;
+        .fa-star {
+          color: $orange;
+        }
 
-          .fa-face-smile {
-            color: $green;
-          }
-          .fa-face-meh {
-            color: $orange;
-          }
-          .fa-face-frown {
-            color: $red;
-          }
+        .fa-heart {
+          color: $red;
         }
       }
     }
