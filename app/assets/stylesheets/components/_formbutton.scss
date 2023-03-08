@@ -1,4 +1,4 @@
-.form-button {
+.formbutton {
   background-color: rgb(117, 176, 117);
   border: none;
   color: white;
@@ -17,15 +17,11 @@
   }
 }
 
-.btn {
-  color: white !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-.form-button:hover {
+.formbutton:hover {
   filter: brightness(95%);
   text-decoration: none;
   color: white;
   transform: scale(1.05);
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
