@@ -1,5 +1,7 @@
 require "open-uri"
 
+Solution.destroy_all
+
 image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198800/1._Square_meter_garden_ni4mkd.png")
 
 solution = Solution.new(

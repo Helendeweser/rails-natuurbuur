@@ -1,4 +1,12 @@
 .rounded-pictures {
-border-radius: 15px;
-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 100%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  height: 130px;
+  width: 130px;
+  position: center;
+
+  max-width: 150%;
+  max-height: 150%;
+  background-color: white;
+
 }
