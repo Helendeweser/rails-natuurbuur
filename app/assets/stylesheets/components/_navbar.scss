@@ -1,7 +1,8 @@
 .navbar {
   justify-content: space-between;
-  background-color: #ffffff7a;
+  background-color: #ffffffa3;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  position: sticky;
 }
 
 .navbar .navbar-collapse {
@@ -23,6 +24,7 @@
   width: 40px;
   text-decoration: none;
   color: #606060;
+  padding-top: 21px;
 }
 
 .save-logo i:hover {
@@ -34,6 +36,7 @@
   width: 40px;
   text-decoration: none;
   color: #606060;
+  padding-top: 21px;
 }
 
 .avatar:hover {
