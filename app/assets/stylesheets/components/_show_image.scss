@@ -3,8 +3,26 @@
   border:1px solid gray;
   background-color: $lighter-gray;
   border-radius: 5px;
+  position: relative;
+  
   .show-image {
     width: 500px;
+    align-self: center;
+    padding: 20px;
+  }
+
+  .fa-bookmark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    opacity: 0.7;
+    color: orange;
+
+    &:hover{
+    font-size: 1.7em;
+    opacity: 0.9;
+    }
   }
 }
 
@@ -22,5 +40,66 @@
   margin: 40px;
   p{
     font-size: 1.0em;
+  }
+
+  .icons-details-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 0px;
+    width: 100%;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    .rating-detail {
+      text-align: center;
+    }
+
+    .difficulty-detail {
+      text-align: center;
+    }
+
+    .likes-detail {
+      text-align: center;
+    }
+
+    .comment-detail {
+      text-align: center;
+    }
+
+    .fa-face-smile {
+      color: $green;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .fa-face-meh {
+      color: $orange;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .fa-face-frown {
+      color: $red;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .fa-comment {
+      color: $green;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .fa-star {
+      color: $orange;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .fa-heart {
+      color: $red;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
   }
 }

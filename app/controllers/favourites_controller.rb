@@ -5,9 +5,9 @@ class FavouritesController < ApplicationController
     @favourite.solution = Solution.find(params[:solution_id])
 
     if @favourite.save
-      redirect_to root_path, notice: "You have added #{@favourite.solution.title} to your favourites"
+      redirect_back_or_to root_path, notice: "You have added #{@favourite.solution.title} to your favourites"
     else
-      redirect_to root_path, notice: "#{@favourite.solution.title} is already in your favourite"
+      redirect_back_or_to root_path, notice: "#{@favourite.solution.title} is already in your favourite"
     end
   end
 
