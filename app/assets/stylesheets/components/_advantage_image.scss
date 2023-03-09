@@ -1,0 +1,28 @@
+.advantages {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 0px;
+  width: 100%;
+  align-items: flex-end;
+
+  img {
+    width: 30px;
+    filter: brightness(0) saturate(100%);
+  }
+
+  .heat-stress {
+    width: 2.3em;
+  }
+
+  .bye-bye-sound {
+    width: 1.3em;
+  }
+
+  .health {
+    width: 1.5em;
+  }
+
+  .air-quality {
+    width: 2.2em;
+  }
+}
