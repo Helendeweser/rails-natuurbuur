@@ -1,12 +1,22 @@
 <div class="small-card">
-    <% if @favourites.include? solution%>
-      <%= link_to favourite_path(solution), data: {turbo_method: :delete, turbo_confirm: "Remove this solution from your favourites?"} do %>
-        <i class="fa-solid fa-bookmark orange"></i>
+    <% if user_signed_in? %>
+      <% if @favourites.include? solution%>
+        <%= link_to favourite_path(solution), data: {turbo_method: :delete, turbo_confirm: "Remove this solutions from yor favorites ?"} do %>
+          <i class="fa-solid fa-bookmark orange"></i>
+          <% end %>
+
+      <% else%>
+
+      <%= link_to solution_favourites_path(solution), data: {turbo_method: :post} do %>
+        <i class="fa-regular fa-bookmark"></i>
+        <% end %>
       <% end %>
-    <% else%>
+
+    <% else %>
       <%= link_to solution_favourites_path(solution), data: {turbo_method: :post} do %>
         <i class="fa-regular fa-bookmark"></i>
       <% end %>
+
     <% end %>
   <%= link_to solution_path(solution) do %>
     <div class="content-small-card">

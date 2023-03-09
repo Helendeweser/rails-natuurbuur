@@ -16,5 +16,6 @@ class SolutionsController < ApplicationController
   def show
     @favourites = current_user.solutions if user_signed_in?
     @solution = Solution.find(params[:id])
+    @experience = Experience.new
   end
 end

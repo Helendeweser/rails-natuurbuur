@@ -1,4 +1,4 @@
-.show_card {
+.show-card {
   border:1px solid gray;
   background-color: $white;
   width: 1200px;
@@ -7,4 +7,38 @@
   margin: 30px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5px;
+}
+
+.experiences-card {
+  display: flex;
+  justify-content: space-between;
+  border:1px solid gray;
+  background-color: $white;
+  width: 1200px;
+  height: fit-content;
+  padding: 30px;
+  margin: 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.experiences-dispaly {
+  background-color: $white;
+  width: 40%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  color: $black;
+}
+
+.form {
+  background-color: $white;
+  margin: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  color: $black;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
