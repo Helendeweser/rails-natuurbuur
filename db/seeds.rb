@@ -2,7 +2,8 @@ require "open-uri"
 
 Solution.destroy_all
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198800/1._Square_meter_garden_ni4mkd.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198800/1._Square_meter_garden_ni4mkd.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370701/1._Square_meter_garden_ewafdp.png")
 
 solution = Solution.new(
   title: "Square meter garden",
@@ -24,12 +25,14 @@ solution = Solution.new(
   advantages: ["Health", "Well-being", "Food production"]
 )
 
-solution.photo.attach(io: image, filename: "1. Square meter garden", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198803/2._Square_meter_garden_on_the_ground_jesbgt.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198803/2._Square_meter_garden_on_the_ground_jesbgt.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370701/2._Square_meter_garden_ground_uwsgzh.png")
 
 solution = Solution.new(
   title: "Square meter garden (ground)",
@@ -53,12 +56,14 @@ solution = Solution.new(
   advantages: ["Health", "Well-being", "Food production"]
 )
 
-solution.photo.attach(io: image, filename: "2. Square meter garden on the ground", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198803/3._Fruit_tree_xtj2cr.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198803/3._Fruit_tree_xtj2cr.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370702/3._Fruit_tree_uv2kvj.png")
 
 solution = Solution.new(
   title: "Fruit tree",
@@ -79,12 +84,14 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Health", "Well-being", "Energy use", "Property value", "Food production"]
 )
 
-solution.photo.attach(io: image, filename: "3. Fruit tree", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198806/4._Espalier_k49o2i.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198806/4._Espalier_k49o2i.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370701/4._Espalier_zjuxqb.png")
 
 solution = Solution.new(
   title: "Espalier",
@@ -104,12 +111,14 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Health", "Well-being", "Energy use", "Property value"]
 )
 
-solution.photo.attach(io: image, filename: "4. Espalier", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198802/5._Climate_tree_gvduxh.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198802/5._Climate_tree_gvduxh.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370701/5._Climate_tree_jhsve6.png")
 
 solution = Solution.new(
   title: "Climate tree",
@@ -123,12 +132,14 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Bye, bye sound", "Health", "Well-being", "Energy use", "Property value"]
 )
 
-solution.photo.attach(io: image, filename: "5. Climate tree", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198801/6._Roof_tree_gxbfpt.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198801/6._Roof_tree_gxbfpt.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370701/6._Roof_tree_eemvxk.png")
 
 solution = Solution.new(
   title: "Roof tree",
@@ -144,12 +155,14 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Health", "Well-being", "Energy use", "Property value"]
 )
 
-solution.photo.attach(io: image, filename: "6. Roof tree", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198802/7._Rainwater_pond_t5li2p.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198802/7._Rainwater_pond_t5li2p.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370701/7._Rainwater_pond_nto453.png")
 
 solution = Solution.new(
   title: "Rainwater pond",
@@ -165,12 +178,14 @@ solution = Solution.new(
   advantages: ["Water balance", "Water quality", "Heat stress", "Biodiversity", "Drought resistance"]
 )
 
-solution.photo.attach(io: image, filename: "7. Rainwater pond", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198800/8._Mini_pond_l7ypur.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198800/8._Mini_pond_l7ypur.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370702/8._Mini_pond_frq35w.png")
 
 solution = Solution.new(
   title: "Mini pond",
@@ -184,12 +199,14 @@ solution = Solution.new(
   advantages: ["Biodiversity"]
 )
 
-solution.photo.attach(io: image, filename: "8. Mini pond", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198802/9._Bioswale_gfi4fs.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198802/9._Bioswale_gfi4fs.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370702/9._Bioswale_tmrpiy.png")
 
 solution = Solution.new(
   title: "Bioswale",
@@ -209,12 +226,14 @@ solution = Solution.new(
   advantages: ["Water balance", "Water quality", "Heat stress", "Soil quality", "Biodiversity", "Drought resistance"]
 )
 
-solution.photo.attach(io: image, filename: "9. Bioswale", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198806/10._Micro_forest_i8fam3.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198806/10._Micro_forest_i8fam3.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370703/10._Micro_forest_z7g1nq.png")
 
 solution = Solution.new(
   title: "Micro forest",
@@ -228,12 +247,14 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Soil quality", "Biodiversity", "Bye, bye sound", "Health", "Well-being", "Property value"]
 )
 
-solution.photo.attach(io: image, filename: "10. Micro forest", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198803/11._Balcony_green_ucgade.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198803/11._Balcony_green_ucgade.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370703/11._Green_Balcony_jmh1iq.png")
 
 solution = Solution.new(
   title: "Balcony green",
@@ -247,12 +268,14 @@ solution = Solution.new(
   advantages: ["Heat stress", "Air quality", "Biodiversity", "Health", "Well-being"]
 )
 
-solution.photo.attach(io: image, filename: "11. Balcony green", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198806/12._Branch_rill_nrs7cy.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198806/12._Branch_rill_nrs7cy.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370703/12._Branch_rill_xl98bo.png")
 
 solution = Solution.new(
   title: "Branch rill",
@@ -266,12 +289,14 @@ solution = Solution.new(
   advantages: ["Biodiversity"]
 )
 
-solution.photo.attach(io: image, filename: "12. Branch rill", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198805/13._Willow_hut_wqtmgs.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198805/13._Willow_hut_wqtmgs.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370704/12._Willow_tree_zlx5f8.png")
 
 solution = Solution.new(
   title: "Willow hut",
@@ -285,12 +310,14 @@ solution = Solution.new(
   advantages: ["Biodiversity", "Health", "Well-being"]
 )
 
-solution.photo.attach(io: image, filename: "13. Willow hut", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198805/14._Blue_roof_kunz0r.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198805/14._Blue_roof_kunz0r.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370704/14._Blue_roof_ofcbc8.png")
 
 solution = Solution.new(
   title: "Blue roof",
@@ -310,13 +337,15 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Energy use"]
 )
 
-solution.photo.attach(io: image, filename: "14. Blue roof", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198807/15._Green_flat_roof_rsgd7j.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198807/15._Green_flat_roof_rsgd7j.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370704/15._Green_flat_roof_fmuyah.png")
 
 solution = Solution.new(
   title: "Green flat roof",
@@ -334,12 +363,14 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Bye, bye sound", "Health", "Well-being", "Energy use", "Lifespan roof", "Property value"]
 )
 
-solution.photo.attach(io: image, filename: "15. Green flat roof", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198809/16._Green_sloping_roof_gc5pz8.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198809/16._Green_sloping_roof_gc5pz8.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370704/16._Green_flat_roof_ljpzhv.png")
 
 solution = Solution.new(
   title: "Green sloping roof",
@@ -357,12 +388,14 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Bye, bye sound", "Health", "Well-being", "Energy use", "Lifespan roof", "Property value"]
 )
 
-solution.photo.attach(io: image, filename: "16. Green sloping roof", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198809/17._Self-attaching_climbing_plant_dzonrj.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198809/17._Self-attaching_climbing_plant_dzonrj.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370704/17._Self-attaching_climbing_plant_kfpue5.png")
 
 solution = Solution.new(
   title: "Self-attaching climbing plant",
@@ -387,13 +420,15 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Bye, bye sound", "Health", "Well-being", "Energy use", "Lifespan facade"]
 )
 
-solution.photo.attach(io: image, filename: "17. Self-attaching climbing plant", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198808/18._Non-self-attaching_climbing_plant_e2yvxc.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198808/18._Non-self-attaching_climbing_plant_e2yvxc.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370704/18._Self-attaching_climbing_plant_xjzm9x.png")
 
 solution = Solution.new(
   title: "Non-self-attaching climbing plant",
@@ -419,13 +454,15 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Bye, bye sound", "Health", "Well-being", "Energy use", "Lifespan facade"]
 )
 
-solution.photo.attach(io: image, filename: "18. Non-self-attaching climbing plant", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198808/19._Hedge_jvgjpq.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198808/19._Hedge_jvgjpq.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370704/19._Hedge_vwvr9j.png")
 
 solution = Solution.new(
   title: "Hedge",
@@ -439,14 +476,16 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Health", "Well-being"]
 )
 
-solution.photo.attach(io: image, filename: "19. Hedge", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198811/20._Permeable_pavement_zwtder.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198811/20._Permeable_pavement_zwtder.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370705/20._Permeable_pavement_tana4x.png")
 
 solution = Solution.new(
   title: "Permeable pavement",
@@ -470,7 +509,8 @@ solution = Solution.new(
   advantages: ["Water balance", "Drought resistance"]
 )
 
-solution.photo.attach(io: image, filename: "20. Permeable pavement", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
@@ -478,7 +518,8 @@ puts "Creating solution #{solution.id}..."
 
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678199371/21._Grey_to_green_saiams.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678199371/21._Grey_to_green_saiams.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370705/21._Grey_to_green_gttwke.png")
 
 solution = Solution.new(
   title: "Grey to green",
@@ -506,14 +547,16 @@ solution = Solution.new(
   advantages: ["Water balance", "Water quality", "Heat stress", "Air quality", "Soil quality", "Biodiversity", "Health", "Well-being", "Property value", "Drought resistance"]
 )
 
-solution.photo.attach(io: image, filename: "21. Grey to green", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678199257/22._Car_sharing_qoj8i6.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678199257/22._Car_sharing_qoj8i6.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370705/22._Car_sharing_n6mh6f.png")
 
 solution = Solution.new(
   title: "Car sharing",
@@ -537,7 +580,8 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Bye, bye sound", "Health", "Well-being"]
 )
 
-solution.photo.attach(io: image, filename: "22. Car sharing", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
@@ -545,7 +589,8 @@ puts "Creating solution #{solution.id}..."
 
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198810/23._Heat_pump_llmmnh.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198810/23._Heat_pump_llmmnh.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370705/23._Heat_pump_jwgmo7.png")
 
 solution = Solution.new(
   title: "Heat pump",
@@ -569,14 +614,16 @@ solution = Solution.new(
   advantages: ["Air quality", "Energy use", "Property value"]
 )
 
-solution.photo.attach(io: image, filename: "23. Heat pump", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678199256/24._Mow_less_v4tv95.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678199256/24._Mow_less_v4tv95.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370705/24._Mow_less_mru8gv.png")
 
 solution = Solution.new(
   title: "Mow less",
@@ -598,14 +645,16 @@ solution = Solution.new(
   advantages: ["Water balance", "Biodiversity", "Energy use", "Drought resistance"]
 )
 
-solution.photo.attach(io: image, filename: "24. Mow less", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678199254/25._Roof_insulation_yje396.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678199254/25._Roof_insulation_yje396.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370706/25._Roof_insulation_lxn8sq.png")
 
 solution = Solution.new(
   title: "Roof insulation",
@@ -629,13 +678,15 @@ solution = Solution.new(
   advantages: ["Air quality", "Bye, bye sound", "Energy use", "Lifespan roof", "Property value"]
 )
 
-solution.photo.attach(io: image, filename: "25. Roof insulation", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
 
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678199255/26._Rainwater_barrel_ueimsi.png")
+image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678199255/26._Rainwater_barrel_ueimsi.png")
+image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370706/26._Rainwater_barrel_hxpobg.png")
 
 solution = Solution.new(
   title: "Rainwater barrel",
@@ -655,6 +706,7 @@ solution = Solution.new(
   advantages: ["Water balance", "Energy use", "Drought resistance"]
 )
 
-solution.photo.attach(io: image, filename: "26. Rainwater barrel", content_type: "image/png")
+solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
 solution.save!
 puts "Creating solution #{solution.id}..."
