@@ -16,7 +16,8 @@ class FavouritesController < ApplicationController
   end
 
   def destroy
-    @favourite = Favourite.find(params[:id])
+    solution = Solution.find(params[:id])
+    @favourite = Favourite.where(solution_id: solution.id.to_s).first
     @favourite.destroy
     redirect_to dashboard_path
   end

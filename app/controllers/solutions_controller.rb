@@ -3,6 +3,7 @@ class SolutionsController < ApplicationController
 
   def index
     @solutions = Solution.all.order(:title)
+    @favourites = current_user.solutions if user_signed_in?
   end
 
   def show

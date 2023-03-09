@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :experiences
   has_many :favourites
   has_many :likes
+  has_many :solutions, through: :favourites
+
 
   validates :username, presence: true
   validates :email, :username, uniqueness: true
