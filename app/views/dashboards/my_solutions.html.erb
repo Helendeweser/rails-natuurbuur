@@ -9,7 +9,7 @@
   <% end %>
       <%= link_to solution_path(solution) do %>
         <div class="content-small-card">
-          <div><%= cl_image_tag solution.photo.key, class: "rounded-pictures"%></div>
+          <div><%= cl_image_tag solution.photos[1].key, class: "rounded-pictures"%></div>
 
           <h3><%= solution.title %></h3>
 
