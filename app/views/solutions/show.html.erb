@@ -1,5 +1,5 @@
-<div class="show_card">
-  <div class="image_card">
+<div class="show-card">
+  <div class="image-card">
     <% if user_signed_in? %>
       <% if @favourites.include? @solution%>
         <%= link_to favourite_path(@solution), data: {turbo_method: :delete, turbo_confirm: "Remove this solution from your favourites?"} do %>
@@ -39,10 +39,7 @@
     <h3>Some more information</h3><hr>
     <p><%= @solution.explanation %></p>
   </div>
-   <div data-tooltip="bla bla">
-     something here
-  </div>
-
+  
 </div>
 
 <div class="experiences-card">
