@@ -12,7 +12,7 @@
       <div class="advantages">
         <% @solution.advantages.each do |advantage| %>
           <% if advantage == "Water balance" %>
-            <%= image_tag "water_balance.png", alt: "Water balance" %>
+            <%= image_tag "water_balance.png", alt: "Water balance", data: {tooltip: "test"} %>
           <% end %>
           <% if advantage == "Water quality" %>
             <%= image_tag "water_quality.png", alt: "Water quality" %>
@@ -39,7 +39,7 @@
             <%= image_tag "well_being.png", alt: "Well-being" %>
           <% end %>
           <% if advantage == "Energy use" %>
-            <%= image_tag "energy use.png", alt: "Energy use" %>
+            <%= image_tag "energy_use.png", alt: "Energy use" %>
           <% end %>
           <% if advantage == "Lifespan roof" %>
             <%= image_tag "lifespan_roof.png", alt: "Lifespan roof" %>
@@ -64,6 +64,9 @@
   <div class="text_card">
     <h3>Some more information</h3><hr>
     <p><%= @solution.explanation %></p>
+  </div>
+   <div data-tooltip="bla bla">
+     something here
   </div>
 
 </div>
