@@ -1,6 +1,6 @@
 .navbar {
   justify-content: space-between;
-  background-color: #ffffffa3;
+  background-color: $navbar-color;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
   position: sticky;
   z-index: 1;
@@ -99,3 +99,7 @@
   /* .dropdown-menu{
     // position:static;
   } */
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: $button-color !important;
+}
