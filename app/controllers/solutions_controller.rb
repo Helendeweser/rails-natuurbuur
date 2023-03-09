@@ -14,6 +14,7 @@ class SolutionsController < ApplicationController
   end
 
   def show
+    @favourites = current_user.solutions if user_signed_in?
     @solution = Solution.find(params[:id])
   end
 end
