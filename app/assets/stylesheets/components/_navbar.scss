@@ -3,6 +3,7 @@
   background-color: #ffffffa3;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
   position: sticky;
+  z-index: 1;
 }
 
 .navbar .navbar-collapse {
@@ -93,4 +94,8 @@
   border-radius: 0 50px 50px 0;
   color: #606060;
   text-decoration:none;
+  }
+
+  .dropdown-menu{
+    // position:static;
   }

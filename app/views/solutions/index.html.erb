@@ -1,2 +1,7 @@
-<h1>hello</h1>
-<div class="formbutton" href="#">Test button</div>
+<%# CARDS INDEX %>
+<div class="cards-index">
+  <% @solutions.each do |solution| %>
+    <%# SMALL CARD: EVERYTHING CENTERED %>
+    <%= render "card", solution:solution %>
+  <% end %>
+</div>

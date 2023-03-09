@@ -19,8 +19,9 @@ solution = Solution.new(
 
   Vegetable gardening in ideal conditions is perfectly possible, and that just on your terrace or balcony!",
   price: 200,
-  category: "Garden - green",
+  category: ["Garden - green"],
   difficulty: "Easy",
+  advantages: ["Health", "Well-being", "Food production"]
 )
 
 solution.photo.attach(io: image, filename: "1. Square meter garden", content_type: "image/png")
@@ -31,7 +32,7 @@ puts "Creating solution #{solution.id}..."
 image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198803/2._Square_meter_garden_on_the_ground_jesbgt.png")
 
 solution = Solution.new(
-  title: "Square meter garden on the ground",
+  title: "Square meter garden (ground)",
   intro: "What do you do with a small, vacant patch of garden? Nothing like picking your own fruits and vegetables there, right?",
   explanation: "You need a container, 1.2 m by 1.2 m approximately. In it you plant different vegetables, fruits or herbs. You divide your box into grid squares of 30 cm by 30 cm and put one type of plant in each. So you are really gardening, but on a small area and very intensively.
 
@@ -47,8 +48,9 @@ solution = Solution.new(
 
   Vegetable gardening in ideal conditions is perfectly possible, and that just in a container in your garden!",
   price: 135,
-  category: "Garden - green",
+  category: ["Garden - green"],
   difficulty: "Easy",
+  advantages: ["Health", "Well-being", "Food production"]
 )
 
 solution.photo.attach(io: image, filename: "2. Square meter garden on the ground", content_type: "image/png")
@@ -72,8 +74,9 @@ solution = Solution.new(
 
     In terms of shape, you have quite a few choices. Will you go for a U-shaped palmette? A double U-shaped one, or just a horizontal one? One with angled branches or a fan is also possible. Here we discuss the U-shape.",
   price: 40,
-  category: "Garden - green",
+  category: ["Garden - green"],
   difficulty: "Easy",
+  advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Health", "Well-being", "Energy use", "Property value", "Food production"]
 )
 
 solution.photo.attach(io: image, filename: "3. Fruit tree", content_type: "image/png")
@@ -96,8 +99,9 @@ solution = Solution.new(
 
   Espaliers protect perfectly from full sun or prying eyes.",
   price: 100,
-  category: "Garden - green",
+  category: ["Garden - green"],
   difficulty: "Medium",
+  advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Health", "Well-being", "Energy use", "Property value"]
 )
 
 solution.photo.attach(io: image, filename: "4. Espalier", content_type: "image/png")
@@ -114,8 +118,9 @@ solution = Solution.new(
 
   The cooling is on the one hand the result of the shade created by the tree. In addition, it captures sunlight, converts that energy into water vapor, and that leads to higher humidity. Of course, the size of the tree plays a role here; the larger its crown size and leaves, the more benefits to you and our climate.",
   price: 25,
-  category: "Garden - green",
+  category: ["Garden - green"],
   difficulty: "Easy",
+  advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Bye, bye sound", "Health", "Well-being", "Energy use", "Property value"]
 )
 
 solution.photo.attach(io: image, filename: "5. Climate tree", content_type: "image/png")
@@ -134,8 +139,9 @@ solution = Solution.new(
 
   When you purchase such a tree, it already comes with a horizontal frame made of wires or wood. This frame guides the branches. Depending on what kind of tree you choose, you do have to bring out the pruning shears once or twice a year to maintain its shape. Compared to the free-standing espalier tree (see elsewhere in the catalogue), guiding a roof tree yourself is a bit more difficult. It is best to buy one that has already been pre-guided.",
   price: 140,
-  category: "Garden - green",
+  category: ["Garden - green"],
   difficulty: "Medium",
+  advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Health", "Well-being", "Energy use", "Property value"]
 )
 
 solution.photo.attach(io: image, filename: "6. Roof tree", content_type: "image/png")
@@ -154,8 +160,9 @@ solution = Solution.new(
 
   Note: you need quite a bit of space to build one. Don't have that? Then a mini pond is a great alternative. You can find this solution elsewhere in the catalogue.",
   price: 260,
-  category: "Garden - blue",
+  category: ["Garden - blue"],
   difficulty: "Medium",
+  advantages: ["Water balance", "Water quality", "Heat stress", "Biodiversity", "Drought resistance"]
 )
 
 solution.photo.attach(io: image, filename: "7. Rainwater pond", content_type: "image/png")
@@ -172,8 +179,9 @@ solution = Solution.new(
 
   Don't have a large garden or only a terrace or balcony? Even then you can have a lot of fun with a mini pond. All you need is a tub, a zinc tub or half a wine barrel.",
   price: 50,
-  category: "Balcony/terrace",
+  category: ["Balcony/terrace"],
   difficulty: "Easy",
+  advantages: ["Biodiversity"]
 )
 
 solution.photo.attach(io: image, filename: "8. Mini pond", content_type: "image/png")
@@ -196,8 +204,9 @@ solution = Solution.new(
 
   The fact that your soil stays nice and moist in the summer is suddenly a nice bonus!",
   price: 90,
-  category: "Garden - blue",
+  category: ["Garden - blue"],
   difficulty: "Medium",
+  advantages: ["Water balance", "Water quality", "Heat stress", "Soil quality", "Biodiversity", "Drought resistance"]
 )
 
 solution.photo.attach(io: image, filename: "9. Bioswale", content_type: "image/png")
@@ -214,8 +223,9 @@ solution = Solution.new(
 
   And you are now bringing it to your garden. With a free 6-square-meter plot, you can already get started and soon enjoy a mix of trees, shrubs and herbs. Choose native plants because they attract more insects, pollinators, birds and butterflies than exotic ones. They provide food, offer a place to reproduce and thus also provide food for animals higher up the chain (who in turn eat those insects, for example).",
   price: 200,
-  category: "Garden - green",
+  category: ["Garden - green"],
   difficulty: "Easy",
+  advantages: ["Water balance", "Heat stress", "Air quality", "Soil quality", "Biodiversity", "Bye, bye sound", "Health", "Well-being", "Property value"]
 )
 
 solution.photo.attach(io: image, filename: "10. Micro forest", content_type: "image/png")
@@ -232,8 +242,9 @@ solution = Solution.new(
 
   All you need are a few large pots and a sturdy balcony. Do you prefer to keep it more modest and light? Then hanging baskets and/or smaller pots are the solution for you.",
   price: 200,
-  category: "Balcony/terrace",
+  category: ["Balcony/terrace"],
   difficulty: "Easy",
+  advantages: ["Heat stress", "Air quality", "Biodiversity", "Health", "Well-being"]
 )
 
 solution.photo.attach(io: image, filename: "11. Balcony green", content_type: "image/png")
@@ -250,8 +261,9 @@ solution = Solution.new(
 
   A branch trellis is ideal as a partition, for example to hide your garbage cans behind. What's more, it offers many advantages for plants and animals.",
   price: 0,
-  category: "Garden - green",
+  category: ["Garden - green"],
   difficulty: "Easy",
+  advantages: ["Biodiversity"]
 )
 
 solution.photo.attach(io: image, filename: "12. Branch rill", content_type: "image/png")
@@ -268,8 +280,9 @@ solution = Solution.new(
 
   Large or small willow hut: that's entirely up to you. Ditto for the shape. Do you like the shape of a tunnel or do you prefer the igloo model? Anything goes! We will tell you more about a circular model: 3 meters in diameter and 2 meters high.",
   price: 100,
-  category: "Garden - green",
+  category: ["Garden - green"],
   difficulty: "Easy",
+  advantages: ["Biodiversity", "Health", "Well-being"]
 )
 
 solution.photo.attach(io: image, filename: "13. Willow hut", content_type: "image/png")
@@ -292,8 +305,9 @@ solution = Solution.new(
 
   If you don't like to see the water drain to the sewer, then a drain to your garden or reuse at home - after filtering then - are also options.",
   price: 500,
-  category: "Roof",
+  category: ["Roof"],
   difficulty: "Difficult",
+  advantages: ["Water balance", "Heat stress", "Energy use"]
 )
 
 solution.photo.attach(io: image, filename: "14. Blue roof", content_type: "image/png")
@@ -315,8 +329,9 @@ solution = Solution.new(
 
   Is your roof really completely flat (0°)? Then a slightly thicker drainage layer helps prevent puddles. And that's important, because the roots of your plants shouldn't be in water all the time. That stunts growth or worse, ends up with dead plants.",
   price: 800,
-  category: "Roof",
+  category: ["Roof"],
   difficulty: "Difficult",
+  advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Bye, bye sound", "Health", "Well-being", "Energy use", "Lifespan roof", "Property value"]
 )
 
 solution.photo.attach(io: image, filename: "15. Green flat roof", content_type: "image/png")
@@ -337,8 +352,9 @@ solution = Solution.new(
 
   The extensive green roof can be installed on both a flat (0.6°) and sloping roof up to 15°.",
   price: 850,
-  category: "Roof",
+  category: ["Roof"],
   difficulty: "Difficult",
+  advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Bye, bye sound", "Health", "Well-being", "Energy use", "Lifespan roof", "Property value"]
 )
 
 solution.photo.attach(io: image, filename: "16. Green sloping roof", content_type: "image/png")
@@ -366,8 +382,9 @@ solution = Solution.new(
 
   The benefits of a climbing plant are worth it! Studies show that such a plant with an average leaf area index covering a 17-square-meter facade captures the same amount of particulate matter as an average 25-year-old urban tree! In summer, that same climbing plant reduces room temperature by 4°C and wall temperature by 8°C!",
   price: 20,
-  category: "Facade",
+  category: ["Facade"],
   difficulty: "Easy",
+  advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Bye, bye sound", "Health", "Well-being", "Energy use", "Lifespan facade"]
 )
 
 solution.photo.attach(io: image, filename: "17. Self-attaching climbing plant", content_type: "image/png")
@@ -380,7 +397,7 @@ image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198808/
 
 solution = Solution.new(
   title: "Non-self-attaching climbing plant",
-  intro: "Studies show that a climbing plant with an average leaf area index covering a 17m² facade captures the same amount of particulate matter as an average 25-year-old urban tree!",
+  intro: "Studies show that a climber with a leaf area index covering a 17m² facade captures the same amount of particulate matter as an average 25-year-old urban tree!",
   explanation: "Your facade likes different types of greenery. A climbing plant is a very good option. But before you choose which one to use, check which one is best for your facade.
 
   •	How many hours of sunlight does it get per day?
@@ -397,8 +414,9 @@ solution = Solution.new(
 
   The benefits of a climbing plant are worth it! Studies show that such a plant with an average leaf area index covering a facade of 17 m² captures the same amount of particulate matter as an average 25-year-old urban tree! In summer, that same climbing plant reduces room temperature by 4°C and wall temperature by 8°C!",
   price: 40,
-  category: "Facade",
+  category: ["Facade"],
   difficulty: "Easy",
+  advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Bye, bye sound", "Health", "Well-being", "Energy use", "Lifespan facade"]
 )
 
 solution.photo.attach(io: image, filename: "18. Non-self-attaching climbing plant", content_type: "image/png")
@@ -416,8 +434,9 @@ solution = Solution.new(
 
   If your hedge borders others or gardens and groves, the passage of insects, birds, reptiles, amphibians and mammals ensures healthy populations.",
   price: 60,
-  category: "Garden - green",
+  category: ["Garden - green"],
   difficulty: "Easy",
+  advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Health", "Well-being"]
 )
 
 solution.photo.attach(io: image, filename: "19. Hedge", content_type: "image/png")
@@ -431,7 +450,7 @@ image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198811/
 
 solution = Solution.new(
   title: "Permeable pavement",
-  intro: "Does this sound familiar to you? You actually want a paved surface for (part of) your patio or garden, but you don't want to harm the environment. There is a sympathetic solution!",
+  intro: "You want a paved surface for (part of) your patio or garden, but you don't want to harm the environment? There is a sympathetic solution!",
   explanation: "Whichever way you look at it, every garden needs some paving (at some point). For your patio, because you would rather not see your chairs or table sink into the grass. For a path, to keep your feet dry in the morning dew. Or for your driveway, to neatly park your two- or four-wheeler(s).
 
   The basic rule is: the sum of all your paved surfaces does not exceed 40% of your garden area. And as with a lot of things, the less hardiness, the better.
@@ -446,8 +465,9 @@ solution = Solution.new(
 
   Attention: this paving only belongs on substrates that are well-drained. And then sandy soil or loamy sandy soil are perfect candidates.",
   price: 1200,
-  category: "Pavement",
+  category: ["Pavement"],
   difficulty: "Difficult",
+  advantages: ["Water balance", "Drought resistance"]
 )
 
 solution.photo.attach(io: image, filename: "20. Permeable pavement", content_type: "image/png")
@@ -481,8 +501,9 @@ solution = Solution.new(
 
   Is paving here and there indispensable? Then take a look at the permeable or water-leveling options. With the former, rainwater runs directly through the material; the latter allows it to seep into the ground through wide joints or openings.",
   price: 500,
-  category: "Pavement",
+  category: ["Pavement"],
   difficulty: "Medium",
+  advantages: ["Water balance", "Water quality", "Heat stress", "Air quality", "Soil quality", "Biodiversity", "Health", "Well-being", "Property value", "Drought resistance"]
 )
 
 solution.photo.attach(io: image, filename: "21. Grey to green", content_type: "image/png")
@@ -511,8 +532,9 @@ solution = Solution.new(
 
   By the way, shared cars come in all shapes and sizes. For a move you use a van, for an appointment in the city a smaller electric car, for a family visit with your children a monovolume. The type of travel is also flexible. Some organizations focus more on trips of a day or less; with others you can easily leave for several weeks or longer.",
   price: 0,
-  category: "Street",
+  category: ["Street"],
   difficulty: "Medium",
+  advantages: ["Water balance", "Heat stress", "Air quality", "Bye, bye sound", "Health", "Well-being"]
 )
 
 solution.photo.attach(io: image, filename: "22. Car sharing", content_type: "image/png")
@@ -542,8 +564,9 @@ solution = Solution.new(
 
   There are 5 different heat pump systems; you can read all about them on the next page.",
   price: 3000,
-  category: "Roof",
+  category: ["Roof"],
   difficulty: "Difficult",
+  advantages: ["Air quality", "Energy use", "Property value"]
 )
 
 solution.photo.attach(io: image, filename: "23. Heat pump", content_type: "image/png")
@@ -570,8 +593,9 @@ solution = Solution.new(
 
   Interesting know-it-all: an Argentine grassland scored a world record in terms of number of habitat types per m². That was a whopping 89! It nicely demonstrates that even your patch of garden, no matter how small, can play a firm leading role in increasing the biodiversity of your environment.",
   price: 0,
-  category: "Garden - green",
+  category: ["Garden - green"],
   difficulty: "Easy",
+  advantages: ["Water balance", "Biodiversity", "Energy use", "Drought resistance"]
 )
 
 solution.photo.attach(io: image, filename: "24. Mow less", content_type: "image/png")
@@ -600,8 +624,9 @@ solution = Solution.new(
 
   Do you already feel the benefits? Then perhaps a heat pump is the next step for you.",
   price: 1500,
-  category: "Roof",
+  category: ["Roof"],
   difficulty: "Difficult",
+  advantages: ["Air quality", "Bye, bye sound", "Energy use", "Lifespan roof", "Property value"]
 )
 
 solution.photo.attach(io: image, filename: "25. Roof insulation", content_type: "image/png")
@@ -625,8 +650,9 @@ solution = Solution.new(
 
   Today, you have numerous forms to choose from. There are rain barrels shaped like flower pots, authentic wine barrels, pitchers, raindrops with integrated watering cans, and so on. So which rainwater barrel you choose depends on your taste, but also on where you want your rainwater barrel (garden, sidewalk, balcony,...) and how much water you want to collect in it (sizes range from 50 to as much as 1000 liters!).",
   price: 80,
-  category: "Garden - blue",
+  category: ["Garden - blue"],
   difficulty: "Easy",
+  advantages: ["Water balance", "Energy use", "Drought resistance"]
 )
 
 solution.photo.attach(io: image, filename: "26. Rainwater barrel", content_type: "image/png")
