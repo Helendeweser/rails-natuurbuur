@@ -17,7 +17,7 @@
       <% end %>
     <% end %>
 
-    <%= cl_image_tag @solution.photo.key, class: "show-image" %>
+    <%= cl_image_tag @solution.photos.first.key, class: "show-image" %>
 
     <div class="side-text">
       <h2><%= @solution.title%></h2>
@@ -39,7 +39,7 @@
     <h3>Some more information</h3><hr>
     <p><%= @solution.explanation %></p>
   </div>
-  
+
 </div>
 
 <div class="experiences-card">
