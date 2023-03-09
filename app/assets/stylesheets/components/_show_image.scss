@@ -1,4 +1,4 @@
-.image_card {
+.image-card {
   display: flex;
   border:1px solid gray;
   background-color: $lighter-gray;
@@ -8,7 +8,7 @@
   }
 }
 
-.text_card {
+.text-card {
   margin-top: 10px;
   margin-bottom: 10px;
   p{
@@ -18,7 +18,7 @@
 
 }
 
-.side_text {
+.side-text {
   margin: 40px;
   p{
     font-size: 1.0em;

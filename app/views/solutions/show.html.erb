@@ -1,10 +1,10 @@
-<div class="show_card">
-  <div class="image_card">
+<div class="show-card">
+  <div class="image-card">
     <div>
       <%= cl_image_tag @solution.photo.key, class: "show-image" %>
     </div>
 
-    <div class="side_text">
+    <div class="side-text">
       <h2><%= @solution.title%></h2>
       <br>
       <p><%= @solution.intro%></p>
@@ -61,9 +61,35 @@
     </div>
   </div>
 
-  <div class="text_card">
+  <div class="text-card">
     <h3>Some more information</h3><hr>
     <p><%= @solution.explanation %></p>
+  </div>
+
+</div>
+
+<div class="experiences-card">
+  <div class="experiences-dispaly">
+      <h2>Reviews :</h2><br>
+
+      <% @solution.experiences.each do |experience| %>
+      <%= experience.content %>
+      <%= experience.rating %><br><hr>
+      <% end %>
+    </div>
+
+  <div class="form-container">
+    <div class="form">
+      <%= simple_form_for [@solution, @experience] do |f| %>
+      <%# <%= f.input :username, :label => 'Your name' %>
+      <%= f.input :rating, :label => 'rating' %>
+      <%= f.input :content, :label => 'Your experience' %>
+      <%= f.input :photo, as: :file %>
+        <div class="form-button">
+          <%= f.button :submit, "share" %>
+          <% end %>
+        </div>
+    </div>
   </div>
 
 </div>

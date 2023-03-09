@@ -1,12 +1,12 @@
-.form_card {
+.form-card {
   width: 40%;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.form_container {
+.form-container {
   display: flex;
   justify-content: center;
-  .form_box {
+  .form-box {
     background-color: $white;
     width: 40%;
     margin: 50px;
@@ -21,7 +21,7 @@
    .form-control {
     background-color: $white;
   }
-  
+
    .form-control:focus {
     background-color: $white;
    }
