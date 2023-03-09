@@ -15,5 +15,6 @@ class SolutionsController < ApplicationController
 
   def show
     @solution = Solution.find(params[:id])
+    @experience = Experience.new
   end
 end

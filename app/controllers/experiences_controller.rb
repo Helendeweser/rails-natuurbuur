@@ -7,7 +7,6 @@ class ExperiencesController < ApplicationController
     @experience = Experience.new(experiences_params)
     @experience.user = current_user
     @experience.solution = @solution
-    raise
 
     # Still have stuff to do
       if @experience.save
@@ -15,7 +14,6 @@ class ExperiencesController < ApplicationController
       else
         render "path", status: :unprocessable_entity
       end
-
   end
 
   def update
@@ -35,7 +33,7 @@ class ExperiencesController < ApplicationController
   private
 
   def experiences_params
-    params.require(:experiences).permit(:content, :rating, :photo)
+    params.require(:experience).permit(:content, :rating, :photo)
   end
 
   def set_solution
