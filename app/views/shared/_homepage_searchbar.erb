@@ -1,24 +1,20 @@
 <%# FIRST DIV FOR THE WHOLE BANNER CONTAINING THE PICTURE%>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1423600/pexels-photo-1423600.jpeg);height: 105px; display: inline-flex;width: 100%;">
+<div id="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1423600/pexels-photo-1423600.jpeg);height: 105px;">
   <div class="container">
 <%# MAIN TITLE WITH BRAND NAME AND CATCH PHRASE ON THE LEFT %>
     <div class="banner-text">
       <h1>Welcome on <strong>Natuurbuur</strong> !</h1>
       <p>The place for finding your perfect environmental solutions</p>
-    </div>
-  </div>
-<%# SEARCH BAR AND FILTER BAR %>
-  <div class="searchbar-banner">
-    <div class="container-fluid" >
+    <div class="searchbar-banner">
 <%# SEARCH BAR PART %>
-      <div class="row align-items-center justify-content-end" style="background-color: #fff9; border-radius: 25px; width: max-content; position:fixed; left:800px;top: 210px;">
+      <div class="row align-items-center" style="background-color: #fff9; border-radius: 25px; width: max-content;">
         <div class="col-md-2" style="display: flex;">
         <%# SEARCH BAR %>
           <%= form_with url: root_path, method: :get, class: "d-flex" do %>
             <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Search a solution"%>
             <%= submit_tag "O", class: "btn" %>
           <% end %>
-<%#             <input class="search_input" type="text" name="" placeholder="Search..." style="width: 120px;">
+<%#         <input class="search_input" type="text" name="" placeholder="Search..." style="width: 120px;">
             <a href="#" class="search_icon"><i class="fas fa-search"></i></a> %>
         </div>
 <%# FILTER BAR PART %>
@@ -57,10 +53,11 @@
           <div class="form-group" style="border-right: 1px solid grey;">
             <select id="inputState" class="form-control" style="background-color: #fff0;color: black;font-weight: bold;">
               <option selected> Price : </option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
+              <option>Less than 500€</option>
+              <option>500€ - 1000€</option>
+              <option>1000€ - 1500€</option>
+              <option>1500€ - 2000€</option>
+              <option> More than 2000€</option>
             </select>
           </div>
         </div>
@@ -79,4 +76,7 @@
       </div>
     </div>
   </div>
-</div>
+
+    </div>
+  </div>
+<%# SEARCH BAR AND FILTER BAR %>
