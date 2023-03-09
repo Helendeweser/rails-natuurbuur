@@ -17,6 +17,15 @@
     color: $black;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
    }
+
+   .form-control {
+    background-color: $white;
+  }
+  
+   .form-control:focus {
+    background-color: $white;
+   }
+
    h2{
     text-align: center;
   }
