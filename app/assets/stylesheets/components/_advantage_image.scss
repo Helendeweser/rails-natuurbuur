@@ -1,0 +1,11 @@
+.advantages {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 0px;
+  width: 100%;
+
+  img {
+    width: 30px;
+    filter: brightness(0) saturate(100%);
+  }
+}
