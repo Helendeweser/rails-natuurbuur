@@ -1,7 +1,12 @@
+<%# BANNER %>
+<%= render "shared/homepage_searchbar" %>
+<div id="content-wrap">
+
 <%# CARDS INDEX %>
-<div class="cards-index">
-  <% @solutions.each do |solution| %>
-    <%# SMALL CARD: EVERYTHING CENTERED %>
-    <%= render "card", solution:solution %>
-  <% end %>
-</div>
+  <div class="cards-index">
+    <% @solutions.each do |solution| %>
+      <%# SMALL CARD: EVERYTHING CENTERED %>
+      <%= render "card", solution:solution %>
+    <% end %>
+  </div>
+  </div>
