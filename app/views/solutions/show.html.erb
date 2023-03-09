@@ -43,26 +43,23 @@
 </div>
 
 <div class="experiences-card">
-  <div class="experiences-dispaly">
-      <h2>Reviews :</h2><br>
+  <div class="experiences-display">
+    <h2>Reviews :</h2><br>
 
-      <% @solution.experiences.each do |experience| %>
-      <%= experience.content %>
-      <%= experience.rating %><br><hr>
-      <% end %>
-    </div>
+    <% @solution.experiences.each do |experience| %>
+    <%= experience.content %>
+    <%= experience.rating %><br><hr>
+    <% end %>
+  </div>
 
-  <div class="form-container">
-    <div class="form">
-      <%= simple_form_for [@solution, @experience] do |f| %>
-      <%# <%= f.input :username, :label => 'Your name' %>
-      <%= f.input :rating, :label => 'rating' %>
-      <%= f.input :content, :label => 'Your experience' %>
-      <%= f.input :photo, as: :file %>
-        <div class="form-button">
-          <%= f.button :submit, "share" %>
-          <% end %>
-        </div>
+  <div class="form">
+    <%= simple_form_for [@solution, @experience] do |f| %>
+    <%= f.input :rating, :label => 'rating' %>
+    <%= f.input :content, :label => 'Your experience' %>
+    <%= f.input :photo, as: :file %>
+    <div class="form-button">
+    <%= f.button :submit, "share" %>
+    <% end %>
     </div>
   </div>
 
