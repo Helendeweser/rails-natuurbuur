@@ -1,10 +1,10 @@
 <div class="navbar">
   <div class="container">
-
+<%# PART FOR THE HOUSE LOGO REDRIRECTING TO THE HOMEPAGE %>
     <%= link_to root_path, class:"house-logo" do %>
       <i class="fa-solid fa-house"></i>
     <% end %>
-
+<%# CONTAINER FOR THE SEARCHBAR DISPLAYED ON THE RIGHT %>
     <div class="d-flex justify-content-center">
       <div class="container">
         <div class="searchbar">
@@ -12,12 +12,12 @@
           <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
         </div>
       </div>
-
+<%# CONTAINER FOR THE SAVE FLAG DISPLAYED ON THE RIGHT REDIRECTING TO THE DASHBOARD %>
       <div class="user-and-save-btn">
         <%= link_to dashboard_path, class:"save-logo" do %>
           <i class="fa-regular fa-bookmark"></i>
         <% end %>
-
+<%# CONTAINER FOR THE DROPDOWN BUTTON WITH THE LOGIN AND SIGN UP %>
       <div class="nav-item dropdown">
         <i class="fa-regular fa-user avatar dropdown-toggle " id= "navbarDropdown" data-bs-toggle= "dropdown", aria-haspopup= "true", aria-expanded= "false"></i>
         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
