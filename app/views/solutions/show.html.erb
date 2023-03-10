@@ -47,20 +47,30 @@
     <h2>Reviews :</h2><br>
 
     <% @solution.experiences.each do |experience| %>
-    <%= experience.content %>
-    <%= experience.rating %><br><hr>
+      <div class="card-review">
+        <%  if experience.photo.key != nil %>
+        <div class= "container-img">
+          <%= cl_image_tag experience.photo.key, class: "image"%>
+        </div>
+        <% end %>
+        <div class="card-review-infos">
+          <p><%= experience.content %></p>
+        </div>
+         <div class="rating">
+            <%= experience.rating %>
+          </div>
+      </div>
     <% end %>
   </div>
 
-  <div class="form">
+   <div class="form">
     <%= simple_form_for [@solution, @experience] do |f| %>
-    <%= f.input :rating, :label => 'rating' %>
+    <%= f.input :rating, :label => 'Rating' %>
     <%= f.input :content, :label => 'Your experience' %>
     <%= f.input :photo, as: :file %>
     <div class="form-button">
-    <%= f.button :submit, "share" %>
+    <%= f.button :submit, "Share" %>
     <% end %>
     </div>
-  </div>
-
+</div>
 </div>
