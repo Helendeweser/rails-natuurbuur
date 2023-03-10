@@ -1,18 +1,16 @@
 <div class="likes-detail">
-<%= link_to solution_likes_path(@solution), data: {turbo_method: :post} do %>
   <i class="fa-solid fa-heart"></i>
-<% end %>
-  <p>0</p>
+  <p><%= solution.likes.count %></p>
 </div>
 
 <div class="rating-detail">
   <i class="fa-solid fa-star"></i>
-  <p><%= solution.average_rating%></p>
+  <p><%= solution.average_rating %></p>
 </div>
 
 <div class="comment-detail">
   <i class="fa-solid fa-comment"></i>
-  <p>0</p>
+  <p><%= solution.experiences.count %></p>
 </div>
 
 <div class="difficulty-detail">
