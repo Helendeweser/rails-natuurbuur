@@ -5,4 +5,24 @@ class Solution < ApplicationRecord
   has_many :users, through: :favourites
 
   has_many_attached :photos
+
+  def average_rating
+    if experiences.first
+      ratings_average
+    else
+      "New"
+    end
+  end
+
+  def number_of_likes
+  end
+
+  private
+
+  def ratings_average
+    ratings = experiences.map(&:rating)
+    total = ratings.sum
+    total / ratings.size
+  end
+
 end

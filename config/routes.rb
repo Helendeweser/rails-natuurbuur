@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :solutions, only: [:show] do
     resources :favourites, only: [:create]
     resources :experiences, only: [:create]
+    resources :likes, only: [:create]
   end
 
   resources :favourites, only: [:destroy]

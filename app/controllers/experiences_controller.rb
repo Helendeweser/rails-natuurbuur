@@ -12,7 +12,8 @@ class ExperiencesController < ApplicationController
       if @experience.save
         redirect_to solution_path(@solution)
       else
-        render "path", status: :unprocessable_entity
+        @favourites = current_user.solutions if user_signed_in?
+        render "solutions/show", status: :unprocessable_entity
       end
   end
 

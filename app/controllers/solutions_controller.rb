@@ -11,11 +11,17 @@ class SolutionsController < ApplicationController
     else
       @solutions
     end
+
+    # if @solution.experiences.first
+    #   @average_rating = ratings_average(@solution)
+    # end
   end
 
   def show
     @favourites = current_user.solutions if user_signed_in?
     @solution = Solution.find(params[:id])
     @experience = Experience.new
+    @likes = current_user.likes if user_signed_in?
   end
+
 end
