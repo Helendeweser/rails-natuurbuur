@@ -11,6 +11,10 @@ class SolutionsController < ApplicationController
     else
       @solutions
     end
+
+    # if @solution.experiences.first
+    #   @average_rating = ratings_average(@solution)
+    # end
   end
 
   def show
@@ -18,4 +22,5 @@ class SolutionsController < ApplicationController
     @solution = Solution.find(params[:id])
     @experience = Experience.new
   end
+
 end

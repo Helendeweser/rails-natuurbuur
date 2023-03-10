@@ -5,4 +5,5 @@ class Experience < ApplicationRecord
   has_one_attached :photo
 
   validates :rating, :user_id, :solution_id, :content, presence: true
+  validates :rating, numericality: { in: (0..5) }
 end

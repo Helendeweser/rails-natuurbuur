@@ -1,16 +1,10 @@
 class LikesController < ApplicationController
   def create
-    # To implement
     @like = Like.new(like_params)
     @like.user = current_user
     @like.solution = Solution.find(params[:solution_id])
-    raise
 
-    # Still have stuff to do
-    if @like.save
-    else
-      render "path", status: :unprocessable_entity
-    end
+    redirect_back_or_to root_path if @like.save
 
   end
 
