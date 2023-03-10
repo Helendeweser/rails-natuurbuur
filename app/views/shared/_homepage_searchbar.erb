@@ -1,15 +1,17 @@
 <%# FIRST DIV FOR THE WHOLE BANNER CONTAINING THE PICTURE%>
 <div id="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1423600/pexels-photo-1423600.jpeg);height: 105px;">
   <div class="container">
-<%# MAIN TITLE WITH BRAND NAME AND CATCH PHRASE ON THE LEFT %>
+
+    <%# MAIN TITLE WITH BRAND NAME AND CATCH PHRASE ON THE LEFT %>
     <div class="banner-text" style="margin-top: -55px;">
-      <h1>Welcome on <strong>Natuurbuur</strong> !</h1>
+      <h1>Welcome to <strong>Upgreen</strong> !</h1>
       <p>The place for finding your perfect environmental solutions</p>
     <div class="searchbar-banner">
-<%# SEARCH BAR PART %>
+
+      <%# SEARCH BAR PART %>
       <div class="row align-items-center" style="background-color: #fff9; border-radius: 25px; width: max-content;">
-        <div class="col-md-2" style="display: flex;">
         <%# SEARCH BAR %>
+        <div class="col-md-2" style="display: flex;">
           <%= form_with url: root_path, method: :get, class: "d-flex" do %>
             <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Search a solution"%>
             <%= submit_tag "O", class: "btn" %>
@@ -17,12 +19,12 @@
 <%#         <input class="search_input" type="text" name="" placeholder="Search..." style="width: 120px;">
             <a href="#" class="search_icon"><i class="fas fa-search"></i></a> %>
         </div>
-<%# FILTER BAR PART %>
 
+        <%# FILTER BAR PART %>
         <div class="col-md-2">
           <div class="form-group" style="border-right: 1px solid grey; border-left: 1px solid grey;">
-            <select id="inputState " class="form-control" style="background-color: #fff0; color: black;font-weight: bold;">
-              <option>Category :</option>
+            <select id="inputState" class="form-control" style="background-color: #fff0; color: black;font-weight: bold;">
+              <option>Category:</option>
               <option><a href="<%=root_path%>?query=Garden_green&commit=O">Garden - green</a></option>
               <option><a href="<%=root_path%>?query=Garden_blue&commit=O">Garden - blue</a></option>
               <option><a href="<%=root_path%>?query=Roof&commit=O">Roof</a></option>
