@@ -1,3 +1,7 @@
+<% content_for :meta_title, "#{@solution.title} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @solution.intro %>
+<% content_for :meta_image, cl_image_path(@solution.photos.first.key) if @solution.photos.attached? %>
+
 <div class="show-card">
   <div class="image-card">
     <% if user_signed_in? %>
