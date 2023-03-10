@@ -1,47 +1,51 @@
 <% @solution.advantages.each do |advantage| %>
   <% if advantage == "Water balance" %>
-    <%= image_tag "water_balance.png", alt: "Water balance" %>
+    <%= image_tag "water_balance.png", alt: "Water balance", data: { controller: "tooltip", bs_toggle:"tooltip", bs_placement:"top"}, title:"Water balance" %>
   <% end %>
-  <% if advantage == "Water quality" %>
-    <%= image_tag "water_quality.png", alt: "Water quality" %>
+<%# data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top"
+ %>
+ <% if advantage == "Water quality" %>
+    <%= image_tag "water_quality.png", alt: "Water quality" , data: { controller: "tooltip", bs_toggle:"tooltip", bs_placement:"top"}, title:"Water quality" %>
   <% end %>
+
   <% if advantage == "Heat stress" %>
-    <%= image_tag "heat_stress.png", alt: "Heat stress" , class: "heat-stress"%>
+    <%= image_tag "heat_stress.png", alt: "Heat stress" , class: "heat-stress", data: { controller: "tooltip", bs_toggle:"tooltip", bs_placement:"top"}, title:"Heat stress" %>
   <% end %>
+
   <% if advantage == "Air quality" %>
-    <%= image_tag "air_quality.png", alt: "Air quality" , class: "air-quality"%>
+    <%= image_tag "air_quality.png", alt: "Air quality" , class: "air-quality", data: { controller: "tooltip", bs_toggle:"tooltip", bs_placement:"top"}, title:"Air quality"%>
   <% end %>
   <% if advantage == "Soil quality" %>
-    <%= image_tag "soil_quality.png", alt: "Soil quality" %>
+    <%= image_tag "soil_quality.png", alt: "Soil quality", data: { controller: "tooltip", bs_toggle:"tooltip", bs_placement:"top"}, title:"Soil quality" %>
   <% end %>
   <% if advantage == "Biodiversity" %>
-    <%= image_tag "biodiversity.png", alt: "Biodiversity" %>
+    <%= image_tag "biodiversity.png", alt: "Biodiversity", data: { controller: "tooltip", bs_toggle:"tooltip", bs_placement:"top"}, title:"Biodiversity" %>
   <% end %>
   <% if advantage == "Bye, bye sound" %>
-    <%= image_tag "bye_bye_sound.png", alt: "Bye, bye sound" , class: "bye-bye-sound"%>
+    <%= image_tag "bye_bye_sound.png", alt: "Bye, bye sound" , class: "bye-bye-sound", data: { controller: "tooltip", bs_toggle:"tooltip", bs_placement:"top"}, title:"Bye, bye sound"%>
   <% end %>
   <% if advantage == "Health" %>
-    <%= image_tag "health.png", alt: "Health" , class: "health"%>
+    <%= image_tag "health.png", alt: "Health" , class: "health", data: { controller: "tooltip", bs_toggle:"tooltip", bs_placement:"top"}, title:"Health"%>
   <% end %>
   <% if advantage == "Well-being" %>
-    <%= image_tag "well_being.png", alt: "Well-being" %>
+    <%= image_tag "well_being.png", alt: "Well-being", data: { controller: "tooltip", bs_toggle:"tooltip", bs_placement:"top"}, title:"Well-being" %>
   <% end %>
   <% if advantage == "Energy use" %>
-    <%= image_tag "energy_use.png", alt: "Energy use" %>
+    <%= image_tag "energy_use.png", alt: "Energy use", data: { controller: "tooltip", bs_toggle:"tooltip", bs_placement:"top"}, title:"Energy use" %>
   <% end %>
   <% if advantage == "Lifespan roof" %>
-    <%= image_tag "lifespan_roof.png", alt: "Lifespan roof" %>
+    <%= image_tag "lifespan_roof.png", alt: "Lifespan roof", data: { controller: "tooltip", bs_toggle:"tooltip", bs_placement:"top"}, title:"Lifespan roof" %>
   <% end %>
   <% if advantage == "Lifespan facade" %>
-    <%= image_tag "lifespan_facade.png", alt: "Lifespan facade" %>
+    <%= image_tag "lifespan_facade.png", alt: "Lifespan facade", data: { controller: "tooltip", bs_toggle:"tooltip", bs_placement:"top"}, title:"Lifespan facade"  %>
   <% end %>
   <% if advantage == "Property value" %>
-    <%= image_tag "property_value.png", alt: "Property value" %>
+    <%= image_tag "property_value.png", alt: "Property value", data: { controller: "tooltip", bs_toggle:"tooltip", bs_placement:"top"}, title:"Property value"  %>
   <% end %>
   <% if advantage == "Drought resistance" %>
-    <%= image_tag "drought_resistance.png", alt: "Drought resistance" %>
+    <%= image_tag "drought_resistance.png", alt: "Drought resistance", data: { controller: "tooltip", bs_toggle:"tooltip", bs_placement:"top"}, title:"Drought resistance"  %>
   <% end %>
   <% if advantage == "Food provision" %>
-    <%= image_tag "food_provision.png", alt: "Food provision" %>
+    <%= image_tag "food_provision.png", alt: "Food provision", data: { controller: "tooltip", bs_toggle:"tooltip", bs_placement:"top"}, title:"Food provision"  %>
   <% end %>
 <% end %>
