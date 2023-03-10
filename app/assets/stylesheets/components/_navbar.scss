@@ -25,7 +25,7 @@
   width: 40px;
   text-decoration: none;
   color: #606060;
-  padding-top: 21px;
+  padding-top: 12px;
 }
 
 .save-logo i:hover {
@@ -37,7 +37,7 @@
   width: 40px;
   text-decoration: none;
   color: #606060;
-  padding-top: 21px;
+  padding-top: 12px;
 }
 
 .avatar:hover {
@@ -50,10 +50,11 @@
 }
 
 .searchbar{
-  margin-bottom: auto;
-  margin-top: auto;
+/*   margin-bottom: auto;
+  margin-top: 1px;
+  margin-right: 18px;
   height: 60px;
-  padding: 10px;
+  padding: 5px; */
   color: #585858;
   text-decoration: none;
   }
@@ -85,8 +86,8 @@
   }
 
   .search_icon{
-  height: 40px;
-  width: 40px;
+  height: 15px;
+  width: 15px;
   float: right;
   display: flex;
   justify-content: center;
