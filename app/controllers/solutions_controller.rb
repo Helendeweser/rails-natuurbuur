@@ -11,6 +11,9 @@ class SolutionsController < ApplicationController
     else
       @solutions
     end
+
+    # @solutions = Solution.where(:category => params[:solution][:category]).all
+
   end
 
   def show

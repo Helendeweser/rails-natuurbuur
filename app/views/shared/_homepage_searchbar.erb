@@ -23,16 +23,14 @@
         <%# FILTER BAR PART %>
         <div class="col-md-2">
           <div class="form-group" style="border-right: 1px solid grey; border-left: 1px solid grey;">
-            <select id="inputState" class="form-control" style="background-color: #fff0; color: black;font-weight: bold;">
-              <option>Category:</option>
-              <option><a href="<%=root_path%>?query=Garden_green&commit=O">Garden - green</a></option>
-              <option><a href="<%=root_path%>?query=Garden_blue&commit=O">Garden - blue</a></option>
-              <option><a href="<%=root_path%>?query=Roof&commit=O">Roof</a></option>
-              <option><a href="<%=root_path%>?query=Facade&commit=O">Facade</a></option>
-              <option><a href="<%=root_path%>?query=Pavement&commit=O">Pavement</a></option>
-              <option><a href="<%=root_path%>?query=Street&commit=O">Street</a></option>
-              <option><a href="<%=root_path%>?query=Balcony/terrace&commit=O">Balcony/terrace</a></option>
-            </select>
+
+            <div id="inputState" class="form-control" style="background-color: #fff0; color: black;font-weight: bold;">
+              <%= select("solution", "category", ['Garden - green', 'Garden - blue', 'Roof', 'Facade', 'Pavement', 'Street', 'Balcony/terrace'], {}, { :prompt => 'Select category' }) %>
+            </div>
+
+            <%# <% select("solution", "difficulty", ['Easy', 'Medium', 'Difficult'], {}, { :prompt => 'Select difficulty' }) %>
+
+
           </div>
         </div>
         <div class="col-md-2">
