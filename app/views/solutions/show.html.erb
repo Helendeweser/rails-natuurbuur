@@ -56,13 +56,15 @@
         <div class= "container-img">
           <%= cl_image_tag experience.photo.key, class: "image"%>
         </div>
+          <% else %>
+          <p>no image</p>
         <% end %>
         <div class="card-review-infos">
           <p><%= experience.content %></p>
         </div>
          <div class="rating">
             <%= experience.rating %>
-          </div>
+         </div>
       </div>
     <% end %>
   </div>

@@ -40,22 +40,23 @@
 }
 
 .card-review {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: 1fr 370px 0.1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 10px;
+  grid-template-areas:
+    ". . .";
+  justify-content: start;
+  justify-items: start;
+  width: 600px;
   box-shadow: 0 3px 7px -1px rgba(#000, .1);
-  margin-bottom: 1.6%;
-  line-height: 1.4;
-  border-radius: 5px;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.card-review-infos {
-  justify-self: stretch;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .card-review p {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 0;
   margin-top: 8px;
   padding: 10px;
@@ -63,10 +64,10 @@
 
 .rating {
   position: relative;
-  display: flex;
-  justify-content: end;
-  top: -40px;
+  justify-content: center;
   margin-right: 10px;
+  text-align: right;
+  font-weight: bold;
 }
 
 .card-review .card-product-infos {
