@@ -1,9 +1,9 @@
 class SolutionsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :set_favourites
 
   def index
     @solutions = Solution.all.order(:title)
-    @favourites = current_user.solutions if user_signed_in?
 
     if params[:query].present?
       sql_query = "title ILIKE :query OR explanation ILIKE :query OR intro ILIKE :query"
@@ -12,16 +12,18 @@ class SolutionsController < ApplicationController
       @solutions
     end
 
-    # if @solution.experiences.first
-    #   @average_rating = ratings_average(@solution)
-    # end
   end
 
   def show
-    @favourites = current_user.solutions if user_signed_in?
     @solution = Solution.find(params[:id])
     @experience = Experience.new
     @likes = current_user.likes if user_signed_in?
+  end
+
+  private
+
+  def set_favourites
+    @favourites = current_user.solutions if user_signed_in?
   end
 
 end
