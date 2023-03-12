@@ -34,7 +34,50 @@
       <br>
       <br>
       <div class="icons-details-card">
-        <%= render "icons_details_card", solution: @solution %>
+        <div class="likes-detail">
+          <% if user_signed_in? %>
+
+              <% if @likes.where(solution_id: params[:id]).exists?%>
+                <%= link_to like_path(@solution), data: {turbo_method: :delete} do %>
+                  <i class="fa-solid fa-heart"></i>
+                <% end %>
+
+              <% else%>
+                <%= link_to solution_likes_path(@solution), data: {turbo_method: :post} do %>
+                  <i class="fa-regular fa-heart"></i>
+                <% end %>
+              <% end %>
+
+            <% else %>
+              <%= link_to solution_likes_path(@solution), data: {turbo_method: :post} do %>
+                <i class="fa-regular fa-heart"></i>
+              <% end %>
+            <% end %>
+            <p><%= @solution.likes.count %></p>
+          </div>
+
+        <div class="rating-detail">
+          <i class="fa-solid fa-star"></i>
+          <p><%= @solution.average_rating %></p>
+        </div>
+
+        <div class="comment-detail">
+          <i class="fa-solid fa-comment"></i>
+          <p><%= @solution.experiences.count %></p>
+        </div>
+
+        <div class="difficulty-detail">
+          <% if @solution.difficulty == "Easy" %>
+            <i class="fa-solid fa-face-smile"></i>
+            <p><%= @solution.difficulty %></p>
+          <% elsif @solution.difficulty == "Medium" %>
+            <i class="fa-solid fa-face-meh"></i>
+            <p><%= @solution.difficulty %></p>
+          <% else %>
+            <i class="fa-solid fa-face-frown"></i>
+            <p><%= @solution.difficulty %></p>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
