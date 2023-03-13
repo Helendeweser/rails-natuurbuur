@@ -24,5 +24,4 @@ class Solution < ApplicationRecord
     total = ratings.sum
     total / ratings.size
   end
-
 end
