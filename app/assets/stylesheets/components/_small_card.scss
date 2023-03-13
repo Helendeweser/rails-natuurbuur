@@ -1,3 +1,20 @@
+.title-page {
+  position: absolute;
+  color: white;
+  margin-top: 140px;
+}
+
+#banner-solution-page  {
+  background-size: cover;
+  background-position: center;
+  padding: 130px 0;
+  width: 100%;
+  margin-bottom: 70px;
+  width: 100vw !important;
+  margin-left: -70px;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
 .small-card {
   height: 415px;
   // width: 300px;

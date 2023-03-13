@@ -1,43 +1,24 @@
 <div class="navbar">
-  <div class="container" style="max-width: 1800px">
-<%# PART FOR THE HOUSE LOGO REDRIRECTING TO THE HOMEPAGE %>
-    <%= link_to root_path, class:"house-logo" do %>
-      <i class="fa-solid fa-house"></i>
-    <% end %>
-<%# CONTAINER FOR THE SEARCHBAR DISPLAYED ON THE RIGHT %>
-     <div class="d-flex justify-content-center">
-      <div class="container">
-         <div class="searchbar">
-            <%= form_with url: root_path, method: :get, class: "d-flex" do %>
-              <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Search a solution"%>
-              <%= submit_tag "Search", class: "btn" %>
-            <% end %>
 
-
-        </div>
-      </div>
-<%# CONTAINER FOR THE SAVE FLAG DISPLAYED ON THE RIGHT REDIRECTING TO THE DASHBOARD %>
-      <div class="user-and-save-btn">
-        <%= link_to dashboard_path, class:"save-logo" do %>
-          <i class="fa-regular fa-bookmark"></i>
-        <% end %>
-<%# CONTAINER FOR THE DROPDOWN BUTTON WITH THE LOGIN AND SIGN UP %>
-      <div class="nav-item dropdown">
-        <i class="fa-regular fa-user avatar dropdown-toggle " id= "navbarDropdown" data-bs-toggle= "dropdown", aria-haspopup= "true", aria-expanded= "false"></i>
-        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-          <% if user_signed_in? %>
-            <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
-          <% else %>
-            <a class="dropdown-item" href="<%= new_user_session_path %>">Login</a>
-            <a class="dropdown-item" href="<%= new_user_registration_path %>">Sign up</a>
-          <% end %>
-
-        </div>
-      </div>
+<%# HOUSE LOGO TO HOMEPAGE %>
+  <div>
+    <%= link_to root_path, class:"house logo-navbar" do %><i class="fa-solid fa-house"></i>HOME<% end %>
+  </div>
+<%# DIV FOR SAVED USER LOG OUT LOGO %>
+  <div class="all-logos-navbar">
+<%# SAVE FLAG TO DASHBOARD %>
+    <div>
+      <%= link_to dashboard_path, class:"bookmark logo-navbar" do %><i class="fa-solid fa-bookmark"></i>Saved<% end %>
     </div>
 
+<%# LOGIN AND SIGN UP %>
+    <% if user_signed_in? %>
+      <div><%= link_to destroy_user_session_path, class: "logout logo-navbar", data: {turbo_method: :delete} do %> <i class="fa-solid fa-right-from-bracket"></i>Log Out<% end %></div>
+    <% else %>
+      <div><%= link_to new_user_session_path, class: "user logo-navbar" do %><i class="fa-solid fa-user"></i>Login<% end %></div>
+      <div><%= link_to new_user_registration_path, class:"signin logo-navbar" do %><i class="fa-solid fa-file-signature"></i>Sign Up<% end %></div>
+              <%#<a class="dropdown-item" href="<%= new_user_session_path %><%# ">LOGIN</a> %>
+              <%#<a class="dropdown-item" href="<%= new_user_registration_path %><%# ">SIGN UP</a> %>
+    <% end %>
   </div>
-
-</div>
-
 </div>
