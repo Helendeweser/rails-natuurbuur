@@ -1,0 +1,4 @@
+<%= form_with url: root_path, method: :get, class: "d-flex" do %>
+    <%= select("sorting","by", ['Price', 'Likes', "Rating"],{ prompt: 'Sorting by'}) %>
+    <%= image_submit_tag ("grey_magnifying_glass.png"), class: "search-btn" %>
+<% end %>

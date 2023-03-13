@@ -3,7 +3,7 @@
   background-position: center;
   padding: 150px 0;
   width: 100%;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
   width: 100vw !important;
   margin-left: -70px;
 
@@ -35,10 +35,12 @@
     color: black;
     font-weight: bold;
   }
-}
 
+  .search-btn {
+    margin: auto;
+  }
+}
 .search-btn {
   width: 22px;
   height: 22px;
-  margin: auto;
 }

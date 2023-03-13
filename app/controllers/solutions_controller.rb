@@ -4,8 +4,8 @@ class SolutionsController < ApplicationController
 
   def index
     @solutions = Solution.all.order(:title)
-
     searching_filtering
+    sorting_solutions
   end
 
   def show
@@ -58,4 +58,27 @@ class SolutionsController < ApplicationController
     end
   end
 
+  def sorting_solutions
+    if params[:sorting]
+      case params[:sorting][:by].downcase
+      when "likes" then @solutions = @solutions.sort_by { |solution| solution.likes.size }.reverse
+      when "rating" then @solutions = sorting_rating
+      when "price" then @solutions = @solutions.sort_by(&:price)
+      end
+    end
+  end
+
+  def sorting_rating
+    # Because solution whitout rating have a string "New" as value
+    rates = []
+    new = []
+    @solutions.each do |solution|
+      if solution.average_rating.class == String then new << solution
+      elsif solution.average_rating.class != String then rates << solution
+      end
+    end
+    sorting_rates = rates.sort_by(&:average_rating).reverse
+    new.each { |solution| sorting_rates << solution }
+    sorting_rates
+  end
 end
