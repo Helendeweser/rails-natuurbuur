@@ -9,3 +9,6 @@ application.register("hello", HelloController)
 
 import TooltipController from "./tooltip_controller"
 application.register("tooltip", TooltipController)
+
+import Popover from 'stimulus-popover'
+application.register('popover', Popover)
