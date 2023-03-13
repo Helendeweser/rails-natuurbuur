@@ -7,12 +7,15 @@
     color: white;
     text-decoration: none;
   }
+  .btn {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .form-button:hover {
   filter: brightness(95%);
   text-decoration: none;
-  color: white;
   transform: scale(1.05);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
