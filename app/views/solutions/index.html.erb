@@ -1,12 +1,19 @@
 <%# BANNER %>
 <%= render "shared/banner" %>
-
-<%# CARDS INDEX %>
-  <%= render "sorted"%>
-
+<%= render "sorted"%>
+  
+<div class="cards-map">
+  <%# CARDS INDEX %>
   <div class="cards-index">
     <% @solutions.each do |solution| %>
       <%# SMALL CARD: EVERYTHING CENTERED %>
       <%= render "card", solution:solution %>
     <% end %>
   </div>
+
+  <%# MAP %>
+  <div class="image-map">
+    <%= render "clickable_map" %>
+  </div>
+
+</div>

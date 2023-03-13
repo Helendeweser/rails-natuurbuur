@@ -1,0 +1,156 @@
+<% resizing = (297/700.0) %>
+
+<map name="big-image">
+  <% coordinates="#{195.639/resizing},#{(112.508/resizing)},#{13.409/2/resizing}" %>
+  <%# Sqm  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Square meter garden"} %>
+  <area shape="circle" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Sqm ground  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Square meter garden (ground)"} %>
+  <% coordinates="#{183.679/resizing},#{(120.856/resizing)},#{13.409/2/resizing}" %>
+  <area shape="circle" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Fruit tree  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Fruit tree"} %>
+  <% coordinates="#{156.03/resizing},#{(114.299/resizing)},#{168.978/resizing},#{132.632/resizing}" %>
+  <area shape="rect" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Espalier  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Espalier"} %>
+  <% coordinates="#{200.172/resizing},#{(85.905/resizing)},#{200.172/resizing},#{85.905/resizing},#{269.798/resizing},#{134.543/resizing},#{275.578/resizing},#{127.94/resizing}" %>
+  <area shape="poly" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Climate tree  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Climate tree"} %>
+  <% coordinates="#{40.871/resizing},#{(34.363/resizing)},#{65.536/resizing},#{67.434/resizing}" %>
+  <area shape="rect" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Roof tree  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Roof tree"} %>
+  <% coordinates="#{130.256/resizing},#{(138.973/resizing)},#{163.047/resizing},#{172.044/resizing}" %>
+  <area shape="rect" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Rainwater pond  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Rainwater pond"} %>
+  <% coordinates="#{76.529/resizing},#{(49.673/resizing)},#{110.196/resizing},#{70.721/resizing}" %>
+  <area shape="rect" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Mini pond  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Mini pond"} %>
+  <% coordinates="#{206.971/resizing},#{(17.258/resizing)},#{215.587/resizing},#{25.873/resizing}" %>
+  <area shape="rect" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Bioswale  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Bioswale"} %>
+  <% coordinates="#{132.183/resizing},#{(194.289/resizing)},#{152.959/resizing},#{180.275/resizing},#{168.731/resizing},#{187.62/resizing},#{144.08/resizing},#{203.663/resizing}" %>
+  <area shape="poly" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Micro forest  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Micro forest"} %>
+  <% coordinates="#{201.36/resizing},#{(127.1/resizing)},#{228.775/resizing},#{166.579/resizing}" %>
+  <area shape="rect" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Green balcony  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Balcony green"} %>
+  <% coordinates="#{187.971/resizing},#{(1.656/resizing)},#{187.971/resizing},#{13.251/resizing},#{198.491/resizing},#{19.849/resizing},#{202.08/resizing},#{15.653/resizing},#{202.349/resizing},#{4.618/resizing}" %>
+  <area shape="poly" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Branch rill  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Branch rill"} %>
+  <% coordinates="#{100.366/resizing},#{(91.827/resizing)},#{110.559/resizing},#{102.009/resizing},#{127.616/resizing},#{89.959/resizing},#{127.616/resizing},#{83.869/resizing},#{120.425/resizing},#{79.424/resizing}" %>
+  <area shape="poly" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Willow hut  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Willow hut"} %>
+  <% coordinates="#{147.117/resizing},#{(78.433/resizing)},#{27.769/2/resizing}" %>
+  <area shape="circle" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%#  Blue roof %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Blue roof"} %>
+  <% coordinates="#{201.36/resizing},#{(127.1/resizing)},#{228.775/resizing},#{166.579/resizing}" %>
+  <area shape="rect" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Green roof flat  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Green flat roof"} %>
+  <% coordinates="#{10.828/resizing},#{(98.879/resizing)},#{33.991/resizing},#{112.615/resizing},#{70.272/resizing},#{90.966/resizing},#{47.589/resizing},#{77.629/resizing}" %>
+  <area shape="poly" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Green sloping roof  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Green sloping roof"} %>
+  <% coordinates="#{44.754/resizing},#{(111.451/resizing)},#{77.788/resizing},#{130.322/resizing},#{96.042/resizing},#{119.882/resizing},#{112.511/resizing},#{105.592/resizing},#{79.474/resizing},#{87.844/resizing},#{62.978/resizing},#{100.927/resizing}" %>
+  <area shape="poly" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Self-attaching  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Self-attaching climbing plant"} %>
+  <% coordinates="#{21.272/resizing},#{(155.607/resizing)},#{31.551/resizing},#{185.214/resizing}" %>
+  <area shape="rect" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Non-self-attaching  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Non-self-attaching climbing plant"} %>
+  <% coordinates="#{7.459/resizing},#{(154.087/resizing)},#{19.799/resizing},#{178.688/resizing}" %>
+  <area shape="rect" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Hedge  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Hedge"} %>
+  <% coordinates="#{115.823/resizing},#{(10.85/resizing)},#{126.038/resizing},#{2.65/resizing},#{174.976/resizing},#{30.786/resizing},#{165.272/resizing},#{40.393/resizing}" %>
+  <area shape="poly" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Permeable pavement  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Permeable pavement"} %>
+  <% coordinates="#{204.331/resizing},#{(61.159/resizing)},#{239.581/resizing},#{41.237/resizing},#{252.154/resizing},#{47.675/resizing},#{218.264/resizing},#{68.769/resizing}" %>
+  <area shape="poly" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Mow less  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Mow less"} %>
+  <% coordinates="#{122.329/resizing},#{(131.817/resizing)},#{128.399/resizing},#{113.822/resizing},#{154.065/resizing},#{97.683/resizing},#{169.404/resizing},#{95.3/resizing},#{176.049/resizing},#{100.678/resizing}" %>
+  <area shape="poly" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Car sharing  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Car sharing"} %>
+  <% coordinates="#{245.27/resizing},#{(80.072/resizing)},#{276.128/resizing},#{100.189/resizing},#{266.749/resizing},#{108.804/resizing},#{235.153/resizing},#{88.884/resizing}" %>
+  <area shape="poly" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# HP  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Heat pump"} %>
+  <% coordinates="#{232.842/resizing},#{(13.681/resizing)},#{243.959/resizing},#{23.655/resizing}" %>
+  <area shape="rect" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Roof insulation  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Roof insulation"} %>
+  <% coordinates="#{296.384/resizing},#{(122.796/resizing)},#{240.712/resizing},#{152.502/resizing},#{297.319/resizing},#{180.828/resizing}" %>
+  <area shape="poly" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+  <%# Rainwater barrel  %>
+  <% clicked_solution = @solutions.select {|s| s.title == "Rainwater barrel"} %>
+  <% coordinates="#{109.196/resizing},#{(170.575/resizing)},#{116.665/resizing},#{182.587/resizing}" %>
+  <area shape="rect" coords="<%= coordinates %>"
+        href="/solutions/<%= clicked_solution.first.id %>"
+        target="_blank" alt="HTML">
+</map>
+
+<%= image_tag "big_image.png", id: "big-image-id", usemap: "#big-image", alt: "Upgreen visual table of content"  %>
