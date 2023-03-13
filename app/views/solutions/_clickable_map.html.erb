@@ -190,7 +190,13 @@
 
 </div>
 
-<span style="position:absolute; left: <%= 183.679/resizing %>px; top: <%= 120.856/resizing %>px"><i class="fa-solid fa-circle-info"></i></span>
+
+
+
+<% clicked_solution = @solutions.select {|s| s.title == "Square meter garden (ground)"} %>
+<div class="icon-popup">
+  <a style="position:absolute; left: <%= (183.679/resizing)+20 %>px; top: <%= (120.856/resizing) %>px" data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right" title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %>" href="/solutions/<%= clicked_solution.first.id %>"><i class="fa-solid fa-circle-info icons-map"></i></a>
+</div>
 
 
 <%# <script>

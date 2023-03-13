@@ -7,8 +7,8 @@ import { application } from "./application"
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import PopoverController from "./popover_controller"
+application.register("popover", PopoverController)
+
 import TooltipController from "./tooltip_controller"
 application.register("tooltip", TooltipController)
-
-import Popover from 'stimulus-popover'
-application.register('popover', Popover)
