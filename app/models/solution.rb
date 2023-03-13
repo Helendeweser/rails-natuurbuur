@@ -8,7 +8,7 @@ class Solution < ApplicationRecord
 
   def average_rating
     if experiences.first
-      ratings_average
+      ratings_average.round(1)
     else
       "New"
     end
