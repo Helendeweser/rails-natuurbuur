@@ -1,25 +1,28 @@
 <%# FIRST DIV FOR THE WHOLE BANNER CONTAINING THE PICTURE%>
-<div id="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1423600/pexels-photo-1423600.jpeg);height: 105px;">
+<div id="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');height: 348px;">
   <div class="container">
+
 <%# MAIN TITLE WITH BRAND NAME AND CATCH PHRASE ON THE LEFT %>
-    <div class="banner-text" style="margin-top: -55px;">
-      <h1>Welcome on <strong>Natuurbuur</strong> !</h1>
-      <p>The place for finding your perfect environmental solutions</p>
+    <div class="banner-text">
+      <h1><strong>UpGreen</strong></h1>
+      <p>The perfect place for finding environmental solutions</p>
     <div class="searchbar-banner">
+
 <%# SEARCH BAR PART %>
       <div class="row align-items-center" style="background-color: #fff9; border-radius: 25px; width: max-content;">
         <div class="col-md-2" style="display: flex;">
         <%# SEARCH BAR %>
           <%= form_with url: root_path, method: :get, class: "d-flex" do %>
             <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Search a solution"%>
-            <%= submit_tag "O", class: "btn" %>
+            <%= image_submit_tag ("grey_magnifying_glass.png"), class: "search-btn" %>
           <% end %>
 <%#         <input class="search_input" type="text" name="" placeholder="Search..." style="width: 120px;">
             <a href="#" class="search_icon"><i class="fas fa-search"></i></a> %>
         </div>
+
 <%# FILTER BAR PART %>
 
-        
+
       </div>
     </div>
   </div>

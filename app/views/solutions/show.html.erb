@@ -2,6 +2,10 @@
 <% content_for :meta_description, @solution.intro %>
 <% content_for :meta_image, cl_image_path(@solution.photos.first.key) if @solution.photos.attached? %>
 
+<div class="title-page"><h1 ><%= "Read all the details about #{@solution.title}:" %></h1></div>
+<div id="banner-solution-page" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80);"></div>
+
+
 <div class="show-card">
   <div class="image-card">
   <%# To add to youre favourites or remove if we are login%>
@@ -34,7 +38,7 @@
       </div>
       <br>
       <br>
-      <div class="icons-details-card">
+      <div class="icons-details-card icon-left-sp">
         <div class="likes-detail">
           <%# To like or dislike if we are login%>
           <% if user_signed_in? %>
@@ -80,7 +84,9 @@
             <p><%= @solution.difficulty %></p>
           <% end %>
         </div>
+
       </div>
+        <div id="show_card-price"><h3>€ <%= @solution.price %></h3></div>
     </div>
   </div>
 
