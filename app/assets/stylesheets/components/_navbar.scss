@@ -9,6 +9,7 @@
 
 .all-logos-navbar {
   display: flex;
+  margin-right: 60px;
 }
 
 .logo-navbar {
@@ -23,4 +24,8 @@
   transform: scale(1.2);
   transition: all 0.3s ease-in-out;
   color: rgb(95, 95, 95);
+}
+
+.house {
+  margin-left: 60px;
 }
