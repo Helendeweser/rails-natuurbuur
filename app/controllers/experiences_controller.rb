@@ -3,18 +3,18 @@ class ExperiencesController < ApplicationController
   before_action :set_experience, only: %i[update destroy]
 
   def create
-    # To implement
     @experience = Experience.new(experiences_params)
     @experience.user = current_user
     @experience.solution = @solution
 
-    # Still have stuff to do
-      if @experience.save
-        redirect_to solution_path(@solution)
-      else
-        @favourites = current_user.solutions if user_signed_in?
-        render "solutions/show", status: :unprocessable_entity
-      end
+    if @experience.save
+      redirect_to solution_path(@solution)
+    else
+      # If render because of the validation, the show page will need this values
+      @likes = current_user.likes if user_signed_in?
+      @favourites = current_user.solutions if user_signed_in?
+      render "solutions/show", status: :unprocessable_entity
+    end
   end
 
   def update
