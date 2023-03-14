@@ -48,7 +48,7 @@
     ". . .";
   justify-content: start;
   justify-items: start;
-  width: 600px;
+  width: fit-content;
   box-shadow: 0 3px 7px -1px rgba(#000, .1);
   margin-top: 15px;
   margin-bottom: 15px;
@@ -69,10 +69,6 @@
   text-align: right;
   font-weight: bold;
 }
-
-// .card-review .card-product-infos {
-//   padding: 16px;
-// }
 
 .form-control {
   width: 100%;
