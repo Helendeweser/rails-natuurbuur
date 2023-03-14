@@ -124,27 +124,12 @@
 </div>
 
 
-<div class="experiences-card">
-  <div class="experiences-display">
-    <h2>Reviews :</h2><br>
-
+<div class="experiences-card" data-controller="create-experience">
+  <div class="experiences-display" data-create-experience-target="experience">
+    <h2>Reviews:</h2>
     <% @solution.experiences.each do |experience| %>
-      <div class="card-review">
-        <%  if experience.photo.key != nil %>
-        <div class= "container-img">
-          <%= cl_image_tag experience.photo.key, class: "image"%>
-        </div>
-          <% else %>
-          <p>no image</p>
-        <% end %>
-        <div class="card-review-infos">
-          <p><%= experience.content %></p>
-        </div>
-         <div class="rating">
-            <%= experience.rating %>
-         </div>
-      </div>
+     <%= render "solutions/experience", experience: experience %>
     <% end %>
   </div>
-   <%= render "solutions/form_experiences" %>
+   <%= render "experiences/form_experiences", solution: @solution, experience: @experience %>
 </div>
