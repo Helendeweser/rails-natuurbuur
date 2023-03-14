@@ -4,11 +4,7 @@
   <map name="big-image" style="position:absolute">
 
     <%# Sqm  %>
-    <% coordinates="#{195.639/resizing},#{(112.508/resizing)},#{13.409/2/resizing}" %>
     <% clicked_solution = @solutions.select {|s| s.title == "Square meter garden"} %>
-    <area shape="circle" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="sqm" style="position:absolute;left:<%= (195.639/resizing)+20 %>px; top:<%= (112.508/resizing)+5 %>px; width:<%= (13.409)+30 %>px; height:<%= 32 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -16,10 +12,6 @@
 
     <%# Sqm ground  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Square meter garden (ground)"} %>
-    <% coordinates="#{183.679/resizing},#{(120.856/resizing)},#{13.409/2/resizing}" %>
-    <area shape="circle" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="sqm-ground" style="position:absolute;left:<%= (183.679/resizing)+20 %>px; top:<%= (120.856/resizing)+6 %>px; width:<%= (13.409)+30 %>px; height:<%= 29 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -27,10 +19,6 @@
 
     <%# Fruit tree  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Fruit tree"} %>
-    <% coordinates="#{156.03/resizing},#{(114.299/resizing)},#{168.978/resizing},#{132.632/resizing}" %>
-    <area shape="rect" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="fruit-tree" style="position:absolute;left:<%= 400.747475 %>px; top:<%= (114.299/resizing)+13 %>px; width:<%= 50 %>px; height:<%= 60 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -38,10 +26,6 @@
 
     <%# Espalier  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Espalier"} %>
-    <% coordinates="#{200.172/resizing},#{(85.905/resizing)},#{200.172/resizing},#{85.905/resizing},#{269.798/resizing},#{134.543/resizing},#{275.578/resizing},#{127.94/resizing}" %>
-    <area shape="poly" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="espalier" style="position:absolute;left:<%= 509.8 %>px; top:<%= 222 %>px; width:<%= 157 %>px; height:<%= 127 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -49,10 +33,6 @@
 
     <%# Climate tree  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Climate tree"} %>
-    <% coordinates="#{40.871/resizing},#{(34.363/resizing)},#{65.536/resizing},#{67.434/resizing}" %>
-    <area shape="rect" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="climate-tree" style="position:absolute;left:<%= (40.871/resizing)+38 %>px; top:<%= (34.363/resizing)+12 %>px; width:<%= ((65.536/resizing)-(40.871/resizing))+10 %>px; height:<%= ((67.434/resizing)-(34.363/resizing))+10 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -60,10 +40,6 @@
 
     <%# Roof tree  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Roof tree"} %>
-    <% coordinates="#{130.256/resizing},#{(138.973/resizing)},#{163.047/resizing},#{172.044/resizing}" %>
-    <area shape="rect" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="roof-tree" style="position:absolute;left:<%= (130.256/resizing)+35 %>px; top:<%= (138.973/resizing)+12 %>px; width:<%= ((163.047/resizing)-(130.256/resizing))+10 %>px; height:<%= ((172.044/resizing)-(138.973/resizing))+10 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -71,10 +47,6 @@
 
     <%# Rainwater pond  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Rainwater pond"} %>
-    <% coordinates="#{76.529/resizing},#{(49.673/resizing)},#{110.196/resizing},#{70.721/resizing}" %>
-    <area shape="rect" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="rainwater-pond" style="position:absolute;left:<%= (76.529/resizing)+31 %>px; top:<%= (49.673/resizing)+18 %>px; width:<%= ((110.196/resizing)-(76.529/resizing))+19 %>px; height:<%= ((70.721/resizing)-(49.673/resizing))+19 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -82,10 +54,6 @@
 
     <%# Mini pond  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Mini pond"} %>
-    <% coordinates="#{206.971/resizing},#{(17.258/resizing)},#{215.587/resizing},#{25.873/resizing}" %>
-    <area shape="rect" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="mini-pond" style="position:absolute;left:<%= (206.971/resizing)+38 %>px; top:<%= (17.258/resizing)+14 %>px; width:<%= ((215.587/resizing)-(206.971/resizing))+10 %>px; height:<%= ((25.873/resizing)-(17.258/resizing))+10 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -93,10 +61,6 @@
 
     <%# Bioswale  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Bioswale"} %>
-    <% coordinates="#{132.183/resizing},#{(194.289/resizing)},#{152.959/resizing},#{180.275/resizing},#{168.731/resizing},#{187.62/resizing},#{144.08/resizing},#{203.663/resizing}" %>
-    <area shape="poly" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="bioswale" style="position:absolute;left:<%= 350 %>px; top:<%= 443 %>px; width:<%= 94 %>px; height:<%= 53 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -104,10 +68,6 @@
 
     <%# Micro forest  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Micro forest"} %>
-    <% coordinates="#{201.36/resizing},#{(127.1/resizing)},#{228.775/resizing},#{166.579/resizing}" %>
-    <area shape="rect" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="micro-forest" style="position:absolute;left:<%= (201.36/resizing)+31 %>px; top:<%= (127.1/resizing)+12 %>px; width:<%= ((228.775/resizing)-(201.36/resizing))+20 %>px; height:<%= ((166.579/resizing)-(127.1/resizing))+20 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -115,10 +75,6 @@
 
     <%# Green balcony  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Balcony green"} %>
-    <% coordinates="#{187.971/resizing},#{(1.656/resizing)},#{187.971/resizing},#{13.251/resizing},#{198.491/resizing},#{19.849/resizing},#{202.08/resizing},#{15.653/resizing},#{202.349/resizing},#{4.618/resizing}" %>
-    <area shape="poly" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="balcony-green" style="position:absolute;left:<%= 477 %>px; top:<%= 29 %>px; width:<%= 36.6 %>px; height:<%= 38 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -126,10 +82,6 @@
 
     <%# Branch rill  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Branch rill"} %>
-    <% coordinates="#{100.366/resizing},#{(91.827/resizing)},#{110.559/resizing},#{102.009/resizing},#{127.616/resizing},#{89.959/resizing},#{127.616/resizing},#{83.869/resizing},#{120.425/resizing},#{79.424/resizing}" %>
-    <area shape="poly" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="branch-rill" style="position:absolute;left:<%= 274.5 %>px; top:<%= 209.4 %>px; width:<%= 68 %>px; height:<%= 51 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -137,10 +89,6 @@
 
     <%# Willow hut  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Willow hut"} %>
-    <% coordinates="#{147.117/resizing},#{(78.433/resizing)},#{27.769/2/resizing}" %>
-    <area shape="circle" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="willow-hut" style="position:absolute;left:<%= (147.117/resizing) %>px; top:<%= (78.433/resizing)-15 %>px; width:<%= (27.769)+57 %>px; height:<%= (27.769)+47 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -148,10 +96,6 @@
 
     <%#  Blue roof %>
     <% clicked_solution = @solutions.select {|s| s.title == "Blue roof"} %>
-    <% coordinates="#{47.589/resizing},#{(76.438/resizing)},#{72.16/resizing},#{90.548/resizing},#{33.991/resizing},#{112.615/resizing},#{8.726/resizing},#{98.021/resizing}" %>
-    <area shape="poly" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="blue-roof" style="position:absolute;left:<%= 62 %>px; top:<%= 199 %>px; width:<%= 151 %>px; height:<%= 91 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -159,10 +103,6 @@
 
     <%# Green roof flat  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Green flat roof"} %>
-    <% coordinates="#{10.828/resizing},#{(98.879/resizing)},#{33.991/resizing},#{112.615/resizing},#{70.272/resizing},#{90.966/resizing},#{47.589/resizing},#{77.629/resizing}" %>
-    <area shape="poly" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="green-roof" style="position:absolute;left:<%= 143.5 %>px; top:<%= 225.7 %>px; width:<%= 165 %>px; height:<%= 107 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -170,10 +110,6 @@
 
     <%# Self-attaching  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Self-attaching climbing plant"} %>
-    <% coordinates="#{21.272/resizing},#{(155.607/resizing)},#{31.551/resizing},#{185.214/resizing}" %>
-    <area shape="rect" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="self-attaching" style="position:absolute;left:<%= (21.272/resizing)+30 %>px; top:<%= (155.607/resizing)+18 %>px; width:<%= ((31.551/resizing)-(21.272/resizing))+13 %>px; height:<%= ((185.214/resizing)-(155.607/resizing))+13 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -181,10 +117,6 @@
 
     <%# Non-self-attaching  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Non-self-attaching climbing plant"} %>
-    <% coordinates="#{7.459/resizing},#{(154.087/resizing)},#{19.799/resizing},#{178.688/resizing}" %>
-    <area shape="rect" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="non-self-attaching" style="position:absolute;left:<%= (7.459/resizing)+37 %>px; top:<%= (154.087/resizing)+14 %>px; width:<%= ((19.799/resizing)-(7.459/resizing))+10 %>px; height:<%= ((178.688/resizing)-(154.087/resizing))+10 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -192,10 +124,6 @@
 
     <%# Hedge  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Hedge"} %>
-    <% coordinates="#{115.823/resizing},#{(10.85/resizing)},#{126.038/resizing},#{2.65/resizing},#{174.976/resizing},#{30.786/resizing},#{165.272/resizing},#{40.393/resizing}" %>
-    <area shape="poly" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="hedge" style="position:absolute;left:<%= 297 %>px; top:<%= 19.6 %>px; width:<%= 142 %>px; height:<%= 98 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -203,10 +131,6 @@
 
     <%# Permeable pavement  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Permeable pavement"} %>
-    <% coordinates="#{204.331/resizing},#{(61.159/resizing)},#{239.581/resizing},#{41.237/resizing},#{252.154/resizing},#{47.675/resizing},#{218.264/resizing},#{68.769/resizing}" %>
-    <area shape="poly" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="permeable-pavement" style="position:absolute;left:<%= 521.5 %>px; top:<%= 116 %>px; width:<%= 121 %>px; height:<%= 66 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -214,10 +138,6 @@
 
     <%# Grey to green  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Grey to green"} %>
-    <% coordinates="#{68.205/resizing},#{(204.574/resizing)},#{113.937/resizing},#{178.45/resizing},#{133.853/resizing},#{190.206/resizing},#{99.208/resizing},#{210.129/resizing},#{81.147/resizing},#{210/resizing}" %>
-    <area shape="poly" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="grey-to-green" style="position:absolute;left:<%= 233 %>px; top:<%= 441 %>px; width:<%= 121 %>px; height:<%= 73 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -225,10 +145,6 @@
 
     <%# Car sharing  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Car sharing"} %>
-    <% coordinates="#{245.27/resizing},#{(80.072/resizing)},#{276.128/resizing},#{100.189/resizing},#{266.749/resizing},#{108.804/resizing},#{235.153/resizing},#{88.884/resizing}" %>
-    <area shape="poly" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="car-sharing" style="position:absolute;left:<%= 591 %>px; top:<%= 208 %>px; width:<%= 108 %>px; height:<%= 66 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -236,10 +152,6 @@
 
     <%# Mow less  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Mow less"} %>
-    <% coordinates="#{122.329/resizing},#{(131.817/resizing)},#{128.399/resizing},#{113.822/resizing},#{154.065/resizing},#{97.683/resizing},#{169.404/resizing},#{95.3/resizing},#{176.049/resizing},#{100.678/resizing}" %>
-    <area shape="poly" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="mow-less" style="position:absolute; left:<%= 319 %>px; top:<%= 230 %>px; clip-path:polygon(157px 28px, 585px 254px, 1 118px, 0 118px); width: 141px; height: 102px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -247,10 +159,6 @@
 
     <%# HP  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Heat pump"} %>
-    <% coordinates="#{232.842/resizing},#{(13.681/resizing)},#{243.959/resizing},#{23.655/resizing}" %>
-    <area shape="rect" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="heat-pump" style="position:absolute;left:<%= (232.842/resizing)+38 %>px; top:<%= (13.681/resizing)+12 %>px; width:<%= ((243.959/resizing)-(232.842/resizing))+10 %>px; height:<%= ((23.655/resizing)-(13.681/resizing))+10 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -258,10 +166,6 @@
 
     <%# Roof insulation  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Roof insulation"} %>
-    <% coordinates="#{296.384/resizing},#{(122.796/resizing)},#{240.712/resizing},#{152.502/resizing},#{297.319/resizing},#{180.828/resizing}" %>
-    <area shape="poly" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="roof-insulation" style="position:absolute; left:<%= 605 %>px; top:<%= 261 %>px; clip-path:polygon(135px 28px, 135px 196px, 0 118px); width: 200px; height: 200px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -269,10 +173,6 @@
 
     <%# Rainwater barrel  %>
     <% clicked_solution = @solutions.select {|s| s.title == "Rainwater barrel"} %>
-    <% coordinates="#{109.196/resizing},#{(170.575/resizing)},#{116.665/resizing},#{182.587/resizing}" %>
-    <area shape="rect" coords="<%= coordinates %>"
-          href="/solutions/<%= clicked_solution.first.id %>"
-          target="_blank" alt="HTML">
     <a id="rainwater-barrel" style="position:absolute;left:<%= (109.196/resizing)+38 %>px; top:<%= (170.575/resizing)+14 %>px; width:<%= ((116.665/resizing)-(109.196/resizing))+9 %>px; height:<%= ((182.587/resizing)-(170.575/resizing))+9 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
@@ -282,26 +182,4 @@
 
   <%= image_tag "big_image.png", id: "big-image-id", usemap: "#big-image", alt: "Upgreen visual table of content"%>
 
-
 </div>
-
-
-
-
-<%# <% clicked_solution = @solutions.select {|s| s.title == "Square meter garden (ground)"} %>
-<%# <div class="icon-popup"> %>
-  <%# <a style="position:absolute; left: <%= (183.679/resizing)+20 %>
-  <%# px; top: <%= (120.856/resizing) %>
-  <%# px" data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right" title="<%= clicked_solution.first.title %>
-  <%# " data-bs-content="<%= clicked_solution.first.intro %>
-  <%# " href="/solutions/<%= clicked_solution.first.id %>
-  <%# "><i class="fa-solid fa-circle-info icons-map"></i></a> %>
-<%# </div> %>
-
-
-<%# <script>
-    $('.maparea').mouseover(function (e) {
-      let pos = this.attr('coords').split(',');
-      $('.popup-box').css({'left': parseInt(pos[2]) + 5, 'top': parseInt(pos[1]) + 35}).fadeIn('slow');
-    });
-</script> %>
