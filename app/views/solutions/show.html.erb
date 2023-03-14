@@ -26,7 +26,15 @@
       <% end %>
     <% end %>
 
-    <%= cl_image_tag @solution.photos.first.key, class: "show-image" %>
+    <%# Carousel for main image %>
+    <div class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <%= cl_image_tag @solution.photos.first.key, class: "show-image" %>
+        </div>
+      </div>
+    </div>
+
 
     <div class="side-text">
       <h2><%= @solution.title%></h2>
