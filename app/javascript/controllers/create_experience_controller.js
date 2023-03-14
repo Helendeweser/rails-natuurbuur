@@ -9,7 +9,6 @@ export default class extends Controller {
 
   send(event) {
     event.preventDefault()
-
     const options =  {
       method: "POST",
       headers: { "Accept": "application/json" },

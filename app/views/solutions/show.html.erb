@@ -134,7 +134,7 @@
     <% end %>
     
     <% @solution.experiences.each do |experience| %>
-     <%= render "solutions/experience", experience: experience %>
+      <%= render "solutions/experience", experience: experience %>
     <% end %>
   </div>
    <%= render "experiences/form_experiences", solution: @solution, experience: @experience %>
