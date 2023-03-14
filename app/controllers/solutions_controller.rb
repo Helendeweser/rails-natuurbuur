@@ -15,6 +15,10 @@ class SolutionsController < ApplicationController
     @likes = current_user.likes if user_signed_in?
   end
 
+  def popup
+    render partial: 'solutions/popup', locals: { solution: @solution }
+  end
+
   private
 
   def set_favourites

@@ -10,5 +10,8 @@ application.register("create-experience", CreateExperienceController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import PopoverController from "./popover_controller"
+application.register("popover", PopoverController)
+
 import TooltipController from "./tooltip_controller"
 application.register("tooltip", TooltipController)
