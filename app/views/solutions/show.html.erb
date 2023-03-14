@@ -106,7 +106,13 @@
         </div>
 
       </div>
-        <div id="show_card-price"><p style="color: gray;">Estimated price:</p><h3 style="padding-right: 25px;">€ <%= @solution.price %></h3></div>
+        <div id="show_card-price"><p style="color: gray;">Estimated price:</p><h3 style="padding-right: 25px;">
+          <% if @solution.price == 0 %>
+            <h3>Free</h3>
+          <% else %>
+          <h3>€ <%= @solution.price %></h3>
+          <% end %>
+        </div>
     </div>
   </div>
 
