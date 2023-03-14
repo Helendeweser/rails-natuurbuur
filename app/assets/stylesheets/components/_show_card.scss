@@ -48,7 +48,7 @@
     ". . .";
   justify-content: start;
   justify-items: start;
-  width: 600px;
+  width: fit-content;
   box-shadow: 0 3px 7px -1px rgba(#000, .1);
   margin-top: 15px;
   margin-bottom: 15px;
@@ -59,20 +59,31 @@
   justify-content: space-between;
   margin-bottom: 0;
   margin-top: 8px;
-  padding: 10px;
+  padding: 20px;
+}
+
+.card-review-infos {
+  p {
+    padding-left: 0px;
+  }
 }
 
 .rating {
   position: relative;
-  justify-content: center;
+  justify-content: space-between;
   margin-right: 10px;
   text-align: right;
   font-weight: bold;
-}
+  p{
+    margin-bottom: 100px;
+    margin-left: 10px;
+    padding: 0px;
 
-// .card-review .card-product-infos {
-//   padding: 16px;
-// }
+  }
+  a {
+    color: red;
+  }
+}
 
 .form-control {
   width: 100%;
@@ -81,7 +92,7 @@
 }
 
 .container-img {
-  width: 180px;
+  width: 205px;
   overflow: hidden;
 }
 

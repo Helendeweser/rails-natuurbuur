@@ -14,6 +14,9 @@
         <%# SEARCH BAR %>
           <%= form_with url: root_path, method: :get, class: "d-flex" do %>
             <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Search a solution"%>
+            <%= select("solution", "category", ['Garden - green', 'Garden - blue', 'Roof', 'Facade', 'Pavement', 'Street', 'Balcony/terrace'], { prompt: 'Select category' }, class: "form-control") %>
+            <%= select("solution", "difficulty", ["Easy", "Medium", "Difficult"], { prompt: 'Select difficulty' }, class: "form-control") %>
+            <%= select("sorting", "by", ["Price", "Rating", "Likes"], { prompt: 'Sorting by' }, class: "form-control") %>
             <%= image_submit_tag ("grey_magnifying_glass.png"), class: "search-btn" %>
           <% end %>
 <%#         <input class="search_input" type="text" name="" placeholder="Search..." style="width: 120px;">
