@@ -26,7 +26,27 @@
       <% end %>
     <% end %>
 
-    <%= cl_image_tag @solution.photos.first.key, class: "show-image" %>
+
+    <%# Carousel for main image %>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <%= cl_image_tag @solution.photos[0].key, class: "d-block show-image", alt:"First slide" %>
+        </div>
+        <div class="carousel-item ">
+          <%= cl_image_tag @solution.photos[1].key, class: "d-block show-image", alt:"Second slide" %>
+        </div>
+      </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
 
     <div class="side-text">
       <h2><%= @solution.title%></h2>
@@ -86,7 +106,13 @@
         </div>
 
       </div>
-        <div id="show_card-price"><p style="color: gray;">Estimated price:</p><h3 style="padding-right: 25px;">€ <%= @solution.price %></h3></div>
+        <div id="show_card-price"><p style="color: gray;">Estimated price:</p><h3 style="padding-right: 25px;">
+          <% if @solution.price == 0 %>
+            <h3>Free</h3>
+          <% else %>
+          <h3>€ <%= @solution.price %></h3>
+          <% end %>
+        </div>
     </div>
   </div>
 
@@ -104,6 +130,7 @@
     <% if @solution.experiences.empty? %>
       <B> " Be the first one to share your experience ! " </B>
     <% end %>
+    
     <% @solution.experiences.each do |experience| %>
      <%= render "solutions/experience", experience: experience %>
     <% end %>

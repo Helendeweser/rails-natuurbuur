@@ -4,8 +4,9 @@ class SolutionsController < ApplicationController
 
   def index
     @solutions = Solution.all.order(:title)
-    searching_filtering
-    sorting_solutions
+    searching_solutions if params[:query]
+    filtering_solutions if params[:solution]
+    sorting_solutions if params[:sorting]
   end
 
   def show
@@ -20,51 +21,29 @@ class SolutionsController < ApplicationController
     @favourites = current_user.solutions if user_signed_in?
   end
 
-  def searching_filtering
-    if params[:query].present?
-      sql_query = "title ILIKE :query OR explanation ILIKE :query OR intro ILIKE :query"
-      @solutions = Solution.where(sql_query, query: "%#{params[:query]}%")
+  def searching_solutions
+    sql_query = "title ILIKE :query OR explanation ILIKE :query OR intro ILIKE :query"
+    @solutions = Solution.where(sql_query, query: "%#{params[:query]}%")
 
-      if params[:solution][:category].present?
-        filter_query = "category in ('{%s}')"
-        @solutions = @solutions.where(filter_query, params[:solution][:category])
+  end
 
-        if params[:solution][:difficulty].present?
-          filter_query = "difficulty = ?"
-          @solutions = @solutions.where(filter_query, params[:solution][:difficulty])
-        end
+  def filtering_solutions
+    if params[:solution][:category].present?
+      filter_query = "category in ('{%s}')"
+      @solutions = @solutions.where(filter_query, params[:solution][:category])
+    end
 
-      elsif params[:solution][:difficulty].present?
-        filter_query = "difficulty = ?"
-        @solutions = @solutions.where(filter_query, params[:solution][:difficulty])
-      end
-
-    elsif params[:solution]
-      if params[:solution][:category].present?
-        filter_query = "category in ('{%s}')"
-        @solutions = @solutions.where(filter_query, params[:solution][:category])
-
-        if params[:solution][:difficulty].present?
-          filter_query = "difficulty = ?"
-          @solutions = @solutions.where(filter_query, params[:solution][:difficulty])
-        end
-
-      elsif params[:solution][:difficulty].present?
-        filter_query = "difficulty = ?"
-        @solutions = @solutions.where(filter_query, params[:solution][:difficulty])
-      end
-    else
-      @solutions
+    if params[:solution][:difficulty].present?
+      filter_query = "difficulty = ?"
+      @solutions = @solutions.where(filter_query, params[:solution][:difficulty])
     end
   end
 
   def sorting_solutions
-    if params[:sorting]
-      case params[:sorting][:by].downcase
-      when "likes" then @solutions = @solutions.sort_by { |solution| solution.likes.size }.reverse
-      when "rating" then @solutions = sorting_rating
-      when "price" then @solutions = @solutions.sort_by(&:price)
-      end
+    case params[:sorting][:by].downcase
+    when "likes" then @solutions = @solutions.sort_by { |solution| solution.likes.size }.reverse
+    when "rating" then @solutions = sorting_rating
+    when "price" then @solutions = @solutions.sort_by(&:price)
     end
   end
 
