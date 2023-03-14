@@ -1,6 +1,6 @@
 class ExperiencesController < ApplicationController
-  before_action :set_solution
-  before_action :set_experience, only: %i[update destroy]
+  before_action :set_solution, except: :destroy
+  before_action :set_experience, only: %i[update, destroy]
 
   def create
     @experience = Experience.new(experiences_params)
@@ -29,9 +29,8 @@ class ExperiencesController < ApplicationController
   end
 
   def destroy
-    # To implement
-    raise
     @experience.destroy
+    @solution = @experience.solution
     redirect_to solution_path(@solution)
   end
 
