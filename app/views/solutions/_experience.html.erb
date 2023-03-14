@@ -13,5 +13,8 @@
         </div>
          <div class="rating">
            <p> <%= experience.rating %>/5</p>
+           <% if experience.user == current_user %>
+            <%= link_to "Delete", experience_path(experience), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"} %>
+            <% end %>
          </div>
-      </div>
+  </div>

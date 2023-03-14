@@ -17,4 +17,6 @@ Rails.application.routes.draw do
 
   get "/dashboard", to: "dashboards#my_solutions"
   get "/testing", to: "pages#testing"
+
+  get "/popup", to: "solutions#popup"
 end

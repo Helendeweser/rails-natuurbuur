@@ -9,15 +9,15 @@
     <div class="searchbar-banner">
 
 <%# SEARCH BAR PART %>
-      <div class="row align-items-center" style="background-color: #fff9; border-radius: 25px; width: max-content;">
+      <div class="row align-items-center" style="background-color: #ffffffb3; border-radius: 25px; width: max-content;">
         <div class="col-md-2" style="display: flex;">
         <%# SEARCH BAR %>
           <%= form_with url: root_path, method: :get, class: "d-flex" do %>
-            <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Search a solution"%>
+            <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Search a solution", style:"font-weight: inherit;"%>
             <%= select("solution", "category", ['Garden - green', 'Garden - blue', 'Roof', 'Facade', 'Pavement', 'Street', 'Balcony/terrace'], { prompt: 'Select category' }, class: "form-control") %>
             <%= select("solution", "difficulty", ["Easy", "Medium", "Difficult"], { prompt: 'Select difficulty' }, class: "form-control") %>
             <%= select("sorting", "by", ["Price", "Rating", "Likes"], { prompt: 'Sorting by' }, class: "form-control") %>
-            <%= image_submit_tag ("grey_magnifying_glass.png"), class: "search-btn" %>
+            <%= image_submit_tag ("loupe_logo.png"), class: "search-btn" %>
           <% end %>
 <%#         <input class="search_input" type="text" name="" placeholder="Search..." style="width: 120px;">
             <a href="#" class="search_icon"><i class="fas fa-search"></i></a> %>
