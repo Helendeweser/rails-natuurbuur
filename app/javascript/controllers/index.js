@@ -9,9 +9,3 @@ application.register("hello", HelloController)
 
 import TooltipController from "./tooltip_controller"
 application.register("tooltip", TooltipController)
-
-
-
-
-import Carousel from 'stimulus-carousel'
-application.register('carousel', Carousel)
