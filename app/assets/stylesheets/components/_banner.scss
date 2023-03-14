@@ -34,6 +34,8 @@
     background-color: #bfbfbf00;
     color: black;
     font-weight: bold;
+    border-right: 1px solid gray;
+    font-weight: inherit;
   }
 
   .search-btn {
@@ -43,4 +45,19 @@
 .search-btn {
   width: 22px;
   height: 22px;
+  transition: transform .1s;
+}
+
+.search-btn:hover{
+  transform: scale(1.2);
+  }
+
+.arrow_down_logo {
+  width: 22px;
+  height: 22px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
