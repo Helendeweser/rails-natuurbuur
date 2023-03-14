@@ -4,6 +4,7 @@
   background-color: $lighter-gray;
   border-radius: 5px;
   position: relative;
+  height: 500px;
 
   .show-image {
     width: 500px;
@@ -23,6 +24,9 @@
     font-size: 1.7em;
     opacity: 0.9;
     }
+  }
+  .carousel{
+    width: 500px;
   }
 }
 

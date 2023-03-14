@@ -126,16 +126,17 @@
 </div>
 
 
-<div class="experiences-card" data-controller="create-experience">
-  <div class="experiences-display" data-create-experience-target="experience">
-    <h2>Reviews:</h2>
-    <% if @solution.experiences.empty? %>
-      <B> " Be the first one to share your experience ! " </B>
-    <% end %>
-    
-    <% @solution.experiences.each do |experience| %>
+
+  <div class="experiences-card" data-controller="create-experience">
+    <div class="experiences-display" data-create-experience-target="experience">
+      <h2>Reviews:</h2>
+      <% if @solution.experiences.empty? %>
+        <B> " Be the first one to share your experience ! " </B>
+      <% end %>
+
+      <% @solution.experiences.each do |experience| %>
       <%= render "solutions/experience", experience: experience %>
-    <% end %>
+      <% end %>
+    </div>
+    <%= render "experiences/form_experiences", solution: @solution, experience: @experience %>
   </div>
-   <%= render "experiences/form_experiences", solution: @solution, experience: @experience %>
-</div>
