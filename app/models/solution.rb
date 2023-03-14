@@ -14,9 +14,6 @@ class Solution < ApplicationRecord
     end
   end
 
-  def number_of_likes
-  end
-
   private
 
   def ratings_average
@@ -24,5 +21,4 @@ class Solution < ApplicationRecord
     total = ratings.sum
     total / ratings.size
   end
-
 end

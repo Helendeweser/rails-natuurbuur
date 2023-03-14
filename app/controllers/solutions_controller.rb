@@ -4,14 +4,8 @@ class SolutionsController < ApplicationController
 
   def index
     @solutions = Solution.all.order(:title)
-
-    if params[:query].present?
-      sql_query = "title ILIKE :query OR explanation ILIKE :query OR intro ILIKE :query"
-      @solutions = Solution.where(sql_query, query: "%#{params[:query]}%")
-    else
-      @solutions
-    end
-
+    searching_filtering
+    sorting_solutions
   end
 
   def show
@@ -26,4 +20,65 @@ class SolutionsController < ApplicationController
     @favourites = current_user.solutions if user_signed_in?
   end
 
+  def searching_filtering
+    if params[:query].present?
+      sql_query = "title ILIKE :query OR explanation ILIKE :query OR intro ILIKE :query"
+      @solutions = Solution.where(sql_query, query: "%#{params[:query]}%")
+
+      if params[:solution][:category].present?
+        filter_query = "category in ('{%s}')"
+        @solutions = @solutions.where(filter_query, params[:solution][:category])
+
+        if params[:solution][:difficulty].present?
+          filter_query = "difficulty = ?"
+          @solutions = @solutions.where(filter_query, params[:solution][:difficulty])
+        end
+
+      elsif params[:solution][:difficulty].present?
+        filter_query = "difficulty = ?"
+        @solutions = @solutions.where(filter_query, params[:solution][:difficulty])
+      end
+
+    elsif params[:solution]
+      if params[:solution][:category].present?
+        filter_query = "category in ('{%s}')"
+        @solutions = @solutions.where(filter_query, params[:solution][:category])
+
+        if params[:solution][:difficulty].present?
+          filter_query = "difficulty = ?"
+          @solutions = @solutions.where(filter_query, params[:solution][:difficulty])
+        end
+
+      elsif params[:solution][:difficulty].present?
+        filter_query = "difficulty = ?"
+        @solutions = @solutions.where(filter_query, params[:solution][:difficulty])
+      end
+    else
+      @solutions
+    end
+  end
+
+  def sorting_solutions
+    if params[:sorting]
+      case params[:sorting][:by].downcase
+      when "likes" then @solutions = @solutions.sort_by { |solution| solution.likes.size }.reverse
+      when "rating" then @solutions = sorting_rating
+      when "price" then @solutions = @solutions.sort_by(&:price)
+      end
+    end
+  end
+
+  def sorting_rating
+    # Because solution whitout rating have a string "New" as value
+    rates = []
+    new = []
+    @solutions.each do |solution|
+      if solution.average_rating.class == String then new << solution
+      elsif solution.average_rating.class != String then rates << solution
+      end
+    end
+    sorting_rates = rates.sort_by(&:average_rating).reverse
+    new.each { |solution| sorting_rates << solution }
+    sorting_rates
+  end
 end
