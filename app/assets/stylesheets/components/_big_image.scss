@@ -3,11 +3,314 @@
   margin-left: 40px;
   border-radius: 5px;
   margin-top: 20px;
-  position: sticky;
-  top: 80px;
+  // position: sticky;
+  // top: 80px;
   margin-bottom: 20px;
 }
 
-.icons-map {
-  color: black;
+#fruit-tree {
+  display: flex;
+  height: 2em;
+
+  &:hover {
+    background-image: url("fruit_tree_little_2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#climate-tree {
+  display: flex;
+  height: 2em;
+
+  &:hover {
+    background-image: url("climate_tree_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#roof-tree {
+  display: flex;
+  height: 2em;
+
+  &:hover {
+    background-image: url("roof_tree_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#rainwater-pond {
+  display: flex;
+  height: 2em;
+
+  &:hover {
+    background-image: url("rainwater_pond_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#mini-pond {
+  display: flex;
+  height: 2em;
+
+  &:hover {
+    background-image: url("mini_pond_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#micro-forest {
+  display: flex;
+  height: 2.5em;
+
+  &:hover {
+    background-image: url("micro_forest_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#self-attaching {
+  display: flex;
+  height: 2em;
+
+  &:hover {
+    background-image: url("self_attaching_climbing_plant_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#non-self-attaching {
+  display: flex;
+  height: 2em;
+
+  &:hover {
+    background-image: url("non_self_attaching_climbing_plant_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#heat-pump {
+  display: flex;
+  height: 2em;
+
+  &:hover {
+    background-image: url("heat_pump_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#rainwater-barrel {
+  display: flex;
+  height: 2em;
+
+  &:hover {
+    background-image: url("rainwater_barrel_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#sqm {
+  display: flex;
+  height: 4em;
+  border-radius: 100%;
+
+  &:hover {
+    background-image: url("square_meter_garden_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#sqm-ground {
+  display: flex;
+  height: 4em;
+  border-radius: 100%;
+
+  &:hover {
+    background-image: url("square_meter_garden_ground_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#willow-hut {
+  display: flex;
+  height: 4em;
+  border-radius: 100%;
+
+  &:hover {
+    background-image: url("willow_hut_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#roof-insulation {
+  display: flex;
+  height: 1em;
+
+  &:hover {
+    background-image: url("roof_insulation_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#mow-less {
+  display: flex;
+  height: 1em;
+  border-radius: 100%;
+
+  &:hover {
+    background-image: url("mow_less_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#car-sharing {
+  display: flex;
+  height: 1em;
+
+  &:hover {
+    background-image: url("car_sharing_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#grey-to-green {
+  display: flex;
+  height: 1em;
+
+  &:hover {
+    background-image: url("grey_to_green_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#permeable-pavement {
+  display: flex;
+  height: 1em;
+
+  &:hover {
+    background-image: url("permeable_pavement_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#hedge {
+  display: flex;
+  height: 1em;
+
+  &:hover {
+    background-image: url("hedge_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#green-roof {
+  display: flex;
+  height: 1em;
+  border-radius: 100%;
+
+  &:hover {
+    background-image: url("green_roof_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#blue-roof {
+  display: flex;
+  height: 1em;
+  border-radius: 100%;
+
+  &:hover {
+    background-image: url("blue_roof_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#branch-rill {
+  display: flex;
+  height: 1em;
+
+  &:hover {
+    background-image: url("branch_rill_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#espalier {
+  display: flex;
+  height: 1em;
+  border-radius: 100%;
+
+  &:hover {
+    background-image: url("espalier_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#bioswale {
+  display: flex;
+  height: 1em;
+
+  &:hover {
+    background-image: url("bioswale_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
+}
+
+#balcony-green {
+  display: flex;
+  height: 1em;
+
+  &:hover {
+    background-image: url("balcony_green_little.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 0 6px rgb(247, 182, 4));
+  }
 }
