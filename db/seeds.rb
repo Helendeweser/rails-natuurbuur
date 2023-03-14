@@ -1,6 +1,7 @@
 require "open-uri"
 
 Solution.destroy_all
+User.destroy_all
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198800/1._Square_meter_garden_ni4mkd.png")
 image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370701/1._Square_meter_garden_ewafdp.png")
@@ -458,7 +459,7 @@ image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370704
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712822/climbing_plant_attaching1_xiphkx.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794358/self_att_climbing_plant3_zug8ox.png")
 
-solution = Solution.new(
+solution6 = Solution.new(
   title: "Self-attaching climbing plant",
   intro: "A self-attaching climbing plant will naturally climb up your wall and in the summer will lower the façade temperature by up to 8° Celsius.",
   explanation: "Your facade likes different types of greenery. A climbing plant is a very good option. But before you choose which one to use, check which one is best for your facade.
@@ -481,13 +482,13 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Bye, bye sound", "Health", "Well-being", "Energy use", "Lifespan facade"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution6.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution6.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution6.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution6.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
 
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution6.save!
+puts "Creating solution #{solution6.id}..."
 
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198808/18._Non-self-attaching_climbing_plant_e2yvxc.png")
@@ -635,7 +636,7 @@ image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370705
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794355/car_sharing5_njiq3l.png")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794356/car_sharing4_fmizyx.png")
 
-solution = Solution.new(
+solution1 = Solution.new(
   title: "Car sharing",
   intro: "The concept of car sharing is simple: you use a car when you need it. If you don't need to leave your house, someone else can get behind the wheel. Did you know that this way one shared car replaces up to ten others?",
   explanation: "In our country, traffic emissions top the list of climate policy challenges. In 2019, it was guilty of nearly 25% of total emissions. If we take a closer look at the transportation sector, passenger transport accounts for more than half of these high figures.
@@ -657,12 +658,12 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Bye, bye sound", "Health", "Well-being"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution1.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution1.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution1.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution1.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution1.save!
+puts "Creating solution #{solution1.id}..."
 
 
 
@@ -672,7 +673,7 @@ image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370705
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794357/heat_pump3_w6gibe.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712828/heat_pump2_ax5lov.jpg")
 
-solution = Solution.new(
+solution2 = Solution.new(
   title: "Heat pump",
   intro: "With a heat pump, you get your domestic heat from nature. Ground, air or water: they are all suitable suppliers.",
   explanation: "There is a mass of heat stored in the ground, water and air - even in winter. Thank you for that, sunshine. It would be a shame if we don't make the best use of what nature so generously gives us, right?
@@ -694,13 +695,13 @@ solution = Solution.new(
   advantages: ["Air quality", "Energy use", "Property value"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution2.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution2.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution2.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution2.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
 
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution2.save!
+puts "Creating solution #{solution2.id}..."
 
 
 
@@ -709,7 +710,7 @@ image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370705
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712822/mow_less1_eoaxwj.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678717383/mow_less2_ncwyu0.jpg")
 
-solution = Solution.new(
+solution3 = Solution.new(
   title: "Mow less",
   intro: "SOS. Bees, butterflies and other insects desperately need our help.",
   explanation: "Scientists are speaking loud & clear: if we continue as we are today, there won't be an insect crawling or flying around in 100 years. And we more than desperately need them as basic suppliers of our food. Strange as it may sound: without insects, our food chain collapses like a house of cards.
@@ -729,12 +730,12 @@ solution = Solution.new(
   advantages: ["Water balance", "Biodiversity", "Energy use", "Drought resistance"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution3.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution3.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution3.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution3.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution3.save!
+puts "Creating solution #{solution3.id}..."
 
 
 
@@ -743,7 +744,7 @@ image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370706
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712824/insulation_roof_u5o8eu.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678717383/insulation_roof2_hwpbz6.jpg")
 
-solution = Solution.new(
+solution4 = Solution.new(
   title: "Roof insulation",
   intro: "Did you know that most heat is lost through your roof? And if you address this problem properly, you can save up to 40% per year!",
   explanation: "Whether you spend time at home, the gym, the supermarket or a shopping mall, it's nice and warm in the winter and often air-conditioned in the summer. Keeping things warm and cool, the lights, the operation of appliances; it takes a lot of energy to do that. That comes mostly from fossil fuels. Unfortunately, this story causes a lot of emissions of greenhouse gases in Belgium.
@@ -765,12 +766,12 @@ solution = Solution.new(
   advantages: ["Air quality", "Bye, bye sound", "Energy use", "Lifespan roof", "Property value"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution4.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution4.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution4.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution4.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution4.save!
+puts "Creating solution #{solution4.id}..."
 
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678199255/26._Rainwater_barrel_ueimsi.png")
@@ -778,7 +779,7 @@ image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370706
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794358/rain_barrel4_hpkghy.png")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712826/barrel2_q30bp4.jpg")
 
-solution = Solution.new(
+solution5 = Solution.new(
   title: "Rainwater barrel",
   intro: "A rainwater barrel captures water during heavy rains, reducing the amount flowing into the sewer system and reducing the risk of flooding in your street.",
   explanation: "Despite the fact that quite a bit of rain falls from the sky in our country, we still regularly experience extended periods of drought during the summer. Sometimes even resulting in a ban on watering.
@@ -796,9 +797,196 @@ solution = Solution.new(
   advantages: ["Water balance", "Energy use", "Drought resistance"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution5.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution5.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution5.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution5.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution5.save!
+puts "Creating solution #{solution5.id}..."
+
+
+
+user1 = User.new(
+  email: "lewagon@hotmail.com",
+  password: "123456",
+  username: "Le Wagon"
+)
+
+user1.save!
+puts "Creating user #{user1.id}..."
+
+user2 = User.new(
+  email: "laraparson@hotmail.com",
+  password: "123456",
+  username: "Lara parson"
+)
+
+user2.save!
+puts "Creating user #{user2.id}..."
+
+user3 = User.new(
+  email: "pierreboileau@hotmail.com",
+  password: "123456",
+  username: "Pierre Boileau"
+)
+
+user3.save!
+puts "Creating user #{user3.id}..."
+
+user4 = User.new(
+  email: "henristubbe@hotmail.com",
+  password: "123456",
+  username: "Henri Stubbe"
+)
+
+user4.save!
+puts "Creating user #{user4.id}..."
+
+user5 = User.new(
+  email: "ellamiller@hotmail.com",
+  password: "123456",
+  username: "Ella Miller"
+)
+
+user5.save!
+puts "Creating user #{user5.id}..."
+
+
+
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794356/car_sharing4_fmizyx.png")
+experience = Experience.new(
+  content: "Really liked this solution. I recommend it!",
+  rating: 4.5,
+  user_id: user1.id,
+  solution_id: solution1.id
+)
+
+experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712826/barrel2_q30bp4.jpg")
+experience = Experience.new(
+  content: "Very clear instructions! We installed it together with the kids.",
+  rating: 4.8,
+  user_id: user4.id,
+  solution_id: solution5.id
+)
+
+experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678717383/mow_less2_ncwyu0.jpg")
+experience = Experience.new(
+  content: "Really liked this solution. I recommend it!",
+  rating: 4.4,
+  user_id: user5.id,
+  solution_id: solution3.id
+)
+
+experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712824/insulation_roof_u5o8eu.jpg")
+experience = Experience.new(
+  content: "A bit hard to implement...",
+  rating: 3.0,
+  user_id: user2.id,
+  solution_id: solution4.id
+)
+
+experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794358/self_att_climbing_plant3_zug8ox.png")
+experience = Experience.new(
+  content: "My facade looks a lot prettier now!",
+  rating: 3.5,
+  user_id: user4.id,
+  solution_id: solution6.id
+)
+
+experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+
+
+
+
+
+like = Like.new(
+  user_id: user1.id,
+  solution_id: solution2.id
+)
+
+like.save!
+puts "Creating like #{like.id}..."
+
+
+like = Like.new(
+  user_id: user2.id,
+  solution_id: solution4.id
+)
+
+like.save!
+puts "Creating like #{like.id}..."
+
+
+like = Like.new(
+  user_id: user5.id,
+  solution_id: solution2.id
+)
+
+like.save!
+puts "Creating like #{like.id}..."
+
+
+like = Like.new(
+  user_id: user2.id,
+  solution_id: solution5.id
+)
+
+like.save!
+puts "Creating like #{like.id}..."
+
+
+like = Like.new(
+  user_id: user1.id,
+  solution_id: solution5.id
+)
+
+like.save!
+puts "Creating like #{like.id}..."
+
+
+like = Like.new(
+  user_id: user3.id,
+  solution_id: solution6.id
+)
+
+like.save!
+puts "Creating like #{like.id}..."
+
+
+like = Like.new(
+  user_id: user1.id,
+  solution_id: solution6.id
+)
+
+like.save!
+puts "Creating like #{like.id}..."
+
+
+
+
+# favourite = Favourite.new(
+#   user_id: user1.id,
+#   solution_id: solution5.id
+# )
+
+# favourite.save!
+# puts "Creating favourite #{favourite.id}..."
