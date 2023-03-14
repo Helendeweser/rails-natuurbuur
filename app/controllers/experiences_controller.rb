@@ -7,13 +7,17 @@ class ExperiencesController < ApplicationController
     @experience.user = current_user
     @experience.solution = @solution
 
-    if @experience.save
-      redirect_to solution_path(@solution)
-    else
-      # If render because of the validation, the show page will need this values
-      @likes = current_user.likes if user_signed_in?
-      @favourites = current_user.solutions if user_signed_in?
-      render "solutions/show", status: :unprocessable_entity
+    respond_to do |format|
+      if @experience.save
+        format.html { redirect_to solution_path(@solution) }
+        format.json
+      else
+        # If render because of the validation, the show page will need this values
+        @likes = current_user.likes if user_signed_in?
+        @favourites = current_user.solutions if user_signed_in?
+        format.html { render "solutions/show", status: :unprocessable_entity }
+        format.json
+      end
     end
   end
 
@@ -44,5 +48,4 @@ class ExperiencesController < ApplicationController
   def set_experience
     @experience = Experience.find(params[:id])
   end
-
 end
