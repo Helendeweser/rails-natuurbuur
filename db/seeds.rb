@@ -106,7 +106,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712826
 
 solution7 = Solution.new(
   title: "Square meter garden",
-  intro: "Of course you can grow fresh greens without a garden! Do you have a terrace or balcony? Then a square-meter garden is the solution for you.",
+  intro: "Do you have a terrace or balcony? Then a square-meter garden is the solution for you.",
   explanation: "You need a container on legs, measuring 1.2 m by 1.2 m approximately. In it you plant fruit, different vegetables or herbs. You divide your container into grid squares of 30 cm by 30 cm and put one type of plant in each. So you really garden, but on a small area and very intensively.
 
   The name square-meter garden is actually a bit of a misnomer. Your container is never exactly a square meter and can perfectly have a different shape. The most important thing is that you respect the grid squares of 30 cm by 30 cm. Is your balcony very small? No problem! Then you choose for example a container of 30 cm by 90 cm. You can still plant three kinds of goodies in there with ease!
@@ -138,7 +138,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678802118
 
 solution8 = Solution.new(
   title: "Square meter garden (ground)",
-  intro: "What do you do with a small, vacant patch of garden? Nothing like picking your own fruits and vegetables there, right?",
+  intro: "Nothing like picking your own fruits and vegetables, right?",
   explanation: "You need a container, 1.2 m by 1.2 m approximately. In it you plant different vegetables, fruits or herbs. You divide your box into grid squares of 30 cm by 30 cm and put one type of plant in each. So you are really gardening, but on a small area and very intensively.
 
   The name square-meter garden is actually a bit of a misnomer. Your container is never exactly a square meter and can perfectly have a different shape. The important thing is that you respect the 30 cm by 30 cm grid squares.
@@ -172,7 +172,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712821
 
 solution9 = Solution.new(
   title: "Fruit tree",
-  intro: "All that you plant yourself, you plant better. And doesn't fruit from your own tree taste more delicious than anything else?",
+  intro: "Doesn't fruit from your own tree taste more delicious than anything else?",
   explanation: "Espalier trees are trees whose branches are guided
     in a certain direction. Their shape does not occur in nature, you model here. You do this by tying the branches to a frame.
 
@@ -203,7 +203,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712827
 
 solution10 = Solution.new(
   title: "Espalier",
-  intro: "Want a little more privacy in your garden? Then plant an espalier tree! In one move, you'll also improve the air quality and biodiversity in your neighbourhood.",
+  intro: "Want a little more privacy in your garden? Then plant an espalier tree!",
   explanation: "Espaliers are trees whose branches are guided in a certain direction. Their shape does not occur in nature, man models here. This is done by tying the branches to a frame. The trees come in storey or screen form.
 
   A storey form has tight horizontal lines, where you can still see through. You prune the tree to close to the frame with pruning shears.
@@ -234,7 +234,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678717383
 
 solution11 = Solution.new(
   title: "Climate tree",
-  intro: "Bringing coolness and improving air quality are the absolute strengths of a climate tree. So planting your own tree really brings you very close to your goal of helping nature.",
+  intro: "Bringing coolness and improving air quality are the absolute strengths of a climate tree!",
   explanation: "When we say that a tree is incredibly good for the climate, we're not bringing you a scoop. But have you ever considered what it does for the environment? Cooling and improving air quality are its absolute strengths.
 
   The cooling is on the one hand the result of the shade created by the tree. In addition, it captures sunlight, converts that energy into water vapor, and that leads to higher humidity. Of course, the size of the tree plays a role here; the larger its crown size and leaves, the more benefits to you and our climate.",
@@ -259,7 +259,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678717382
 
 solution12 = Solution.new(
   title: "Roof tree",
-  intro: "Did you know that on a hot summer day it gets up to 15 degrees cooler under a roof tree than in the flat sun? Plant your own green umbrella soon and reduce not only your own warming but also that of the earth.",
+  intro: "Did you know that on a hot summer day it gets up to 15 degrees cooler under a roof tree than in the flat sun?",
   explanation: "Do you know espaliers? Whether your answer is yes or no; here you will find everything you need to know about them. Their branches are guided in a certain direction and many types of trees can serve as espaliers. You have them in different shapes and models: one that looks like a hedge on a trunk, another with fruits against a wall or - as you will read in a moment - an espalier that as a natural parasol surpasses any plastic version.
 
   Roof tree, it is called, or also parasol tree. It is guided in a horizontal plane; blissful to sit under it in hot weather! Did you know that on a hot summer day it gets up to 15 degrees cooler under your tree than in the flat sun! And if you have a city garden, you'll probably be happy with some extra shielding from the eyes of your upstairs neighbours.
@@ -286,7 +286,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794358
 
 solution13 = Solution.new(
   title: "Rainwater pond",
-  intro: "Few forms of greenery contain as many species of life per square meter as ponds. Dragonflies lay eggs in them, birds come to drink and hedgehogs look for snails.",
+  intro: "Few forms of greenery contain as many species of life per square meter as ponds.",
   explanation: "Your own rainwater pond: how fun is that! Rainwater ponds temporarily collect rainwater and discharge it in a delayed manner. Unlike an ordinary garden pond, the rainwater version - up to 30 cm - has varying water levels. Plants keep your pond beautiful at both high and low water levels. Compared to a bioswale, a rainwater pond is much deeper and stores a lot more water.
 
   Your rainwater pond is covered with pond liner, which keeps a continuous layer of water in it.
@@ -313,7 +313,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794357
 
 solution14 = Solution.new(
   title: "Mini pond",
-  intro: "A private spot to let your thoughts flow undisturbed: don't we all want that? All you need is a tub, a zinc tub or half a wine barrel.",
+  intro: "A private spot to let your thoughts flow undisturbed: don't we all want that?",
   explanation: "If you do like a little life in the water, a mini pond is probably your thing. Dragonflies, frogs or boatmen, and even birds: they all find their way to such a swimming or drinking pool. The sight of water is soothing. Fun for your kids to play with, and a welcome cool down for young and old during hot summers.
 
   Don't have a large garden or only a terrace or balcony? Even then you can have a lot of fun with a mini pond. All you need is a tub, a zinc tub or half a wine barrel.",
@@ -338,7 +338,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794355
 
 solution15 = Solution.new(
   title: "Bioswale",
-  intro: "A bioswale collects rainwater locally, allows it to infiltrate into the soil of your garden and thus relieves the sewer system. Less chance of flooding and your garden can suddenly cope better with drought.",
+  intro: "A bioswale collects rainwater locally and allows it to infiltrate into the ground!",
   explanation: "A bioswale is a lowered area in your garden that collects rainwater, which then slowly seeps into the soil.
 
   It can be a lowered piece with only grass, but just as easily a lowering that you create yourself with plants. Attention, attention: the plants must be able to withstand both wet and dry weather, because your bioswale will be dry in dry periods. A bioswale is shallow and therefore fits easily into any garden.
@@ -369,7 +369,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794355
 
 solution16 = Solution.new(
   title: "Micro forest",
-  intro: "A forest in your garden too crazy for words? No way! For a micro-model, you barely need 6 m².",
+  intro: "A forest in your garden too crazy for words? Not for a micro-model, you barely need 6 m².",
   explanation: "A microforest fits right into the philosophy of the protected concept of 'Tiny Forest', devised by an Indian engineer. He drew on the work of a Japanese man who specialized in restoring natural vegetation and old-growth forests. The engineer brought the Japanese man's idea to the city.
 
   And you are now bringing it to your garden. With a free 6-square-meter plot, you can already get started and soon enjoy a mix of trees, shrubs and herbs. Choose native plants because they attract more insects, pollinators, birds and butterflies than exotic ones. They provide food, offer a place to reproduce and thus also provide food for animals higher up the chain (who in turn eat those insects, for example).",
@@ -394,7 +394,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794357
 
 solution17 = Solution.new(
   title: "Balcony green",
-  intro: "No garden but have a balcony or terrace? You'll turn that into a vegetable oasis in no time with all the climate benefits.",
+  intro: "No garden but have a balcony or terrace? Turn it into a vegetable oasis in no time with all the climate benefits.",
   explanation: "You definitely don't need a garden to be surrounded by greenery! Even on your balcony or terrace you can create your own piece of nature with trees, shrubs and herbs.
 
   All you need are a few large pots and a sturdy balcony. Do you prefer to keep it more modest and light? Then hanging baskets and/or smaller pots are the solution for you.",
@@ -418,7 +418,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794357
 
 solution18 = Solution.new(
   title: "Branch rill",
-  intro: "Did your pruning work over the past few months provide you with a lot of wood? With all those branches, you'll make a beautiful wooden fence and create a popular spot for flora and fauna.",
+  intro: "Make a beautiful wooden fence and create a popular spot for flora and fauna.",
   explanation: "Do you know a branch line? That's an accumulation of prunings - between poles or thick branches - through which you weave some thinner branches. Its height, width and length are entirely up to you. In the summer, you can also throw your mowed grass between them.
 
   A branch trellis is ideal as a partition, for example to hide your garbage cans behind. What's more, it offers many advantages for plants and animals.",
@@ -443,7 +443,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712823
 
 solution19 = Solution.new(
   title: "Willow hut",
-  intro: "How about an extra dash of nature in your yard? A willow hut is a 100% natural playground for your kids. Fun to build with the whole family and a nice picnic area to boot!",
+  intro: "A willow hut is a 100% natural playground for your kids. Fun to build with the whole family!",
   explanation: "A willow hut looks really handsome. The willow branches - which are thin branches - stick into the ground on several sides, forming an arch each time. The ends of those branches take root over time and so the branches stay nice and long. Every spring you see new leaves appear and the enclosure grows more and more dense. The more willow branches, the better your shelter.
 
   Large or small willow hut: that's entirely up to you. Ditto for the shape. Do you like the shape of a tunnel or do you prefer the igloo model? Anything goes! We will tell you more about a circular model: 3 meters in diameter and 2 meters high.",
@@ -468,7 +468,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712821
 
 solution20 = Solution.new(
   title: "Blue roof",
-  intro: "Does your house or carport have a flat roof? If you collect the rainwater there, you reduce the pressure on the sewerage system during heavy rainfall. No more flooding in your street any time soon!",
+  intro: "By collecting rainwater on your roof, you reduce the pressure on the sewerage system during heavy rainfall.",
   explanation: "Extreme rainstorms cause a sudden overload of the sewer system. Not infrequently resulting in flooding, unfortunately. A blue roof - or retention roof - offers solutions. It largely keeps up with the rainwater during such showers by discharging it only very gradually. That way you avoid sudden overloading of the sewer system.
 
   For that gradual drainage, you need two openings, one small and one large. The small one sits low against the roof surface, providing a slow and gradual drainage of water. The large opening prevents the roof itself from overflowing. If it fills up completely, the excess rainwater flows away immediately through this emergency outlet. You determine the height of the large opening based on how much water your roof can handle.
@@ -555,7 +555,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794358
 
 solution6 = Solution.new(
   title: "Self-attaching climbing plant",
-  intro: "A self-attaching climbing plant will naturally climb up your wall and in the summer will lower the façade temperature by up to 8° Celsius.",
+  intro: "This climbing plant will naturally climb up your wall and will lower the façade temperature by up to 8° Celsius.",
   explanation: "Your facade likes different types of greenery. A climbing plant is a very good option. But before you choose which one to use, check which one is best for your facade.
 
   • How many hours of sunlight does it get per day?
@@ -592,7 +592,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712828
 
 solution23 = Solution.new(
   title: "Non-self-attaching climbing plant",
-  intro: "Studies show that a climber with a leaf area index covering a 17m² facade captures the same amount of particulate matter as an average 25-year-old urban tree!",
+  intro: "A climber covering a 17m² facade captures the same amount of particulate matter as an average 25-year-old urban tree!",
   explanation: "Your facade likes different types of greenery. A climbing plant is a very good option. But before you choose which one to use, check which one is best for your facade.
 
   • How many hours of sunlight does it get per day?
@@ -629,7 +629,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794355
 
 solution24 = Solution.new(
   title: "Hedge",
-  intro: "What could be more natural and beautiful than a hedge to safeguard your private moments? You hide your trash cans behind it as much as it makes the animals in your garden happy or protects you from strong winds.",
+  intro: "What could be more natural and beautiful than a hedge to safeguard your private moments?",
   explanation: "A walled garden is inaccessible to animals. But with a natural fence like your hedge, you give critters - such as hedgehogs - safe passage between different green areas.
 
   If your hedge borders others or gardens and groves, the passage of insects, birds, reptiles, amphibians and mammals ensures healthy populations.",
@@ -655,7 +655,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794357
 
 solution25 = Solution.new(
   title: "Permeable pavement",
-  intro: "You want a paved surface for (part of) your patio or garden, but you don't want to harm the environment? There is a sympathetic solution!",
+  intro: "You want a paved surface but you don't want to harm the environment? There is a sympathetic solution!",
   explanation: "Whichever way you look at it, every garden needs some paving (at some point). For your patio, because you would rather not see your chairs or table sink into the grass. For a path, to keep your feet dry in the morning dew. Or for your driveway, to neatly park your two- or four-wheeler(s).
 
   The basic rule is: the sum of all your paved surfaces does not exceed 40% of your garden area. And as with a lot of things, the less hardiness, the better.
@@ -692,7 +692,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712822
 
 solution26 = Solution.new(
   title: "Grey to green",
-  intro: "Flanders is one of the most paved places in Europe. And your driveway and terrace are also culprits. Maybe you could do without a few bricks and tiles? You get a green view and a cooler garden as a result!",
+  intro: "Maybe you could do without a few bricks and tiles? You get a green view and a cooler garden as a result!",
   explanation: "Climate change never comes with good news; more drought, brighter heat waves and more intense rainfall.
 
   Flanders is in a particularly bad light when it comes to paved surfaces. We may not always realize it, but our driveways and terraces are also contributing heavily to this. And that has major consequences. Asphalt and clinkers absorb more sun than the green varieties, and do not allow rainwater to pass through to the surface. Pot tight, they sit, sending rainwater straight to the sewer system.
@@ -732,7 +732,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794356
 
 solution1 = Solution.new(
   title: "Car sharing",
-  intro: "The concept of car sharing is simple: you use a car when you need it. If you don't need to leave your house, someone else can get behind the wheel. Did you know that this way one shared car replaces up to ten others?",
+  intro: "The concept of car sharing is simple: you use a car when you need it.",
   explanation: "In our country, traffic emissions top the list of climate policy challenges. In 2019, it was guilty of nearly 25% of total emissions. If we take a closer look at the transportation sector, passenger transport accounts for more than half of these high figures.
 
   Flanders wants to reduce total CO2 emissions by 40% by 2030. The use of more sustainable cars must increase, and our car use itself must decrease. And tadaa, that's where shared mobility comes in.
@@ -838,7 +838,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678717383
 
 solution4 = Solution.new(
   title: "Roof insulation",
-  intro: "Did you know that most heat is lost through your roof? And if you address this problem properly, you can save up to 40% per year!",
+  intro: "Did you know that most heat is lost through your roof? Save up to 40% per year!",
   explanation: "Whether you spend time at home, the gym, the supermarket or a shopping mall, it's nice and warm in the winter and often air-conditioned in the summer. Keeping things warm and cool, the lights, the operation of appliances; it takes a lot of energy to do that. That comes mostly from fossil fuels. Unfortunately, this story causes a lot of emissions of greenhouse gases in Belgium.
 
   If we take a look at our own home, more than 60% of our energy goes to heating it. The rest is for your refrigerator and freezer, lighting, washing and drying machines, cooking, hot water and entertainment.
@@ -873,7 +873,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712826
 
 solution5 = Solution.new(
   title: "Rainwater barrel",
-  intro: "A rainwater barrel captures water during heavy rains, reducing the amount flowing into the sewer system and reducing the risk of flooding in your street.",
+  intro: "A rainwater barrel captures water during heavy rains and reduces the risk of flooding in your street.",
   explanation: "Despite the fact that quite a bit of rain falls from the sky in our country, we still regularly experience extended periods of drought during the summer. Sometimes even resulting in a ban on watering.
 
   Your rain barrel provides a (admittedly limited) supply of rainwater during these dry periods to water your garden. For your patio or facade garden, this may be enough to cover a few weeks. For a larger garden, 1 rain barrel will not always suffice during several dry weeks. Still, the rain barrel helps raise awareness about our rainwater use!
