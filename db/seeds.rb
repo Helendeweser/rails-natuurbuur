@@ -903,14 +903,14 @@ experiences_content = [
   "Really liked this solution. I recommend it!",
   "Very clear instructions! We installed it together with the kids.",
   "A bit hard to implement...",
-  "Nice solution to my problems, thank you !",
-  "Hard work but nice results !",
-  "I'm not a huge fan of this way to do ...",
-  "I fell it make my life more green.",
+  "Nice solution to my problems, thank you!",
+  "Hard work but nice results!",
+  "I'm not a huge fan of this method...",
+  "It makes my life more green.",
   "This green solution is amazing! It's really helps me reduce my carbon footprint. I feel good about using it and would definitely recommend it to others.",
-  "I love this one ! It's so easy to use and really effective. And of course it's environmentally friendly, which makes me feel good about my purchase.",
+  "I love this one! It's so easy to use and really effective. And of course it's environmentally friendly, which makes me feel good about my purchase.",
   "I've tried a lot of solutions for my issue, but this one is by far my favorite. It's affordable, effective, and eco-friendly.",
-  "If you're looking for a xomething that really works, this is for you. It's made from all-natural ingredients and is safe for both you and the environment. I would definitely recommend it to anyone looking to go green.",
+  "If you're looking for something that really works, this is for you. It's made from all-natural ingredients and is good for both you and the environment.",
 ]
 
 def random_rating
