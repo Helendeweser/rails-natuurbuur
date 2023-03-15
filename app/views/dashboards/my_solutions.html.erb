@@ -7,8 +7,8 @@
     <%# SMALL CARD: EVERYTHING CENTERED %>
     <div class="small-card">
       <%= link_to favourite_path(solution), data: {turbo_method: :delete, turbo_confirm: "Remove this solutions from yor favorites ?"} do %>
-    <i class="fa-solid fa-bookmark"></i>
-  <% end %>
+        <i class="fa-solid fa-bookmark"></i>
+      <% end %>
       <%= link_to solution_path(solution) do %>
         <div class="content-small-card">
           <div><%= cl_image_tag solution.photos[1].key, class: "rounded-pictures"%></div>
