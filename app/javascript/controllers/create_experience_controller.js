@@ -21,7 +21,7 @@ export default class extends Controller {
       .then((data) => {
 
         if (data.inserted_item) {
-          this.experienceTarget.insertAdjacentHTML("beforeend", data.inserted_item)
+          this.experienceTarget.insertAdjacentHTML("afterbegin", data.inserted_item)
         }
 
         this.insertformTarget.outerHTML = data.form
