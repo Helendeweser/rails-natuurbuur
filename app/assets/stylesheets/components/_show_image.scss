@@ -4,10 +4,10 @@
   background-color: $lighter-gray;
   border-radius: 5px;
   position: relative;
-  height: 450px;
+  height: 500px;
 
   .show-image {
-    width: 450px;
+    width: 500px;
     align-self: middle;
     padding: 20px;
     border-radius: 5px;
@@ -29,13 +29,12 @@
 }
 
 .carousel-item {
-  width: 450px;
+  width: 500px;
 }
 
 .carousel {
-  width: 450px;
+  width: 500px;
 }
-
 
 
 .text-card {
@@ -51,6 +50,7 @@
 .side-text {
   margin: 20px 40px 20px 40px;
   position: relative;
+  width: 100%;
   p{
     font-size: 1.0em;
   }
@@ -58,7 +58,7 @@
 
 .icons-details-card {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 0px;
   width: 80%;
   align-items: flex-end;
@@ -149,17 +149,17 @@
 
 
 
-@media(max-width: 1370px) {
+@media(max-width: 1728px) {
   .icons-details-card {
     width: 70%;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
 
 
-@media(max-width: 1236px) {
+@media(max-width: 1513px) {
   .icons-details-card {
     width: 60%;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
