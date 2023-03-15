@@ -1,5 +1,18 @@
 .cards-map {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
+}
 
+.arrow {
+  // margin-top: 30px;
+  margin-left: 215px;
+  b {
+    margin-top: 50px;
+    font-size: xx-large;
+  }
+}
+
+.arrow-grid {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
 }
