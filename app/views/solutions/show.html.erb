@@ -94,6 +94,7 @@
               <p><%= @solution.likes.count %></p>
             </div>
 
+
           <div class="rating-detail">
             <i class="fa-solid fa-star"></i>
             <p><%= @solution.average_rating %></p>
@@ -141,9 +142,9 @@
 
 
 
-  <div id="users-experiences" class="experiences-card" data-controller="create-experience">
+  <div class="experiences-card" data-controller="create-experience">
     <div class="experiences-display" data-create-experience-target="experience">
-      <h2 style="font-family:'Zeyada', cursive; transform: rotate(-12deg); width: 10px; color: #ca973b;font-size: 40px;text-decoration: 1.5px #ca973b wavy underline;position:absolute; top:23px; z-index:1">Reviews:</h2>
+      <h2 id="users-experiences" style="font-family:'Zeyada', cursive; transform: rotate(-12deg); width: 10px; color: #ca973b;font-size: 40px;text-decoration: 1.5px #ca973b wavy underline;position:absolute; top:23px; z-index:1">Reviews:</h2>
       <% if @solution.experiences.empty? %>
         <B> " Be the first one to share your experience ! " </B>
       <% end %>
