@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="create-experience"
 export default class extends Controller {
-  static targets = ["experience", "form"]
+  static targets = ["experience", "form", "insertform"]
 
   connect(){
   }
@@ -23,7 +23,8 @@ export default class extends Controller {
         if (data.inserted_item) {
           this.experienceTarget.insertAdjacentHTML("beforeend", data.inserted_item)
         }
-        this.formTarget.outerHTML = data.form
+
+        this.insertformTarget.outerHTML = data.form
       })
   }
 }
