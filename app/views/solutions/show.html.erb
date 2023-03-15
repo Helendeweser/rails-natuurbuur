@@ -90,7 +90,9 @@
         </div>
 
         <div class="comment-detail">
-          <i class="fa-solid fa-comment"></i>
+         <a href="#users-experiences">
+            <i class="fa-solid fa-comment"></i>
+         </a>
           <p><%= @solution.experiences.count %></p>
         </div>
 
@@ -127,7 +129,7 @@
 
 
 
-  <div class="experiences-card" data-controller="create-experience">
+  <div id="users-experiences" class="experiences-card" data-controller="create-experience">
     <div class="experiences-display" data-create-experience-target="experience">
       <h2>Reviews:</h2>
       <% if @solution.experiences.empty? %>
