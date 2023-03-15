@@ -65,12 +65,13 @@
   justify-content: space-between;
   margin-bottom: 0;
   margin-top: 8px;
-  padding: 20px;
 }
 
 .card-review-infos {
-  p {
-    padding-left: 0px;
+  padding-left: 20px;
+  b {
+  font-family: 'Zeyada', cursive;
+  font-size: 28px;
   }
 }
 
@@ -87,7 +88,8 @@
 
   }
   a {
-    color: red;
+    border:#aa7171;
+    color:#aa7171;
   }
 }
 
@@ -98,7 +100,7 @@
 }
 
 .container-img {
-  width: 205px;
+  width: 233px;
   overflow: hidden;
 }
 
@@ -106,4 +108,18 @@
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+
+#show_card-price {
+  text-align: end;
+}
+
+.icon-left-sp {
+  margin-left: -27px;
+}
+
+.quotation_mark {
+  width: 12px;
+  height: 12px;;
 }
