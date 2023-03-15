@@ -1,20 +1,26 @@
  <div class="card-review">
+
         <%  if experience.photo.key != nil %>
         <div class= "container-img">
           <%= cl_image_tag experience.photo.key, class: "image"%>
         </div>
           <% else %>
-          <p>     </p>
+          <%= link_to image_tag("background_white.png")%>
         <% end %>
         <div class="card-review-infos">
 
           <B> <%= experience.user.username %></B>
+          <p><img src="/assets/quot_mark_start-d0df031e16b717e5ec13e71bdf359deee285c326b33ee131585e7f80060d660d.png" style="width: 18px; margin-left: -18px;"></p>
           <p><%= experience.content %></p>
+          <p><img src="/assets/quot_mark_end-8d55b6eebff225ec6e75e39c2e3045670a3e8ddbcdd475236ce9266ac2b3aaad.png" style="width: 18px;margin-left: 342px;"></p>
         </div>
-         <div class="rating">
-           <p> <%= experience.rating %>/5</p>
-           <% if experience.user == current_user %>
-            <%= link_to "Delete", experience_path(experience), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"} %>
+        <div class="rating">
+          <p>⭐ <%= experience.rating %>/5</p>
+
+          <div class="delete-button"></div>
+            <% if experience.user == current_user %>
+              <%= link_to "Delete", experience_path(experience), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}%>
             <% end %>
          </div>
+
   </div>
