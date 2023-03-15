@@ -99,10 +99,17 @@
             <p><%= @solution.average_rating %></p>
           </div>
 
-          <div class="comment-detail">
+        <div class="rating-detail">
+          <i class="fa-solid fa-star"></i>
+          <p><%= @solution.average_rating %></p>
+        </div>
+
+        <div class="comment-detail">
+         <a href="#users-experiences">
             <i class="fa-solid fa-comment"></i>
-            <p><%= @solution.experiences.count %></p>
-          </div>
+         </a>
+          <p><%= @solution.experiences.count %></p>
+        </div>
 
           <div class="difficulty-detail">
             <% if @solution.difficulty == "Easy" %>
@@ -139,7 +146,7 @@
 
 
 
-  <div class="experiences-card" data-controller="create-experience">
+  <div id="users-experiences" class="experiences-card" data-controller="create-experience">
     <div class="experiences-display" data-create-experience-target="experience">
       <h2>Reviews:</h2>
       <% if @solution.experiences.empty? %>

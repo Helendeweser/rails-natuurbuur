@@ -96,10 +96,16 @@
     margin-bottom: 10px;
   }
 
+
   .fa-comment {
     color: $green;
     font-size: 2em;
     margin-bottom: 10px;
+    opacity: 0.8;
+    &:hover{
+      opacity: 1;
+      color: #8fa102;;
+    }
   }
 
   .fa-star {
