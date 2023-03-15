@@ -148,7 +148,7 @@
         <B> " Be the first one to share your experience ! " </B>
       <% end %>
 
-      <% @solution.experiences.each do |experience| %>
+      <% @solution.experiences.reverse.each do |experience| %>
       <%= render "solutions/experience", experience: experience %>
       <% end %>
     </div>
