@@ -8,7 +8,7 @@
 
 <div class="show-card">
   <div class="image-card">
-  <%# To add to youre favourites or remove if we are login%>
+  <%# To add to your favourites or remove if we are login%>
     <% if user_signed_in? %>
       <% if @favourites.include? @solution%>
         <%= link_to favourite_path(@solution), data: {turbo_method: :delete, turbo_confirm: "Remove this solution from your favourites?"} do %>
@@ -36,7 +36,7 @@
           <%= cl_image_tag @solution.photos[2].key, class: "d-block show-image", alt:"Second slide" %>
         </div>
         <div class="carousel-item ">
-          <%= cl_image_tag @solution.photos[3].key, class: "d-block show-image", alt:"Second slide" %>
+          <%= cl_image_tag @solution.photos[3].key, class: "d-block show-image", alt:"Third slide" %>
         </div>
       </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -51,37 +51,52 @@
 
 
     <div class="side-text">
-      <h2><%= @solution.title%></h2>
-      <br>
-      <p><%= @solution.intro%></p>
-      <br>
-      <div class="advantages">
-        <%= render "solutions/advantages_show_card", solution: @solution %>
-      </div>
-      <br>
-      <br>
-      <div class="icons-details-card icon-left-sp">
-        <div class="likes-detail">
-          <%# To like or dislike if we are login%>
-          <% if user_signed_in? %>
+      <div class="upper">
+        <h2><%= @solution.title%></h2>
 
-              <% if @likes.where(solution_id: params[:id]).exists?%>
-                <%= link_to like_path(@solution), data: {turbo_method: :delete} do %>
-                  <i class="fa-solid fa-heart"></i>
+        <br>
+
+        <p><%= @solution.intro%></p>
+
+        <br>
+
+        <h5>Many advantages for you and the climate!</h5>
+
+        <div class="advantages">
+          <%= render "solutions/advantages_show_card", solution: @solution %>
+        </div>
+
+        <br>
+      </div>
+
+      <div class="bottom">
+        <div class="icons-details-card">
+          <div class="likes-detail">
+            <%# To like or dislike if we are login%>
+            <% if user_signed_in? %>
+
+                <% if @likes.where(solution_id: params[:id]).exists?%>
+                  <%= link_to like_path(@solution), data: {turbo_method: :delete} do %>
+                    <i class="fa-solid fa-heart"></i>
+                  <% end %>
+
+                <% else%>
+                  <%= link_to solution_likes_path(@solution), data: {turbo_method: :post} do %>
+                    <i class="fa-regular fa-heart"></i>
+                  <% end %>
                 <% end %>
 
-              <% else%>
+              <% else %>
                 <%= link_to solution_likes_path(@solution), data: {turbo_method: :post} do %>
                   <i class="fa-regular fa-heart"></i>
                 <% end %>
               <% end %>
+              <p><%= @solution.likes.count %></p>
+            </div>
 
-            <% else %>
-              <%= link_to solution_likes_path(@solution), data: {turbo_method: :post} do %>
-                <i class="fa-regular fa-heart"></i>
-              <% end %>
-            <% end %>
-            <p><%= @solution.likes.count %></p>
+          <div class="rating-detail">
+            <i class="fa-solid fa-star"></i>
+            <p><%= @solution.average_rating %></p>
           </div>
 
         <div class="rating-detail">
@@ -90,24 +105,26 @@
         </div>
 
         <div class="comment-detail">
-          <i class="fa-solid fa-comment"></i>
+         <a href="#users-experiences">
+            <i class="fa-solid fa-comment"></i>
+         </a>
           <p><%= @solution.experiences.count %></p>
         </div>
 
-        <div class="difficulty-detail">
-          <% if @solution.difficulty == "Easy" %>
-            <i class="fa-solid fa-face-smile"></i>
-            <p><%= @solution.difficulty %></p>
-          <% elsif @solution.difficulty == "Medium" %>
-            <i class="fa-solid fa-face-meh"></i>
-            <p><%= @solution.difficulty %></p>
-          <% else %>
-            <i class="fa-solid fa-face-frown"></i>
-            <p><%= @solution.difficulty %></p>
-          <% end %>
+          <div class="difficulty-detail">
+            <% if @solution.difficulty == "Easy" %>
+              <i class="fa-solid fa-face-smile"></i>
+              <p><%= @solution.difficulty %></p>
+            <% elsif @solution.difficulty == "Medium" %>
+              <i class="fa-solid fa-face-meh"></i>
+              <p><%= @solution.difficulty %></p>
+            <% else %>
+              <i class="fa-solid fa-face-frown"></i>
+              <p><%= @solution.difficulty %></p>
+            <% end %>
+          </div>
         </div>
 
-      </div>
         <div id="show_card-price"><p style="color: gray;">Estimated price:</p><h3 style="padding-right: 25px;">
           <% if @solution.price == 0 %>
             <h3>Free</h3>
@@ -115,11 +132,13 @@
           <h3>€ <%= @solution.price %></h3>
           <% end %>
         </div>
+      </div>
+
     </div>
   </div>
 
   <div class="text-card">
-    <h3>Some more information</h3><hr>
+    <h4>Discover more</h4><hr>
     <p><%= @solution.explanation %></p>
   </div>
 
@@ -127,7 +146,7 @@
 
 
 
-  <div class="experiences-card" data-controller="create-experience">
+  <div id="users-experiences" class="experiences-card" data-controller="create-experience">
     <div class="experiences-display" data-create-experience-target="experience">
       <h2>Reviews:</h2>
       <% if @solution.experiences.empty? %>

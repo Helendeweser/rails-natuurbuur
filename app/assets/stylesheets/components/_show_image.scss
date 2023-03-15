@@ -4,12 +4,13 @@
   background-color: $lighter-gray;
   border-radius: 5px;
   position: relative;
-  height: 500px;
+  height: 450px;
 
   .show-image {
-    width: 500px;
-    align-self: center;
+    width: 450px;
+    align-self: middle;
     padding: 20px;
+    border-radius: 5px;
   }
 
   .fa-bookmark {
@@ -25,10 +26,17 @@
     opacity: 0.9;
     }
   }
-  .carousel{
-    width: 500px;
-  }
 }
+
+.carousel-item {
+  width: 450px;
+}
+
+.carousel {
+  width: 450px;
+}
+
+
 
 .text-card {
   margin-top: 10px;
@@ -41,73 +49,117 @@
 }
 
 .side-text {
-  margin: 40px;
+  margin: 20px 40px 20px 40px;
+  position: relative;
   p{
     font-size: 1.0em;
   }
+}
 
+.icons-details-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 0px;
+  width: 80%;
+  align-items: flex-end;
+  justify-items: left;
+
+  p {
+    margin-bottom: 0px;
+  }
+
+  .rating-detail {
+    text-align: center;
+  }
+
+  .difficulty-detail {
+    text-align: center;
+  }
+
+  .likes-detail {
+    text-align: center;
+  }
+
+  .comment-detail {
+    text-align: center;
+  }
+
+  .fa-face-smile {
+    color: $green;
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  .fa-face-meh {
+    color: $orange;
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  .fa-face-frown {
+    color: $red;
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+
+  .fa-comment {
+    color: $green;
+    font-size: 2em;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    &:hover{
+      opacity: 1;
+      color: #8fa102;;
+    }
+  }
+
+  .fa-star {
+    color: $orange;
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .fa-heart {
+    color: $red;
+    font-size: 2em;
+    margin-bottom: 10px;
+
+    &:hover{
+      color: red;
+    }
+  }
+}
+
+#show_card-price {
+  text-align: end;
+
+  h3 {
+    margin-bottom: 0px;
+  }
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+
+}
+
+
+
+
+@media(max-width: 1370px) {
   .icons-details-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 0px;
-    width: 100%;
+    width: 70%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
 
-    p {
-      margin-bottom: 0;
-    }
 
-    .rating-detail {
-      text-align: center;
-    }
-
-    .difficulty-detail {
-      text-align: center;
-    }
-
-    .likes-detail {
-      text-align: center;
-    }
-
-    .comment-detail {
-      text-align: center;
-    }
-
-    .fa-face-smile {
-      color: $green;
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-    .fa-face-meh {
-      color: $orange;
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-    .fa-face-frown {
-      color: $red;
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-
-    .fa-comment {
-      color: $green;
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-
-    .fa-star {
-      color: $orange;
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-
-    .fa-heart {
-      color: $red;
-      font-size: 2em;
-      margin-bottom: 10px;
-
-      &:hover{
-        color: red;
-      }
-    }
+@media(max-width: 1236px) {
+  .icons-details-card {
+    width: 60%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
