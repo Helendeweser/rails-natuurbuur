@@ -21,13 +21,6 @@ class ExperiencesController < ApplicationController
     end
   end
 
-  def update
-    # To implement
-    raise
-    @experience.update(experiences_params)
-    redirect_to solution_path(@solution)
-  end
-
   def destroy
     @experience.destroy
     @solution = @experience.solution

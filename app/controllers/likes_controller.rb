@@ -9,8 +9,9 @@ class LikesController < ApplicationController
 
   def destroy
     solution = Solution.find(params[:id])
-    @like = Like.where(solution_id: solution.id.to_s).first
-    @like.destroy
+    likes = Like.where(solution_id: solution.id.to_s)
+    like = likes.where(user: current_user).first
+    like.destroy
     redirect_back_or_to root_path
   end
 
