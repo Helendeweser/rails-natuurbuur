@@ -1,7 +1,13 @@
 require "open-uri"
 
+puts "Destroying solutions ..."
 Solution.destroy_all
+
+puts "Destroying users ..."
 User.destroy_all
+
+##################################################### Solutions ####################################################
+
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198800/1._Square_meter_garden_ni4mkd.png")
 image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370701/1._Square_meter_garden_ewafdp.png")
@@ -805,6 +811,7 @@ solution5.save!
 puts "Creating solution #{solution5.id}..."
 
 
+######################################################## Users  ########################################################
 
 user1 = User.new(
   email: "lewagon@hotmail.com",
@@ -851,9 +858,49 @@ user5 = User.new(
 user5.save!
 puts "Creating user #{user5.id}..."
 
+user6 = User.new { Faker::Internet.user('username', 'email', 'password') }
+user6.save!
+puts "Creating user #{user6.id}..."
+
+user7 = User.new { Faker::Internet.user('username', 'email', 'password') }
+user7.save!
+puts "Creating user #{user7.id}..."
+
+user8 = User.new { Faker::Internet.user('username', 'email', 'password') }
+user8.save!
+puts "Creating user #{user8.id}..."
+
+user9 = User.new { Faker::Internet.user('username', 'email', 'password') }
+user9.save!
+puts "Creating user #{user9.id}..."
+
+user10 = User.new { Faker::Internet.user('username', 'email', 'password') }
+user10.save!
+puts "Creating user #{user10.id}..."
+
+users = User.all
 
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794356/car_sharing4_fmizyx.png")
+
+##################################################### Experiences ####################################################
+
+experiences_content = [
+  "Really liked this solution. I recommend it!",
+  "Very clear instructions! We installed it together with the kids.",
+  "A bit hard to implement...",
+  "Nice solution to my problems, thank you !",
+  "Hard work but nice results !",
+  "I'm not a huge fan of this way to do ...",
+  "I fell it make my life more green.",
+  "This green solution is amazing! It's really helps me reduce my carbon footprint. I feel good about using it and would definitely recommend it to others.",
+  "I love this one ! It's so easy to use and really effective. And of course it's environmentally friendly, which makes me feel good about my purchase.",
+  "I've tried a lot of solutions for my issue, but this one is by far my favorite. It's affordable, effective, and eco-friendly.",
+  "If you're looking for a xomething that really works, this is for you. It's made from all-natural ingredients and is safe for both you and the environment. I would definitely recommend it to anyone looking to go green.",
+]
+
+random_rating = rand(0.0..5.0).round(1)
+
+#### Solution 1 - Car sharing #####
 experience = Experience.new(
   content: "Really liked this solution. I recommend it!",
   rating: 4.5,
@@ -861,23 +908,88 @@ experience = Experience.new(
   solution_id: solution1.id
 )
 
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794356/car_sharing4_fmizyx.png")
 experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
 experience.save!
 puts "Creating experience #{experience.id}..."
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712826/barrel2_q30bp4.jpg")
 experience = Experience.new(
-  content: "Very clear instructions! We installed it together with the kids.",
-  rating: 4.8,
-  user_id: user4.id,
-  solution_id: solution5.id
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user5.id,
+  solution_id: solution1.id
 )
-
-experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
 experience.save!
 puts "Creating experience #{experience.id}..."
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678717383/mow_less2_ncwyu0.jpg")
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user7.id,
+  solution_id: solution1.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user2.id,
+  solution_id: solution1.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user3.id,
+  solution_id: solution1.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+
+#### Solution 2 - Heat pump ####
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user3.id,
+  solution_id: solution2.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user1.id,
+  solution_id: solution2.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user9.id,
+  solution_id: solution2.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+
+#### Solution 3 - Mow less #####
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user2.id,
+  solution_id: solution3.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
 experience = Experience.new(
   content: "Really liked this solution. I recommend it!",
   rating: 4.4,
@@ -885,11 +997,22 @@ experience = Experience.new(
   solution_id: solution3.id
 )
 
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678717383/mow_less2_ncwyu0.jpg")
 experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
 experience.save!
 puts "Creating experience #{experience.id}..."
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712824/insulation_roof_u5o8eu.jpg")
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user1.id,
+  solution_id: solution3.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+
+#### Solution 4 - Roof insulation #####
 experience = Experience.new(
   content: "A bit hard to implement...",
   rating: 3.0,
@@ -897,11 +1020,65 @@ experience = Experience.new(
   solution_id: solution4.id
 )
 
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712824/insulation_roof_u5o8eu.jpg")
 experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
 experience.save!
 puts "Creating experience #{experience.id}..."
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794358/self_att_climbing_plant3_zug8ox.png")
+
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user5.id,
+  solution_id: solution1.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+
+#### Solution 5 - Rainwater barrel #####
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user5.id,
+  solution_id: solution5.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+experience = Experience.new(
+  content: "Very clear instructions! We installed it together with the kids.",
+  rating: 4.8,
+  user_id: user4.id,
+  solution_id: solution5.id
+)
+
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712826/barrel2_q30bp4.jpg")
+experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user10.id,
+  solution_id: solution5.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user7.id,
+  solution_id: solution5.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+
+#### Solution 6 - Self-attaching climbing plant #####
 experience = Experience.new(
   content: "My facade looks a lot prettier now!",
   rating: 3.5,
@@ -909,13 +1086,46 @@ experience = Experience.new(
   solution_id: solution6.id
 )
 
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794358/self_att_climbing_plant3_zug8ox.png")
 experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user2.id,
+  solution_id: solution6.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user8.id,
+  solution_id: solution6.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user6.id,
+  solution_id: solution6.id
+)
 experience.save!
 puts "Creating experience #{experience.id}..."
 
 
 
 
+
+##################################################### Likes ####################################################
 
 
 like = Like.new(
