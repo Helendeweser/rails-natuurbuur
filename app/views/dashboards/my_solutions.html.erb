@@ -1,14 +1,14 @@
 <div class="title-page"><h1 >Have a look at your saved solutions!</h1></div>
 <div id="banner-solution-page" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80);"></div>
 
-<div class="cards-index">
+<div class="cards-index my-solutions-grid">
 
   <% @solutions.each do |solution| %>
     <%# SMALL CARD: EVERYTHING CENTERED %>
     <div class="small-card">
       <%= link_to favourite_path(solution), data: {turbo_method: :delete, turbo_confirm: "Remove this solutions from yor favorites ?"} do %>
-    <i class="fa-solid fa-bookmark"></i>
-  <% end %>
+        <i class="fa-solid fa-bookmark"></i>
+      <% end %>
       <%= link_to solution_path(solution) do %>
         <div class="content-small-card">
           <div><%= cl_image_tag solution.photos[1].key, class: "rounded-pictures"%></div>
@@ -23,11 +23,7 @@
             <%# ICONS %>
             <div class="icons-details-small-card">
 
-
-
-
               <%= render "solutions/icons_details_card", solution:solution %>
-
 
             </div>
 

@@ -6,4 +6,6 @@ class Experience < ApplicationRecord
 
   validates :rating, :user_id, :solution_id, :content, presence: true
   validates :rating, numericality: { in: (0..5) }
+  validates :user_id, uniqueness: { scope: :solution_id }
+  validates :content, length: { in: 20..200 }
 end

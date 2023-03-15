@@ -3,7 +3,7 @@
 
 <div class="cards-map">
   <%# CARDS INDEX %>
-  <div class="cards-index">
+  <div class="cards-index index-grid">
     <% @solutions.each do |solution| %>
       <%# SMALL CARD: EVERYTHING CENTERED %>
       <%= render "card", solution:solution %>
@@ -13,6 +13,9 @@
   <%# MAP %>
   <div class="image-map">
     <%= render "clickable_map" %>
+      <div class= "arrow arrow-grid" style="position:sticky; top:558px;">
+        <%= image_tag "arrow.png", width: 150, height: 150 %>
+        <B>Try It Out</B>
+      </div>
   </div>
-
 </div>

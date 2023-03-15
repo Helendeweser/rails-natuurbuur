@@ -1,7 +1,102 @@
 require "open-uri"
 
+puts "Destroying solutions ..."
 Solution.destroy_all
+
+puts "Destroying users ..."
 User.destroy_all
+
+######################################################## Users  ########################################################
+
+user1 = User.new(
+  email: "lewagon@hotmail.com",
+  password: "123456",
+  username: "Le Wagon"
+)
+
+user1.save!
+puts "Creating user #{user1.id}..."
+
+user2 = User.new(
+  email: "laraparson@hotmail.com",
+  password: "123456",
+  username: "Lara parson"
+)
+
+user2.save!
+puts "Creating user #{user2.id}..."
+
+user3 = User.new(
+  email: "pierreboileau@hotmail.com",
+  password: "123456",
+  username: "Pierre Boileau"
+)
+
+user3.save!
+puts "Creating user #{user3.id}..."
+
+user4 = User.new(
+  email: "henristubbe@hotmail.com",
+  password: "123456",
+  username: "Henri Stubbe"
+)
+
+user4.save!
+puts "Creating user #{user4.id}..."
+
+user5 = User.new(
+  email: "ellamiller@hotmail.com",
+  password: "123456",
+  username: "Ella Miller"
+)
+
+user5.save!
+puts "Creating user #{user5.id}..."
+
+user6 = User.new(
+  email: Faker::Internet.email,
+  password: "123456",
+  username: Faker::Internet.username
+)
+user6.save!
+puts "Creating user #{user6.id}..."
+
+user7 = User.new(
+  email: Faker::Internet.email,
+  password: "123456",
+  username: Faker::Internet.username
+)
+user7.save!
+puts "Creating user #{user7.id}..."
+
+user8 = User.new(
+  email: Faker::Internet.email,
+  password: "123456",
+  username: Faker::Internet.username
+)
+user8.save!
+puts "Creating user #{user8.id}..."
+
+user9 = User.new(
+  email: Faker::Internet.email,
+  password: "123456",
+  username: Faker::Internet.username
+)
+user9.save!
+puts "Creating user #{user9.id}..."
+
+user10 = User.new(
+  email: Faker::Internet.email,
+  password: "123456",
+  username: Faker::Internet.username
+)
+user10.save!
+puts "Creating user #{user10.id}..."
+
+users = User.all
+
+##################################################### Solutions ####################################################
+
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198800/1._Square_meter_garden_ni4mkd.png")
 image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370701/1._Square_meter_garden_ewafdp.png")
@@ -9,9 +104,9 @@ image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794356
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712826/square_meter_garden2_tz7lux.jpg")
 
 
-solution = Solution.new(
+solution7 = Solution.new(
   title: "Square meter garden",
-  intro: "Of course you can grow fresh greens without a garden! Do you have a terrace or balcony? Then a square-meter garden is the solution for you.",
+  intro: "Do you have a terrace or balcony? Then a square-meter garden is the solution for you.",
   explanation: "You need a container on legs, measuring 1.2 m by 1.2 m approximately. In it you plant fruit, different vegetables or herbs. You divide your container into grid squares of 30 cm by 30 cm and put one type of plant in each. So you really garden, but on a small area and very intensively.
 
   The name square-meter garden is actually a bit of a misnomer. Your container is never exactly a square meter and can perfectly have a different shape. The most important thing is that you respect the grid squares of 30 cm by 30 cm. Is your balcony very small? No problem! Then you choose for example a container of 30 cm by 90 cm. You can still plant three kinds of goodies in there with ease!
@@ -29,21 +124,21 @@ solution = Solution.new(
   advantages: ["Health", "Well-being", "Food production"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution7.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution7.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution7.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution7.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution7.save!
+puts "Creating solution #{solution7.id}..."
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198803/2._Square_meter_garden_on_the_ground_jesbgt.png")
 image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370701/2._Square_meter_garden_ground_uwsgzh.png")
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794356/squaare_meter_garden3_ivkf8w.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678802118/square_garden_ground4_rsnbob.jpg")
 
-solution = Solution.new(
+solution8 = Solution.new(
   title: "Square meter garden (ground)",
-  intro: "What do you do with a small, vacant patch of garden? Nothing like picking your own fruits and vegetables there, right?",
+  intro: "Nothing like picking your own fruits and vegetables, right?",
   explanation: "You need a container, 1.2 m by 1.2 m approximately. In it you plant different vegetables, fruits or herbs. You divide your box into grid squares of 30 cm by 30 cm and put one type of plant in each. So you are really gardening, but on a small area and very intensively.
 
   The name square-meter garden is actually a bit of a misnomer. Your container is never exactly a square meter and can perfectly have a different shape. The important thing is that you respect the 30 cm by 30 cm grid squares.
@@ -63,21 +158,21 @@ solution = Solution.new(
   advantages: ["Health", "Well-being", "Food production"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution8.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution8.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution8.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution8.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution8.save!
+puts "Creating solution #{solution8.id}..."
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198803/3._Fruit_tree_xtj2cr.png")
 image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370702/3._Fruit_tree_uv2kvj.png")
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712821/fruit_tree1_gamoyb.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712821/fruit_tree2_cs6xos.jpg")
 
-solution = Solution.new(
+solution9 = Solution.new(
   title: "Fruit tree",
-  intro: "All that you plant yourself, you plant better. And doesn't fruit from your own tree taste more delicious than anything else?",
+  intro: "Doesn't fruit from your own tree taste more delicious than anything else?",
   explanation: "Espalier trees are trees whose branches are guided
     in a certain direction. Their shape does not occur in nature, you model here. You do this by tying the branches to a frame.
 
@@ -94,22 +189,21 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Health", "Well-being", "Energy use", "Property value", "Food production"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
-
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution9.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution9.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution9.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution9.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution9.save!
+puts "Creating solution #{solution9.id}..."
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198806/4._Espalier_k49o2i.png")
 image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370701/4._Espalier_zjuxqb.png")
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712827/espalier_tree1_ahwxpn.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712827/espalier_tree2_lrb6tr.jpg")
 
-solution = Solution.new(
+solution10 = Solution.new(
   title: "Espalier",
-  intro: "Want a little more privacy in your garden? Then plant an espalier tree! In one move, you'll also improve the air quality and biodiversity in your neighbourhood.",
+  intro: "Want a little more privacy in your garden? Then plant an espalier tree!",
   explanation: "Espaliers are trees whose branches are guided in a certain direction. Their shape does not occur in nature, man models here. This is done by tying the branches to a frame. The trees come in storey or screen form.
 
   A storey form has tight horizontal lines, where you can still see through. You prune the tree to close to the frame with pruning shears.
@@ -125,22 +219,22 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Health", "Well-being", "Energy use", "Property value"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution10.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution10.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution10.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution10.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
 
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution10.save!
+puts "Creating solution #{solution10.id}..."
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198802/5._Climate_tree_gvduxh.png")
 image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370701/5._Climate_tree_jhsve6.png")
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712824/climate_tree1_il30xe.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678717383/climate_tree2_m804ql.jpg")
 
-solution = Solution.new(
+solution11 = Solution.new(
   title: "Climate tree",
-  intro: "Bringing coolness and improving air quality are the absolute strengths of a climate tree. So planting your own tree really brings you very close to your goal of helping nature.",
+  intro: "Bringing coolness and improving air quality are the absolute strengths of a climate tree!",
   explanation: "When we say that a tree is incredibly good for the climate, we're not bringing you a scoop. But have you ever considered what it does for the environment? Cooling and improving air quality are its absolute strengths.
 
   The cooling is on the one hand the result of the shade created by the tree. In addition, it captures sunlight, converts that energy into water vapor, and that leads to higher humidity. Of course, the size of the tree plays a role here; the larger its crown size and leaves, the more benefits to you and our climate.",
@@ -150,22 +244,22 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Bye, bye sound", "Health", "Well-being", "Energy use", "Property value"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution11.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution11.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution11.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution11.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
 
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution11.save!
+puts "Creating solution #{solution11.id}..."
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198801/6._Roof_tree_gxbfpt.png")
 image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370701/6._Roof_tree_eemvxk.png")
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712823/roof_tree1_wwhjhf.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678717382/roof_tree2_c6nqaq.jpg")
 
-solution = Solution.new(
+solution12 = Solution.new(
   title: "Roof tree",
-  intro: "Did you know that on a hot summer day it gets up to 15 degrees cooler under a roof tree than in the flat sun? Plant your own green umbrella soon and reduce not only your own warming but also that of the earth.",
+  intro: "Did you know that on a hot summer day it gets up to 15 degrees cooler under a roof tree than in the flat sun?",
   explanation: "Do you know espaliers? Whether your answer is yes or no; here you will find everything you need to know about them. Their branches are guided in a certain direction and many types of trees can serve as espaliers. You have them in different shapes and models: one that looks like a hedge on a trunk, another with fruits against a wall or - as you will read in a moment - an espalier that as a natural parasol surpasses any plastic version.
 
   Roof tree, it is called, or also parasol tree. It is guided in a horizontal plane; blissful to sit under it in hot weather! Did you know that on a hot summer day it gets up to 15 degrees cooler under your tree than in the flat sun! And if you have a city garden, you'll probably be happy with some extra shielding from the eyes of your upstairs neighbours.
@@ -177,22 +271,22 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Health", "Well-being", "Energy use", "Property value"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution12.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution12.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution12.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution12.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
 
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution12.save!
+puts "Creating solution #{solution12.id}..."
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198802/7._Rainwater_pond_t5li2p.png")
 image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370701/7._Rainwater_pond_nto453.png")
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678725204/rainwater_pond4_kf1ulj.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794358/rainwater_pond5_btqfqp.jpg")
 
-solution = Solution.new(
+solution13 = Solution.new(
   title: "Rainwater pond",
-  intro: "Few forms of greenery contain as many species of life per square meter as ponds. Dragonflies lay eggs in them, birds come to drink and hedgehogs look for snails.",
+  intro: "Few forms of greenery contain as many species of life per square meter as ponds.",
   explanation: "Your own rainwater pond: how fun is that! Rainwater ponds temporarily collect rainwater and discharge it in a delayed manner. Unlike an ordinary garden pond, the rainwater version - up to 30 cm - has varying water levels. Plants keep your pond beautiful at both high and low water levels. Compared to a bioswale, a rainwater pond is much deeper and stores a lot more water.
 
   Your rainwater pond is covered with pond liner, which keeps a continuous layer of water in it.
@@ -204,22 +298,22 @@ solution = Solution.new(
   advantages: ["Water balance", "Water quality", "Heat stress", "Biodiversity", "Drought resistance"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution13.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution13.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution13.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution13.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
 
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution13.save!
+puts "Creating solution #{solution13.id}..."
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198800/8._Mini_pond_l7ypur.png")
 image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370702/8._Mini_pond_frq35w.png")
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712823/minipond1_lbjbkf.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794357/moinipond3_kuonuu.jpg")
 
-solution = Solution.new(
+solution14 = Solution.new(
   title: "Mini pond",
-  intro: "A private spot to let your thoughts flow undisturbed: don't we all want that? All you need is a tub, a zinc tub or half a wine barrel.",
+  intro: "A private spot to let your thoughts flow undisturbed: don't we all want that?",
   explanation: "If you do like a little life in the water, a mini pond is probably your thing. Dragonflies, frogs or boatmen, and even birds: they all find their way to such a swimming or drinking pool. The sight of water is soothing. Fun for your kids to play with, and a welcome cool down for young and old during hot summers.
 
   Don't have a large garden or only a terrace or balcony? Even then you can have a lot of fun with a mini pond. All you need is a tub, a zinc tub or half a wine barrel.",
@@ -229,22 +323,22 @@ solution = Solution.new(
   advantages: ["Biodiversity"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution14.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution14.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution14.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution14.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
 
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution14.save!
+puts "Creating solution #{solution14.id}..."
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198802/9._Bioswale_gfi4fs.png")
 image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370702/9._Bioswale_tmrpiy.png")
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712826/bioswale1_jpnv3d.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794355/bioswale4_ybo8yt.jpg")
 
-solution = Solution.new(
+solution15 = Solution.new(
   title: "Bioswale",
-  intro: "A bioswale collects rainwater locally, allows it to infiltrate into the soil of your garden and thus relieves the sewer system. Less chance of flooding and your garden can suddenly cope better with drought.",
+  intro: "A bioswale collects rainwater locally and allows it to infiltrate into the ground!",
   explanation: "A bioswale is a lowered area in your garden that collects rainwater, which then slowly seeps into the soil.
 
   It can be a lowered piece with only grass, but just as easily a lowering that you create yourself with plants. Attention, attention: the plants must be able to withstand both wet and dry weather, because your bioswale will be dry in dry periods. A bioswale is shallow and therefore fits easily into any garden.
@@ -260,22 +354,22 @@ solution = Solution.new(
   advantages: ["Water balance", "Water quality", "Heat stress", "Soil quality", "Biodiversity", "Drought resistance"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution15.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution15.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution15.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution15.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
 
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution15.save!
+puts "Creating solution #{solution15.id}..."
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198806/10._Micro_forest_i8fam3.png")
 image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370703/10._Micro_forest_z7g1nq.png")
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712825/microforest1_ijzeru.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794355/microforest2_do89yf.jpg")
 
-solution = Solution.new(
+solution16 = Solution.new(
   title: "Micro forest",
-  intro: "A forest in your garden too crazy for words? No way! For a micro-model, you barely need 6 m².",
+  intro: "A forest in your garden too crazy for words? Not for a micro-model, you barely need 6 m².",
   explanation: "A microforest fits right into the philosophy of the protected concept of 'Tiny Forest', devised by an Indian engineer. He drew on the work of a Japanese man who specialized in restoring natural vegetation and old-growth forests. The engineer brought the Japanese man's idea to the city.
 
   And you are now bringing it to your garden. With a free 6-square-meter plot, you can already get started and soon enjoy a mix of trees, shrubs and herbs. Choose native plants because they attract more insects, pollinators, birds and butterflies than exotic ones. They provide food, offer a place to reproduce and thus also provide food for animals higher up the chain (who in turn eat those insects, for example).",
@@ -285,22 +379,22 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Soil quality", "Biodiversity", "Bye, bye sound", "Health", "Well-being", "Property value"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution16.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution16.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution16.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution16.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
 
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution16.save!
+puts "Creating solution #{solution16.id}..."
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198803/11._Balcony_green_ucgade.png")
 image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370703/11._Green_Balcony_jmh1iq.png")
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712826/balcony_green1_g75fdl.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794357/balcony_green4_ulr8bx.png")
 
-solution = Solution.new(
+solution17 = Solution.new(
   title: "Balcony green",
-  intro: "No garden but have a balcony or terrace? You'll turn that into a vegetable oasis in no time with all the climate benefits.",
+  intro: "No garden but have a balcony or terrace? Turn it into a vegetable oasis in no time with all the climate benefits.",
   explanation: "You definitely don't need a garden to be surrounded by greenery! Even on your balcony or terrace you can create your own piece of nature with trees, shrubs and herbs.
 
   All you need are a few large pots and a sturdy balcony. Do you prefer to keep it more modest and light? Then hanging baskets and/or smaller pots are the solution for you.",
@@ -310,21 +404,21 @@ solution = Solution.new(
   advantages: ["Heat stress", "Air quality", "Biodiversity", "Health", "Well-being"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution17.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution17.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution17.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution17.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution17.save!
+puts "Creating solution #{solution17.id}..."
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198806/12._Branch_rill_nrs7cy.png")
 image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370703/12._Branch_rill_xl98bo.png")
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794356/branch_rill6_m3mmpj.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794357/branch_rill5_tygpu8.jpg")
 
-solution = Solution.new(
+solution18 = Solution.new(
   title: "Branch rill",
-  intro: "Did your pruning work over the past few months provide you with a lot of wood? With all those branches, you'll make a beautiful wooden fence and create a popular spot for flora and fauna.",
+  intro: "Make a beautiful wooden fence and create a popular spot for flora and fauna.",
   explanation: "Do you know a branch line? That's an accumulation of prunings - between poles or thick branches - through which you weave some thinner branches. Its height, width and length are entirely up to you. In the summer, you can also throw your mowed grass between them.
 
   A branch trellis is ideal as a partition, for example to hide your garbage cans behind. What's more, it offers many advantages for plants and animals.",
@@ -334,22 +428,22 @@ solution = Solution.new(
   advantages: ["Biodiversity"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution18.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution18.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution18.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution18.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
 
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution18.save!
+puts "Creating solution #{solution18.id}..."
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198805/13._Willow_hut_wqtmgs.png")
 image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370704/12._Willow_tree_zlx5f8.png")
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712821/willow_hut1_j3ulg0.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712823/willow_hut2_rjst65.png")
 
-solution = Solution.new(
+solution19 = Solution.new(
   title: "Willow hut",
-  intro: "How about an extra dash of nature in your yard? A willow hut is a 100% natural playground for your kids. Fun to build with the whole family and a nice picnic area to boot!",
+  intro: "A willow hut is a 100% natural playground for your kids. Fun to build with the whole family!",
   explanation: "A willow hut looks really handsome. The willow branches - which are thin branches - stick into the ground on several sides, forming an arch each time. The ends of those branches take root over time and so the branches stay nice and long. Every spring you see new leaves appear and the enclosure grows more and more dense. The more willow branches, the better your shelter.
 
   Large or small willow hut: that's entirely up to you. Ditto for the shape. Do you like the shape of a tunnel or do you prefer the igloo model? Anything goes! We will tell you more about a circular model: 3 meters in diameter and 2 meters high.",
@@ -359,22 +453,22 @@ solution = Solution.new(
   advantages: ["Biodiversity", "Health", "Well-being"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution19.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution19.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution19.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution19.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
 
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution19.save!
+puts "Creating solution #{solution19.id}..."
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198805/14._Blue_roof_kunz0r.png")
 image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370704/14._Blue_roof_ofcbc8.png")
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794358/blue_roof5_w9nlaa.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712821/blue_roof2_l7axl8.jpg")
 
-solution = Solution.new(
+solution20 = Solution.new(
   title: "Blue roof",
-  intro: "Does your house or carport have a flat roof? If you collect the rainwater there, you reduce the pressure on the sewerage system during heavy rainfall. No more flooding in your street any time soon!",
+  intro: "By collecting rainwater on your roof, you reduce the pressure on the sewerage system during heavy rainfall.",
   explanation: "Extreme rainstorms cause a sudden overload of the sewer system. Not infrequently resulting in flooding, unfortunately. A blue roof - or retention roof - offers solutions. It largely keeps up with the rainwater during such showers by discharging it only very gradually. That way you avoid sudden overloading of the sewer system.
 
   For that gradual drainage, you need two openings, one small and one large. The small one sits low against the roof surface, providing a slow and gradual drainage of water. The large opening prevents the roof itself from overflowing. If it fills up completely, the excess rainwater flows away immediately through this emergency outlet. You determine the height of the large opening based on how much water your roof can handle.
@@ -390,12 +484,12 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Energy use"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution20.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution20.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution20.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution20.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution20.save!
+puts "Creating solution #{solution20.id}..."
 
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198807/15._Green_flat_roof_rsgd7j.png")
@@ -403,7 +497,7 @@ image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370704
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794356/green_flat_roof1_zmmflr.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794356/green_flat_roof2_svuiqp.jpg")
 
-solution = Solution.new(
+solution21 = Solution.new(
   title: "Green flat roof",
   intro: "Turn your gray roof into a green roof and you have the green weapon in your hands in the fight against global warming.",
   explanation: "Your roof is your green weapon in your fight against global warming! Ideal for climate adaptation, as it's called.
@@ -419,19 +513,19 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Bye, bye sound", "Health", "Well-being", "Energy use", "Lifespan roof", "Property value"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution21.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution21.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution21.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution21.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution21.save!
+puts "Creating solution #{solution21.id}..."
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198809/16._Green_sloping_roof_gc5pz8.png")
 image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370704/16._Green_flat_roof_ljpzhv.png")
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794356/green_sloping_roof6_lf0stv.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794356/green_sloping_roof4_eirjoh.jpg")
 
-solution = Solution.new(
+solution22 = Solution.new(
   title: "Green sloping roof",
   intro: "Do you have a flat to slightly sloped roof (0.6° - 15°)? Make it green! The benefits to you and your environment are great!",
   explanation: "Your roof is your green weapon in your fight against global warming! Ideal for climate adaptation, as it's called.
@@ -447,12 +541,12 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Bye, bye sound", "Health", "Well-being", "Energy use", "Lifespan roof", "Property value"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution22.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution22.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution22.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution22.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution22.save!
+puts "Creating solution #{solution22.id}..."
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198809/17._Self-attaching_climbing_plant_dzonrj.png")
 image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370704/17._Self-attaching_climbing_plant_kfpue5.png")
@@ -461,7 +555,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794358
 
 solution6 = Solution.new(
   title: "Self-attaching climbing plant",
-  intro: "A self-attaching climbing plant will naturally climb up your wall and in the summer will lower the façade temperature by up to 8° Celsius.",
+  intro: "This climbing plant will naturally climb up your wall and will lower the façade temperature by up to 8° Celsius.",
   explanation: "Your facade likes different types of greenery. A climbing plant is a very good option. But before you choose which one to use, check which one is best for your facade.
 
   • How many hours of sunlight does it get per day?
@@ -496,9 +590,9 @@ image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370704
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794355/non_atta_climbing_plant2_geznmz.png")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712828/climbing_plant1_kr8isv.jpg")
 
-solution = Solution.new(
+solution23 = Solution.new(
   title: "Non-self-attaching climbing plant",
-  intro: "Studies show that a climber with a leaf area index covering a 17m² facade captures the same amount of particulate matter as an average 25-year-old urban tree!",
+  intro: "A climber covering a 17m² facade captures the same amount of particulate matter as an average 25-year-old urban tree!",
   explanation: "Your facade likes different types of greenery. A climbing plant is a very good option. But before you choose which one to use, check which one is best for your facade.
 
   • How many hours of sunlight does it get per day?
@@ -520,12 +614,12 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Bye, bye sound", "Health", "Well-being", "Energy use", "Lifespan facade"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution23.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution23.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution23.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution23.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution23.save!
+puts "Creating solution #{solution23.id}..."
 
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198808/19._Hedge_jvgjpq.png")
@@ -533,9 +627,9 @@ image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370704
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794355/hedge5_agw1jf.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794355/hedge4_jyl31d.jpg")
 
-solution = Solution.new(
+solution24 = Solution.new(
   title: "Hedge",
-  intro: "What could be more natural and beautiful than a hedge to safeguard your private moments? You hide your trash cans behind it as much as it makes the animals in your garden happy or protects you from strong winds.",
+  intro: "What could be more natural and beautiful than a hedge to safeguard your private moments?",
   explanation: "A walled garden is inaccessible to animals. But with a natural fence like your hedge, you give critters - such as hedgehogs - safe passage between different green areas.
 
   If your hedge borders others or gardens and groves, the passage of insects, birds, reptiles, amphibians and mammals ensures healthy populations.",
@@ -545,12 +639,12 @@ solution = Solution.new(
   advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Health", "Well-being"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution24.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution24.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution24.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution24.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution24.save!
+puts "Creating solution #{solution24.id}..."
 
 
 
@@ -559,9 +653,9 @@ image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370705
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712826/permeable_pavement1_e1r3z8.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794357/permeable_pavement_coyoqu.jpg")
 
-solution = Solution.new(
+solution25 = Solution.new(
   title: "Permeable pavement",
-  intro: "You want a paved surface for (part of) your patio or garden, but you don't want to harm the environment? There is a sympathetic solution!",
+  intro: "You want a paved surface but you don't want to harm the environment? There is a sympathetic solution!",
   explanation: "Whichever way you look at it, every garden needs some paving (at some point). For your patio, because you would rather not see your chairs or table sink into the grass. For a path, to keep your feet dry in the morning dew. Or for your driveway, to neatly park your two- or four-wheeler(s).
 
   The basic rule is: the sum of all your paved surfaces does not exceed 40% of your garden area. And as with a lot of things, the less hardiness, the better.
@@ -581,12 +675,12 @@ solution = Solution.new(
   advantages: ["Water balance", "Drought resistance"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution25.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution25.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution25.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution25.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution25.save!
+puts "Creating solution #{solution25.id}..."
 
 
 
@@ -596,9 +690,9 @@ image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370705
 image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794357/grey_to_green4_pq4cts.jpg")
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712822/grey_to_green2_iakcd3.jpg")
 
-solution = Solution.new(
+solution26 = Solution.new(
   title: "Grey to green",
-  intro: "Flanders is one of the most paved places in Europe. And your driveway and terrace are also culprits. Maybe you could do without a few bricks and tiles? You get a green view and a cooler garden as a result!",
+  intro: "Maybe you could do without a few bricks and tiles? You get a green view and a cooler garden as a result!",
   explanation: "Climate change never comes with good news; more drought, brighter heat waves and more intense rainfall.
 
   Flanders is in a particularly bad light when it comes to paved surfaces. We may not always realize it, but our driveways and terraces are also contributing heavily to this. And that has major consequences. Asphalt and clinkers absorb more sun than the green varieties, and do not allow rainwater to pass through to the surface. Pot tight, they sit, sending rainwater straight to the sewer system.
@@ -607,27 +701,27 @@ solution = Solution.new(
 
   Fortunately: if we transform our soil into a true sponge, we reduce the dangers enormously. And uh, how exactly do we do that?
 
-  By softening on a large scale so that rainwater can seep into the soil locally.
+    By softening on a large scale so that rainwater can seep into the soil locally.
 
-  By (among other things) planting more trees and shrubs. Planting provides natural shade, reduces heat stress and ensures that the soil stays moist longer and is more resistant to drought.
+    By (among other things) planting more trees and shrubs. Planting provides natural shade, reduces heat stress and ensures that the soil stays moist longer and is more resistant to drought.
 
-  Take a walk around your home. Where would a little less hard ground certainly not be an inconvenience? Narrow the path to your front door, perhaps? Or park your car on two 'tracks' instead of a fully paved area?
+    Take a walk around your home. Where would a little less hard ground certainly not be an inconvenience? Narrow the path to your front door, perhaps? Or park your car on two 'tracks' instead of a fully paved area?
 
-  By the way, did you know that the sum of all your paved surfaces can legally be no more than 40% of your garden area? But of course, less is even better!
+    By the way, did you know that the sum of all your paved surfaces can legally be no more than 40% of your garden area? But of course, less is even better!
 
-  Is paving here and there indispensable? Then take a look at the permeable or water-leveling options. With the former, rainwater runs directly through the material; the latter allows it to seep into the ground through wide joints or openings.",
-  price: 500,
+    Is paving here and there indispensable? Then take a look at the permeable or water-leveling options. With the former, rainwater runs directly through the material; the latter allows it to seep into the ground through wide joints or openings.",
+    price: 500,
   category: ["Pavement"],
   difficulty: "Medium",
   advantages: ["Water balance", "Water quality", "Heat stress", "Air quality", "Soil quality", "Biodiversity", "Health", "Well-being", "Property value", "Drought resistance"]
 )
 
-solution.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
-solution.save!
-puts "Creating solution #{solution.id}..."
+solution26.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
+solution26.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
+solution26.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
+solution26.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
+solution26.save!
+puts "Creating solution #{solution26.id}..."
 
 
 
@@ -638,7 +732,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794356
 
 solution1 = Solution.new(
   title: "Car sharing",
-  intro: "The concept of car sharing is simple: you use a car when you need it. If you don't need to leave your house, someone else can get behind the wheel. Did you know that this way one shared car replaces up to ten others?",
+  intro: "The concept of car sharing is simple: you use a car when you need it.",
   explanation: "In our country, traffic emissions top the list of climate policy challenges. In 2019, it was guilty of nearly 25% of total emissions. If we take a closer look at the transportation sector, passenger transport accounts for more than half of these high figures.
 
   Flanders wants to reduce total CO2 emissions by 40% by 2030. The use of more sustainable cars must increase, and our car use itself must decrease. And tadaa, that's where shared mobility comes in.
@@ -664,8 +758,6 @@ solution1.photos.attach(io: image3, filename: "Image 3", content_type: "image/pn
 solution1.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
 solution1.save!
 puts "Creating solution #{solution1.id}..."
-
-
 
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198810/23._Heat_pump_llmmnh.png")
@@ -746,7 +838,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678717383
 
 solution4 = Solution.new(
   title: "Roof insulation",
-  intro: "Did you know that most heat is lost through your roof? And if you address this problem properly, you can save up to 40% per year!",
+  intro: "Did you know that most heat is lost through your roof? Save up to 40% per year!",
   explanation: "Whether you spend time at home, the gym, the supermarket or a shopping mall, it's nice and warm in the winter and often air-conditioned in the summer. Keeping things warm and cool, the lights, the operation of appliances; it takes a lot of energy to do that. That comes mostly from fossil fuels. Unfortunately, this story causes a lot of emissions of greenhouse gases in Belgium.
 
   If we take a look at our own home, more than 60% of our energy goes to heating it. The rest is for your refrigerator and freezer, lighting, washing and drying machines, cooking, hot water and entertainment.
@@ -781,7 +873,7 @@ image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712826
 
 solution5 = Solution.new(
   title: "Rainwater barrel",
-  intro: "A rainwater barrel captures water during heavy rains, reducing the amount flowing into the sewer system and reducing the risk of flooding in your street.",
+  intro: "A rainwater barrel captures water during heavy rains and reduces the risk of flooding in your street.",
   explanation: "Despite the fact that quite a bit of rain falls from the sky in our country, we still regularly experience extended periods of drought during the summer. Sometimes even resulting in a ban on watering.
 
   Your rain barrel provides a (admittedly limited) supply of rainwater during these dry periods to water your garden. For your patio or facade garden, this may be enough to cover a few weeks. For a larger garden, 1 rain barrel will not always suffice during several dry weeks. Still, the rain barrel helps raise awareness about our rainwater use!
@@ -804,56 +896,30 @@ solution5.photos.attach(io: image4, filename: "Image 4", content_type: "image/pn
 solution5.save!
 puts "Creating solution #{solution5.id}..."
 
+solutions = Solution.all
+##################################################### Experiences ####################################################
 
+experiences_content = [
+  "Really liked this solution. I recommend it!",
+  "Very clear instructions! We installed it together with the kids.",
+  "A bit hard to implement...",
+  "Nice solution to my problems, thank you !",
+  "Hard work but nice results !",
+  "I'm not a huge fan of this way to do ...",
+  "I fell it make my life more green.",
+  "This green solution is amazing! It's really helps me reduce my carbon footprint. I feel good about using it and would definitely recommend it to others.",
+  "I love this one ! It's so easy to use and really effective. And of course it's environmentally friendly, which makes me feel good about my purchase.",
+  "I've tried a lot of solutions for my issue, but this one is by far my favorite. It's affordable, effective, and eco-friendly.",
+  "If you're looking for a xomething that really works, this is for you. It's made from all-natural ingredients and is safe for both you and the environment. I would definitely recommend it to anyone looking to go green.",
+]
 
-user1 = User.new(
-  email: "lewagon@hotmail.com",
-  password: "123456",
-  username: "Le Wagon"
-)
+def random_rating
+  rand(2.0..5.0).round(1)
+end
 
-user1.save!
-puts "Creating user #{user1.id}..."
+#### Solution 1 - Car sharing #####
+puts "Creating experiences for solution1 ..."
 
-user2 = User.new(
-  email: "laraparson@hotmail.com",
-  password: "123456",
-  username: "Lara parson"
-)
-
-user2.save!
-puts "Creating user #{user2.id}..."
-
-user3 = User.new(
-  email: "pierreboileau@hotmail.com",
-  password: "123456",
-  username: "Pierre Boileau"
-)
-
-user3.save!
-puts "Creating user #{user3.id}..."
-
-user4 = User.new(
-  email: "henristubbe@hotmail.com",
-  password: "123456",
-  username: "Henri Stubbe"
-)
-
-user4.save!
-puts "Creating user #{user4.id}..."
-
-user5 = User.new(
-  email: "ellamiller@hotmail.com",
-  password: "123456",
-  username: "Ella Miller"
-)
-
-user5.save!
-puts "Creating user #{user5.id}..."
-
-
-
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794356/car_sharing4_fmizyx.png")
 experience = Experience.new(
   content: "Really liked this solution. I recommend it!",
   rating: 4.5,
@@ -861,23 +927,91 @@ experience = Experience.new(
   solution_id: solution1.id
 )
 
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794356/car_sharing4_fmizyx.png")
 experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
 experience.save!
 puts "Creating experience #{experience.id}..."
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712826/barrel2_q30bp4.jpg")
 experience = Experience.new(
-  content: "Very clear instructions! We installed it together with the kids.",
-  rating: 4.8,
-  user_id: user4.id,
-  solution_id: solution5.id
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user5.id,
+  solution_id: solution1.id
 )
-
-experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
 experience.save!
 puts "Creating experience #{experience.id}..."
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678717383/mow_less2_ncwyu0.jpg")
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user7.id,
+  solution_id: solution1.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user2.id,
+  solution_id: solution1.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user3.id,
+  solution_id: solution1.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+
+#### Solution 2 - Heat pump ####
+puts "Creating experiences for solution2 .."
+
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user3.id,
+  solution_id: solution2.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user1.id,
+  solution_id: solution2.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user9.id,
+  solution_id: solution2.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+
+#### Solution 3 - Mow less #####
+puts "Creating experiences for solution3 ..."
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user2.id,
+  solution_id: solution3.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
 experience = Experience.new(
   content: "Really liked this solution. I recommend it!",
   rating: 4.4,
@@ -885,11 +1019,23 @@ experience = Experience.new(
   solution_id: solution3.id
 )
 
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678717383/mow_less2_ncwyu0.jpg")
 experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
 experience.save!
 puts "Creating experience #{experience.id}..."
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712824/insulation_roof_u5o8eu.jpg")
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user1.id,
+  solution_id: solution3.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+
+#### Solution 4 - Roof insulation #####
+puts "Creating experiences for solution4 ..."
 experience = Experience.new(
   content: "A bit hard to implement...",
   rating: 3.0,
@@ -897,11 +1043,67 @@ experience = Experience.new(
   solution_id: solution4.id
 )
 
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712824/insulation_roof_u5o8eu.jpg")
 experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
 experience.save!
 puts "Creating experience #{experience.id}..."
 
-image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794358/self_att_climbing_plant3_zug8ox.png")
+
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user5.id,
+  solution_id: solution4.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+
+#### Solution 5 - Rainwater barrel #####
+puts "Creating experiences for solution5 ..."
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user5.id,
+  solution_id: solution5.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+experience = Experience.new(
+  content: "Very clear instructions! We installed it together with the kids.",
+  rating: 4.8,
+  user_id: user4.id,
+  solution_id: solution5.id
+)
+
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678712826/barrel2_q30bp4.jpg")
+experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user10.id,
+  solution_id: solution5.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user7.id,
+  solution_id: solution5.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+
+#### Solution 6 - Self-attaching climbing plant #####
+puts "Creating experiences for solution6 ..."
 experience = Experience.new(
   content: "My facade looks a lot prettier now!",
   rating: 3.5,
@@ -909,13 +1111,310 @@ experience = Experience.new(
   solution_id: solution6.id
 )
 
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794358/self_att_climbing_plant3_zug8ox.png")
 experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
 experience.save!
 puts "Creating experience #{experience.id}..."
 
 
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user2.id,
+  solution_id: solution6.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
 
 
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user8.id,
+  solution_id: solution6.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+
+experience = Experience.new(
+  content: experiences_content.sample,
+  rating: random_rating,
+  user_id: user6.id,
+  solution_id: solution6.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+
+#### Solution 7 - Square meter garden ####
+puts "Creating experiences for solution7 ..."
+10.times do
+  experience = Experience.new(
+    content: experiences_content.sample,
+    rating: random_rating,
+    user_id: users.sample.id,
+    solution_id: solution7.id
+  )
+  experience.save
+  puts "Creating experience #{experience.id}..."
+end
+
+
+#### Solution 8 - Square meter garden (ground) ####
+puts "Creating experiences for solution8 ..."
+10.times do
+  experience = Experience.new(
+    content: experiences_content.sample,
+    rating: random_rating,
+    user_id: users.sample.id,
+    solution_id: solution8.id
+  )
+  experience.save
+  puts "Creating experience #{experience.id}..."
+end
+
+
+#### Solution 9 - Fruit tree ####
+puts "Creating experiences for solution9 ..."
+10.times do
+  experience = Experience.new(
+    content: experiences_content.sample,
+    rating: random_rating,
+    user_id: users.sample.id,
+    solution_id: solution9.id
+  )
+  experience.save
+  puts "Creating experience #{experience.id}..."
+end
+
+
+#### Solution 10 - Espalier ####
+puts "Creating experiences for solution10 ..."
+10.times do
+  experience = Experience.new(
+    content: experiences_content.sample,
+    rating: random_rating,
+    user_id: users.sample.id,
+    solution_id: solution10.id
+  )
+  experience.save
+  puts "Creating experience #{experience.id}..."
+end
+
+#### Solution 11 - Climate tree ####
+puts "Creating experiences for solution11 ..."
+10.times do
+  experience = Experience.new(
+    content: experiences_content.sample,
+    rating: random_rating,
+    user_id: users.sample.id,
+    solution_id: solution11.id
+  )
+  experience.save
+  puts "Creating experience #{experience.id}..."
+end
+
+
+#### Solution 12 - Roof tree ####
+puts "Creating experiences for solution12 ..."
+10.times do
+  experience = Experience.new(
+    content: experiences_content.sample,
+    rating: random_rating,
+    user_id: users.sample.id,
+    solution_id: solution12.id
+  )
+  experience.save
+  puts "Creating experience #{experience.id}..."
+end
+
+#### Solution 13 - Rainwater pond ####
+puts "Creating experiences for solution13 ..."
+10.times do
+  experience = Experience.new(
+    content: experiences_content.sample,
+    rating: random_rating,
+    user_id: users.sample.id,
+    solution_id: solution13.id
+  )
+  experience.save
+  puts "Creating experience #{experience.id}..."
+end
+
+
+#### Solution 14 - Mini pond ####
+puts "Creating experiences for solution14 ..."
+10.times do
+  experience = Experience.new(
+    content: experiences_content.sample,
+    rating: random_rating,
+    user_id: users.sample.id,
+    solution_id: solution14.id
+  )
+  experience.save
+  puts "Creating experience #{experience.id}..."
+end
+
+#### Solution 15 - Bioswale ####
+puts "Creating experiences for solution15 ..."
+10.times do
+  experience = Experience.new(
+    content: experiences_content.sample,
+    rating: random_rating,
+    user_id: users.sample.id,
+    solution_id: solution15.id
+  )
+  experience.save
+  puts "Creating experience #{experience.id}..."
+end
+
+#### Solution 16 - Micro forest ####
+puts "Creating experiences for solution16 ..."
+
+10.times do
+  experience = Experience.new(
+    content: experiences_content.sample,
+    rating: random_rating,
+    user_id: users.sample.id,
+    solution_id: solution16.id
+  )
+  experience.save
+  puts "Creating experience #{experience.id}..."
+end
+#### Solution 17 - Balcony green ####
+puts "Creating experiences for solution17 ..."
+10.times do
+  experience = Experience.new(
+    content: experiences_content.sample,
+    rating: random_rating,
+    user_id: users.sample.id,
+    solution_id: solution17.id
+  )
+  experience.save
+  puts "Creating experience #{experience.id}..."
+end
+
+#### Solution 18 - Branch rill ####
+puts "Creating experiences for solution18 ..."
+10.times do
+  experience = Experience.new(
+    content: experiences_content.sample,
+    rating: random_rating,
+    user_id: users.sample.id,
+    solution_id: solution18.id
+  )
+  experience.save
+  puts "Creating experience #{experience.id}..."
+end
+
+
+#### Solution 19 - Willow hut ####
+puts "Creating experiences for solution19 ..."
+10.times do
+  experience = Experience.new(
+    content: experiences_content.sample,
+    rating: random_rating,
+    user_id: users.sample.id,
+    solution_id: solution19.id
+  )
+  experience.save
+  puts "Creating experience #{experience.id}..."
+end
+
+#### Solution 20 - Blue roof ####
+puts "Creating experiences for solution20 ..."
+10.times do
+  experience = Experience.new(
+    content: experiences_content.sample,
+    rating: random_rating,
+    user_id: users.sample.id,
+    solution_id: solution20.id
+  )
+  experience.save
+  puts "Creating experience #{experience.id}..."
+end
+
+#### Solution 21 - Green flat roof ####
+puts "Creating experiences for solution21 ..."
+10.times do
+  experience = Experience.new(
+    content: experiences_content.sample,
+    rating: random_rating,
+    user_id: users.sample.id,
+    solution_id: solution21.id
+  )
+  experience.save
+  puts "Creating experience #{experience.id}..."
+end
+
+#### Solution 22 - Green sloping roof ####
+puts "Creating experiences for solution22 ..."
+10.times do
+  experience = Experience.new(
+    content: experiences_content.sample,
+    rating: random_rating,
+    user_id: users.sample.id,
+    solution_id: solution22.id
+  )
+  experience.save
+  puts "Creating experience #{experience.id}..."
+end
+
+#### Solution 23 - Non-self-attaching climbing plant ####
+puts "Creating experiences for solution23 ..."
+10.times do
+  experience = Experience.new(
+    content: experiences_content.sample,
+    rating: random_rating,
+    user_id: users.sample.id,
+    solution_id: solution23.id
+  )
+  experience.save
+  puts "Creating experience #{experience.id}..."
+end
+
+#### Solution 24 - Hedge ####
+puts "Creating experiences for solution24 ..."
+10.times do
+  experience = Experience.new(
+    content: experiences_content.sample,
+    rating: random_rating,
+    user_id: users.sample.id,
+    solution_id: solution24.id
+  )
+  experience.save
+  puts "Creating experience #{experience.id}..."
+end
+
+
+#### Solution 25 - Permeable pavement ####
+puts "Creating experiences for solution25 ..."
+10.times do
+  experience = Experience.new(
+    content: experiences_content.sample,
+    rating: random_rating,
+    user_id: users.sample.id,
+    solution_id: solution25.id
+  )
+  experience.save
+  puts "Creating experience #{experience.id}..."
+end
+
+#### Solution 26 - Grey to green ####
+puts "Creating experiences for solution26 ..."
+10.times do
+  experience = Experience.new(
+    content: experiences_content.sample,
+    rating: random_rating,
+    user_id: users.sample.id,
+    solution_id: solution26.id
+  )
+  experience.save
+  puts "Creating experience #{experience.id}..."
+end
+
+##################################################### Likes ####################################################
 
 
 like = Like.new(
@@ -981,8 +1480,98 @@ like.save!
 puts "Creating like #{like.id}..."
 
 
+puts "Creating more likes user1..."
+15.times do
+  like = Like.new(
+    user_id: user1.id,
+    solution_id: solutions.sample.id
+  )
+  like.save
+end
 
 
+puts "Creating more likes user2..."
+15.times do
+  like = Like.new(
+    user_id: user2.id,
+    solution_id: solutions.sample.id
+  )
+  like.save
+end
+
+puts "Creating more likes user3..."
+15.times do
+  like = Like.new(
+    user_id: user3.id,
+    solution_id: solutions.sample.id
+  )
+  like.save
+end
+
+puts "Creating more likes user4..."
+15.times do
+  like = Like.new(
+    user_id: user4.id,
+    solution_id: solutions.sample.id
+  )
+  like.save
+end
+
+puts "Creating more likes user5..."
+15.times do
+  like = Like.new(
+    user_id: user5.id,
+    solution_id: solutions.sample.id
+  )
+  like.save
+end
+
+puts "Creating more likes user6..."
+15.times do
+  like = Like.new(
+    user_id: user6.id,
+    solution_id: solutions.sample.id
+  )
+  like.save
+end
+
+puts "Creating more likes user7..."
+15.times do
+  like = Like.new(
+    user_id: user7.id,
+    solution_id: solutions.sample.id
+  )
+  like.save
+end
+
+puts "Creating more likes user8..."
+15.times do
+  like = Like.new(
+    user_id: user8.id,
+    solution_id: solutions.sample.id
+  )
+  like.save
+end
+
+puts "Creating more likes user9..."
+15.times do
+  like = Like.new(
+    user_id: user9.id,
+    solution_id: solutions.sample.id
+  )
+  like.save
+end
+
+puts "Creating more likes user10..."
+15.times do
+  like = Like.new(
+    user_id: user10.id,
+    solution_id: solutions.sample.id
+  )
+  like.save
+end
+
+puts "#{Like.all.size} likes has been created !"
 # favourite = Favourite.new(
 #   user_id: user1.id,
 #   solution_id: solution5.id

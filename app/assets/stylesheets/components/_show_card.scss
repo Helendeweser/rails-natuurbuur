@@ -1,12 +1,17 @@
 .show-card {
   border:1px solid gray;
   background-color: $white;
-  width: 1200px;
+  width: 100%;
+  min-width: 1089px;
   height: fit-content;
   padding: 30px;
   margin: 30px auto;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5px;
+
+  h4 {
+    margin-top: 20px;
+  }
 }
 
 .experiences-card {
@@ -14,12 +19,13 @@
   justify-content: space-between;
   border:1px solid gray;
   background-color: $white;
-  width: 1200px;
+  width: 100%;
   height: fit-content;
   padding: 30px;
   margin: 30px auto;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5px;
+  min-width: 1089px;
 }
 
 .experiences-display {
@@ -103,6 +109,7 @@
   height: auto;
   display: block;
 }
+
 
 #show_card-price {
   text-align: end;
