@@ -1,4 +1,4 @@
- <div class="card-review">
+<div class="card-review" style="box-sizing: border-box;height: 220px;width: auto;">
 
         <%  if experience.photo.key != nil %>
         <div class= "container-img">
@@ -19,7 +19,7 @@
 
           <div class="delete-button"></div>
             <% if experience.user == current_user %>
-              <%= link_to "Delete", experience_path(experience), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}%>
+              <%= link_to "Delete", experience_path(experience), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete your review?"}%>
             <% end %>
          </div>
 
