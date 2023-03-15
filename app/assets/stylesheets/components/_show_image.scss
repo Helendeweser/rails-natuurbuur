@@ -163,3 +163,8 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
+
+.first-image {
+  height: 500px;
+  object-fit: contain;
+}
