@@ -5,17 +5,29 @@
 <div id="banner-solution-page" style="background-image: linear-gradient(rgba(0,0,283,0.2),rgba(0,0,283,0.2)), url(<%= asset_path 'leaves.png' %>);"></div>
 
 
+
+
 <div class="show-card" style="border-radius: 10px;box-shadow: 0 0 15px rgba(0,0,0,0.9);">
-  <div class="image-card">
+  <div class="image-card" data-controller="bookmark">
+
   <%# To add to your favourites or remove if we are login%>
     <% if user_signed_in? %>
       <% if @favourites.include? @solution%>
-        <%= link_to favourite_path(@solution), data: {turbo_method: :delete, turbo_confirm: "Remove this solution from your favourites?"} do %>
+        <%= link_to favourite_path(@solution), data: {action: "click->bookmark#add_to_favourite", bookmark_target: "removefavourite", turbo_method: :delete} do %>
           <i class="fa-solid fa-bookmark orange"></i>
+          <% end %>
+
+        <%= link_to solution_favourites_path(@solution), data: {action: "click->bookmark#add_to_favourite",  bookmark_target: "addfavourite", turbo_method: :post}, class:"d-none" do %>
+        <i class="fa-regular fa-bookmark"></i>
         <% end %>
+
       <% else%>
-        <%= link_to solution_favourites_path(@solution), data: {turbo_method: :post} do %>
-          <i class="fa-regular fa-bookmark"></i>
+      <%= link_to favourite_path(@solution), data: {action: "click->bookmark#add_to_favourite", bookmark_target: "removefavourite", turbo_method: :delete}, class:"d-none" do %>
+          <i class="fa-solid fa-bookmark orange"></i>
+          <% end %>
+
+      <%= link_to solution_favourites_path(@solution), data: {action: "click->bookmark#add_to_favourite",  bookmark_target: "addfavourite", turbo_method: :post} do %>
+        <i class="fa-regular fa-bookmark"></i>
         <% end %>
       <% end %>
 
@@ -23,6 +35,7 @@
       <%= link_to solution_favourites_path(@solution), data: {turbo_method: :post} do %>
         <i class="fa-regular fa-bookmark"></i>
       <% end %>
+
     <% end %>
 
     <%# Carousel for main image %>
