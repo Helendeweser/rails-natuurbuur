@@ -19,11 +19,12 @@ export default class extends Controller {
 
       .then(response => response.json())
       .then((data) => {
+        console.log(data)
 
         if (data.inserted_item) {
           this.experienceTarget.insertAdjacentHTML("afterbegin", data.inserted_item)
         }
-
+          console.log(data.form)
         this.insertformTarget.outerHTML = data.form
       })
   }
