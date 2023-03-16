@@ -1,7 +1,13 @@
+#title-show {
+  h1 {
+    margin: 0 auto;
+  }
+}
+
 .show-card {
   border:1px solid gray;
   background-color: $white;
-  width: 100%;
+  width: 80%;
   min-width: 1089px;
   height: fit-content;
   padding: 30px;
