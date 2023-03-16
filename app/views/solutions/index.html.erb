@@ -8,7 +8,14 @@
       <%# SMALL CARD: EVERYTHING CENTERED %>
       <%= render "card", solution:solution %>
     <% end %>
-  </div>
+
+    <% if @solutions.empty? %>
+        <%= image_tag "blank.png", width: 1 %>
+      <div class="img-no-results">
+        <%= image_tag "no-results.png", width: 450 %>
+      </div>
+    <% end %>
+</div>
 
   <%# MAP %>
   <div class="image-map">
