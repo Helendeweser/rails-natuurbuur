@@ -9,7 +9,11 @@
     <%= f.input :content, :label => 'Your experience' %>
     <%= f.input :photo, as: :file %>
     <div class="form-button">
+    <% if user_signed_in?  %>
       <%= f.button :submit, "Share"%>
+    <% else %>
+      <%= "You have to be signed in to write a review ! 😊" %>
+    <% end %>
     </div>
   <% end %>
 </div>
