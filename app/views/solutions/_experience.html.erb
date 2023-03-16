@@ -5,7 +5,7 @@
           <%= cl_image_tag experience.photo.key, class: "image"%>
         </div>
           <% else %>
-          <%= link_to image_tag("background_white.png")%>
+          <div style="background-image:url(<%= asset_path"background_white.png"%>)"></div>
         <% end %>
         <div class="card-review-infos">
 
