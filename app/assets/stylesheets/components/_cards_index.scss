@@ -3,6 +3,12 @@
   margin-bottom: 20px;
   width: 100%;
   flex-grow: 1;
+
+}
+
+.img-no-results{
+  margin-top: 80px;
+  filter: invert(42%) sepia(67%) saturate(333%) hue-rotate(105deg) brightness(96%) contrast(86%);
 }
 
 .index-grid {
