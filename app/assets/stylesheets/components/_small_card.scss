@@ -18,21 +18,20 @@
 
 .small-card {
   height: 415px;
-  // width: 300px;
   font-weight: bold;
-  border-radius: 5px;
-  border:1px solid gray;
+  border-radius: 10px;
   margin-top: 20px;
   text-align: center;
   background-color: white;
   padding: 20px;
   position: relative;
+  box-shadow: 0 0 15px rgba(0,0,0,0.9);
 
   .fa-bookmark {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 1.5em;
+    font-size: 1.9em;
     opacity: 0.7;
     color: $bookmark-color;
 
