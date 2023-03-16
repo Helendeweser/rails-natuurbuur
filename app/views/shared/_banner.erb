@@ -1,15 +1,15 @@
 <%# FIRST DIV FOR THE WHOLE BANNER CONTAINING THE PICTURE%>
-<div id="banner" style="background-image: linear-gradient(rgba(0,0,283,0.2),rgba(0,0,283,0.2)), url('leaves_darker2.png');height: 348px;">
+<div id="banner" style="background-image: linear-gradient(rgba(0,0,283,0.2),rgba(0,0,283,0.2)), url(<%= asset_path 'leaves.png' %>);height: 348px;">
   <div class="container">
 
 <%# MAIN TITLE WITH BRAND NAME AND CATCH PHRASE ON THE LEFT %>
     <div class="banner-text">
-      <h1><strong>UpGreen</strong></h1>
-      <p>The perfect place for finding environmental solutions</p>
+      <h1 style="text-shadow:0 0 12px black"><strong>UpGreen</strong></h1>
+      <p style="text-shadow:0 0 12px black">The perfect place for finding environmental solutions</p>
     <div class="searchbar-banner">
 
 <%# SEARCH BAR PART %>
-      <div class="row align-items-center" style="background-color: #ffffffb3; border-radius: 25px; width: max-content;">
+      <div class="row align-items-center" style="background-color: #ffffffb3; border-radius: 25px; box-shadow:0 0 12px black; width: max-content;">
         <div class="col-md-2" style="display: flex;">
         <%# SEARCH BAR %>
           <%= form_with url: root_path, method: :get, class: "d-flex" do %>
