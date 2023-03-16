@@ -1182,8 +1182,8 @@ puts "Creating experiences for solution11 ..."
 experience = Experience.new(
   content: "Every year I plant trees and now my garden is a little piece of heaven where life is good and my dogs love having some shadow in the garden",
   rating: 4.8,
-  user_id: users8.id,
-  solution_id: solution16.id
+  user_id: user8.id,
+  solution_id: solution11.id
 )
 image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678959779/quel_arbre_fruitier_planter_sol_argileux_AdobeStock_16534243_kgbb0m.jpg")
 experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
@@ -1194,8 +1194,8 @@ puts "Creating experience #{experience.id}..."
 experience = Experience.new(
   content: "Hard to know which tree to choose and my garden is quit small, but I think that I will be happy when it will grow",
   rating: 3.4,
-  user_id: users8.id,
-  solution_id: solution16.id
+  user_id: user3.id,
+  solution_id: solution11.id
 )
 experience.save!
 puts "Creating experience #{experience.id}..."
@@ -1203,8 +1203,8 @@ puts "Creating experience #{experience.id}..."
 experience = Experience.new(
   content: "It's now more complicated to cut the grass but it's worth it, I can breathe fresh air in town",
   rating: 4.4,
-  user_id: users8.id,
-  solution_id: solution16.id
+  user_id: user5.id,
+  solution_id: solution11.id
 )
 image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678960807/shutterstock_1971888077-545x410_zna30g.jpg")
 experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
@@ -1270,7 +1270,7 @@ puts "Creating experiences for solution16 ..."
 experience = Experience.new(
   content: "I liked this solution a lot. Very clear instructions! We installed it together with the kids. My trees still have to grow but here is a little image ;)",
   rating: 4.2,
-  user_id: users1.id,
+  user_id: user1.id,
   solution_id: solution16.id
 )
 image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678958756/forest-garden-01.jpg_jtxdux.webp")
@@ -1278,11 +1278,10 @@ experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
 experience.save!
 puts "Creating experience #{experience.id}..."
 
-
 experience = Experience.new(
   content: "I only had grass before and it was very boring, now I added two trees and some shrubs and now I'm happy when I look to my garden, plus it's really easy",
   rating: 4,
-  user_id: users5.id,
+  user_id: user5.id,
   solution_id: solution16.id
 )
 experience.save!
