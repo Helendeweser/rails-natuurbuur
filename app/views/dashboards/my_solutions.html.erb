@@ -4,8 +4,8 @@
 
   <% @solutions.each do |solution| %>
     <%# SMALL CARD: EVERYTHING CENTERED %>
-    <div class="small-card">
-      <%= link_to favourite_path(solution), data: {turbo_method: :delete, turbo_confirm: "Remove this solutions from yor favorites ?"} do %>
+    <div class="small-card" data-controller="bookmark" data-bookmark-target="removefavourite">
+      <%= link_to favourite_path(solution), data: {action: "click->bookmark#add_to_favourite", turbo_method: :delete} do %>
         <i class="fa-solid fa-bookmark"></i>
       <% end %>
       <%= link_to solution_path(solution) do %>
@@ -16,6 +16,7 @@
 
           <p><%= solution.intro %></p>
 
+          <span class="d-none" data-bookmark-target="addfavourite"></span>
           <%# 'FOOTER' CARD WITH LEFT:ICONS and RIGHT:PRICE %>
           <div class="details-small-card">
 
