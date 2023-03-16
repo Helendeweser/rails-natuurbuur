@@ -5,7 +5,7 @@
 <div id="banner-solution-page" style="background-image: linear-gradient(rgba(0,0,283,0.2),rgba(0,0,283,0.2)), url(<%= asset_path 'leaves.png' %>);"></div>
 
 
-<div class="show-card">
+<div class="show-card" style="border-radius: 10px;box-shadow: 0 0 15px rgba(0,0,0,0.9);">
   <div class="image-card">
   <%# To add to your favourites or remove if we are login%>
     <% if user_signed_in? %>
@@ -141,7 +141,7 @@
 
 
 
-  <div class="experiences-card" data-controller="create-experience">
+  <div class="experiences-card" data-controller="create-experience" style="border-radius: 10px;box-shadow: 0 0 15px rgba(0,0,0,0.9);">
     <div class="experiences-display" data-create-experience-target="experience">
       <h2 id="users-experiences" style="font-family:'Zeyada', cursive; transform: rotate(-12deg); width: 10px; color: #ca973b;font-size: 40px;text-decoration: 1.5px #ca973b wavy underline;position:absolute; top:23px; z-index:1; text-shadow: 1px 1px 2px #cc9736;">Reviews:</h2>
       <% if @solution.experiences.empty? %>
