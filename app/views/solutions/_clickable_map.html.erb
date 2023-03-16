@@ -102,8 +102,8 @@
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"
     href="/solutions/<%= clicked_solution.first.id %>"></a>
 
-    <%# Green roof flat  %>
-    <% clicked_solution = @solutions.select {|s| s.title == "Green flat roof"} %>
+    <%# Green flat  %>
+    <% clicked_solution = @solutions.select {|s| s.title == "Green roof"} %>
     <a id="green-roof" style="position:absolute;left:<%= 143.5 %>px; top:<%= 225.7 %>px; width:<%= 165 %>px; height:<%= 107 %>px;"
     data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right"
     title="<%= clicked_solution.first.title %>" data-bs-content="<%= clicked_solution.first.intro %> Learn more!"

@@ -1,5 +1,7 @@
 require "open-uri"
 
+puts "############################################# starting seeding ############################################# "
+
 puts "Destroying solutions ..."
 Solution.destroy_all
 
@@ -498,7 +500,7 @@ image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794356
 image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794356/green_flat_roof2_svuiqp.jpg")
 
 solution21 = Solution.new(
-  title: "Green flat roof",
+  title: "Green roof",
   intro: "Turn your gray roof into a green roof and you have the green weapon in your hands in the fight against global warming.",
   explanation: "Your roof is your green weapon in your fight against global warming! Ideal for climate adaptation, as it's called.
 
@@ -520,33 +522,6 @@ solution21.photos.attach(io: image4, filename: "Image 4", content_type: "image/p
 solution21.save!
 puts "Creating solution #{solution21.id}..."
 
-image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198809/16._Green_sloping_roof_gc5pz8.png")
-image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370704/16._Green_flat_roof_ljpzhv.png")
-image3 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794356/green_sloping_roof6_lf0stv.jpg")
-image4 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678794356/green_sloping_roof4_eirjoh.jpg")
-
-solution22 = Solution.new(
-  title: "Green sloping roof",
-  intro: "Do you have a flat to slightly sloped roof (0.6° - 15°)? Make it green! The benefits to you and your environment are great!",
-  explanation: "Your roof is your green weapon in your fight against global warming! Ideal for climate adaptation, as it's called.
-
-  An extensive green roof weighs quite little. This is exactly why it is an ideal match with both renovated and new roofs. Most new construction roofs easily tolerate 100 kg/m², which is fine for an extensive green roof.
-
-  Mosses, succulents (Sedum) and other herbaceous species prefer to grow here. These plants stay low, cover the ground and require little maintenance. More than that, it develops independently and is resistant to sun, wind and drought.
-
-  The extensive green roof can be installed on both a flat (0.6°) and sloping roof up to 15°.",
-  price: 850,
-  category: ["Roof"],
-  difficulty: "Difficult",
-  advantages: ["Water balance", "Heat stress", "Air quality", "Biodiversity", "Bye, bye sound", "Health", "Well-being", "Energy use", "Lifespan roof", "Property value"]
-)
-
-solution22.photos.attach(io: image1, filename: "Image 1", content_type: "image/png")
-solution22.photos.attach(io: image2, filename: "Image 2", content_type: "image/png")
-solution22.photos.attach(io: image3, filename: "Image 3", content_type: "image/png")
-solution22.photos.attach(io: image4, filename: "Image 4", content_type: "image/png")
-solution22.save!
-puts "Creating solution #{solution22.id}..."
 
 image1 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678198809/17._Self-attaching_climbing_plant_dzonrj.png")
 image2 = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678370704/17._Self-attaching_climbing_plant_kfpue5.png")
@@ -1204,17 +1179,37 @@ end
 
 #### Solution 11 - Climate tree ####
 puts "Creating experiences for solution11 ..."
-10.times do
-  experience = Experience.new(
-    content: experiences_content.sample,
-    rating: random_rating,
-    user_id: users.sample.id,
-    solution_id: solution11.id
-  )
-  experience.save
-  puts "Creating experience #{experience.id}..."
-end
+experience = Experience.new(
+  content: "Every year I plant trees and now my garden is a little piece of heaven where life is good and my dogs love having some shadow in the garden",
+  rating: 4.8,
+  user_id: user8.id,
+  solution_id: solution11.id
+)
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678959779/quel_arbre_fruitier_planter_sol_argileux_AdobeStock_16534243_kgbb0m.jpg")
+experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
+experience.save!
+puts "Creating experience #{experience.id}..."
 
+
+experience = Experience.new(
+  content: "Hard to know which tree to choose and my garden is quit small, but I think that I will be happy when it will grow",
+  rating: 3.4,
+  user_id: user3.id,
+  solution_id: solution11.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+experience = Experience.new(
+  content: "It's now more complicated to cut the grass but it's worth it, I can breathe fresh air in town",
+  rating: 4.4,
+  user_id: user5.id,
+  solution_id: solution11.id
+)
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678960807/shutterstock_1971888077-545x410_zna30g.jpg")
+experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
+experience.save!
+puts "Creating experience #{experience.id}..."
 
 #### Solution 12 - Roof tree ####
 puts "Creating experiences for solution12 ..."
@@ -1272,16 +1267,26 @@ end
 #### Solution 16 - Micro forest ####
 puts "Creating experiences for solution16 ..."
 
-10.times do
-  experience = Experience.new(
-    content: experiences_content.sample,
-    rating: random_rating,
-    user_id: users.sample.id,
-    solution_id: solution16.id
-  )
-  experience.save
-  puts "Creating experience #{experience.id}..."
-end
+experience = Experience.new(
+  content: "I liked this solution a lot. Very clear instructions! We installed it together with the kids. My trees still have to grow but here is a little image ;)",
+  rating: 4.2,
+  user_id: user1.id,
+  solution_id: solution16.id
+)
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1678958756/forest-garden-01.jpg_jtxdux.webp")
+experience.photo.attach(io: image, filename: "Image", content_type: "image/png")
+experience.save!
+puts "Creating experience #{experience.id}..."
+
+experience = Experience.new(
+  content: "I only had grass before and it was very boring, now I added two trees and some shrubs and now I'm happy when I look to my garden, plus it's really easy",
+  rating: 4,
+  user_id: user5.id,
+  solution_id: solution16.id
+)
+experience.save!
+puts "Creating experience #{experience.id}..."
+
 #### Solution 17 - Balcony green ####
 puts "Creating experiences for solution17 ..."
 10.times do
@@ -1335,7 +1340,7 @@ puts "Creating experiences for solution20 ..."
   puts "Creating experience #{experience.id}..."
 end
 
-#### Solution 21 - Green flat roof ####
+#### Solution 21 - Green roof ####
 puts "Creating experiences for solution21 ..."
 10.times do
   experience = Experience.new(
@@ -1343,19 +1348,6 @@ puts "Creating experiences for solution21 ..."
     rating: random_rating,
     user_id: users.sample.id,
     solution_id: solution21.id
-  )
-  experience.save
-  puts "Creating experience #{experience.id}..."
-end
-
-#### Solution 22 - Green sloping roof ####
-puts "Creating experiences for solution22 ..."
-10.times do
-  experience = Experience.new(
-    content: experiences_content.sample,
-    rating: random_rating,
-    user_id: users.sample.id,
-    solution_id: solution22.id
   )
   experience.save
   puts "Creating experience #{experience.id}..."
@@ -1579,3 +1571,8 @@ puts "#{Like.all.size} likes has been created !"
 
 # favourite.save!
 # puts "Creating favourite #{favourite.id}..."
+
+
+puts "############################################# end of seeding ############################################# "
+
+puts "### You succefully seed all the file ! You're now good to go ###"
