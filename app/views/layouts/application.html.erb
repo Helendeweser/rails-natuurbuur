@@ -34,6 +34,13 @@
 <body>
   <%= render "shared/navbar" %>
   <div id="page-container">
+
+    <% if params[:action] == "show" %>
+      <div class="title-page"><h1><%= "Read all the details about #{@solution.title}:" %></h1></div>
+    <% elsif params[:action] == "my_solutions" %>
+      <div class="title-page"><h1>Have a look at your saved solutions!</h1></div>
+    <% end %>
+
     <div id="content-wrap">
       <%= render "shared/flashes" %>
       <%= yield %>
