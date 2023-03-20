@@ -13,7 +13,7 @@
 
 .index-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .my-solutions-grid {
@@ -30,7 +30,21 @@ a:hover {
   color: rgb(66, 66, 66);
 }
 
-@media(max-width: 1400px) {
+
+@media(max-width: 2213px) {
+  .cards-index {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media(max-width: 1723px) {
+  .cards-index {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media(max-width: 1417px) {
   .cards-index {
     grid-template-columns: 1fr;
   }
